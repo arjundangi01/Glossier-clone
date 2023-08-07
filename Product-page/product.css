@@ -1,0 +1,176 @@
+body,
+body h5,
+body p {
+  margin: 0;
+}
+
+/* --------------------filter & sort start---------------------- */
+#filter{
+  background-color: #e8e8e8;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+#filter p:hover{
+ text-decoration: underline;
+ cursor: pointer;
+}
+#filter-left{
+  display: flex;
+  gap: 10px;
+
+}
+#filter-right {
+  display: flex;
+  gap: 5px;
+  margin-right: 1%;
+  
+}
+#filter-right p{
+  opacity: 0.8;
+
+}
+
+
+.clicked{
+  text-decoration: underline;
+}
+
+
+#sort-options{
+  position: fixed;
+  line-height: 2rem;
+  right: 2%;
+  font-size: 0.9rem;
+
+  display: none;
+
+}
+#sort-options p{
+ 
+   padding: 0px 5px;
+   cursor: pointer;
+}
+#sort-options p:hover{
+ background-color: #e8e8e8;
+
+}
+
+/* --------------------filter & sort end---------------------- */
+
+
+/* --------------------container  start---------------------- */
+#container {
+  display: grid;
+  width: 98%;
+  margin: auto;
+  margin-top: 20px;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.prod-img-div img {
+  width: 100%;
+}
+
+.prod-detail-div >p{
+    opacity: 0.8;
+    margin: 2px 0px;
+}
+
+.prod-price-card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+
+.bag-btn {
+  width: 100%;
+  background-color:white;
+  border:0;
+  padding: 10px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+
+.bag-btn:hover {
+  border: 1px dashed;
+  
+}
+
+/* -------------------responsive start------------------ */
+
+@media only screen and (min-width: 900px) and (max-width: 1250px) {
+  #container {
+          
+      grid-template-columns: repeat(3, 1fr);
+      
+    }
+}
+@media only screen and (max-width: 900px) {
+  #container {
+          
+      grid-template-columns: repeat(2, 1fr);
+      /* width: 100%; */
+      
+    }
+}
+@media only screen and (max-width: 650px) {
+ #filter-left{
+     font-size: 0.7rem;
+ }
+ #filter #filter-right {
+  font-size: 0.7rem;
+}
+
+}
+@media only screen and (max-width: 600px) {
+ body{
+  font-size: 0.8rem;
+ }
+
+}
+
+@media only screen and (max-width: 520px) {
+ 
+  #filter-right {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body{
+   font-size: 0.7rem;
+  }
+ 
+ }
+ @media only screen and (max-width: 425px) {
+  #filter{
+    
+    padding-left: 5px;
+  }
+ 
+  #filter-left {
+    gap: 4px;
+    
+  }
+}
+
+
+ @media only screen and (max-width: 361px) {
+  #filter{
+   
+    padding-left: 5px;
+  }
+ 
+  #filter-left {
+    gap: 4px;
+    font-size: 0.6rem;
+    
+  }
+}
+/* -------------------responsive end------------------ */

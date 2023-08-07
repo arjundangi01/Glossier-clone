@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+				initial-scale=1.0"
+    />
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="adminres.css" />
+    <link rel="stylesheet" href="./article.css" />
+  </head>
+  <style>
+    .option2 {
+      border-left: 5px solid #3f3e3e;
+      background-color: #989292;
+      color: white;
+      cursor: pointer;
+    }
+    .option2:hover {
+      border-left: 5px solid #3f3e3e;
+      background-color: #e8e8e8;
+    }
+  </style>
+
+  <body>
+    <!-- for header part -->
+    <header>
+      <div class="logosec">
+        <div class="logo">Glossier</div>
+        <img
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
+          class="icn menuicn"
+          id="menuicn"
+          alt="menu-icon"
+        />
+      </div>
+
+      <div class="searchbar">
+        <input type="text" placeholder="Search" />
+        <div class="searchbtn">
+          <img
+            src="https://i.pinimg.com/736x/fa/0e/7b/fa0e7b992eff03c576727e95c746005c.jpg"
+            class="icn srchicn"
+            alt="search-icon"
+          />
+        </div>
+      </div>
+
+      <div class="message">
+        <div class="circle"></div>
+        <img
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png"
+          class="icn"
+          alt=""
+        />
+        <div class="dp">
+          <img
+            src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
+            class="dpicn"
+            alt="dp"
+          />
+        </div>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <div class="navcontainer">
+        <nav class="nav">
+          <div class="nav-upper-options">
+            <a href="./admin.html">
+              <div class="nav-option option1">
+                <img
+                  src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+                  class="nav-img"
+                  alt="dashboard"
+                />
+                <h3>Dashboard</h3>
+              </div></a
+            >
+
+            <a href="./article.html">
+              <div class="option2 nav-option">
+                <img
+                  src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
+                  class="nav-img"
+                  alt="articles"
+                />
+                <h3>Articles</h3>
+              </div>
+            </a>
+
+            <div class="nav-option option3">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
+                class="nav-img"
+                alt="report"
+              />
+              <h3>Report</h3>
+            </div>
+
+            <div class="nav-option option4">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
+                class="nav-img"
+                alt="institution"
+              />
+              <h3>Institution</h3>
+            </div>
+
+            <div class="nav-option option6">
+              <img
+                src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
+                class="nav-img"
+                alt="settings"
+              />
+              <h3>Settings</h3>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="main">
+        <div class="searchbar2">
+        
+        </div>
+
+        <div class="report-container">
+          <div class="report-header">
+            <h1 class="recent-Articles">Add Articles</h1>
+          </div>
+
+          <div id="form-div">
+            <form id="form" action="">
+              <input id="name" type="text" placeholder="Product name" />
+              <label for="">Product Name</label>
+
+              <input id="desc" type="text" placeholder="Product Description" />
+              <label for="">Product Description</label>
+
+              <input id="price" type="number" placeholder="Product Price" />
+              <label for="">Product Price</label>
+
+           
+
+              <select name="" id="skinType">
+                <option value="">Select Skin Type</option>
+                <option value="Dry">Dry</option>
+                <option value="Sensitive">Sensitive</option>
+                <option value="Normal">Normal</option>
+                <option value="Oily">Oily</option>
+              </select>
+              <label for="">Skin Type</label>
+
+
+              <select name="" id="category">
+                <option value="">Select Category</option>
+                <option value="Cleansers">Cleansers</option>
+                <option value="Balms">Balms</option>
+                <option value="Treatments">Treatments</option>
+                <option value="Sunscreen">Sunscreen</option>
+                <option value="Moisturizers">Moisturizers</option>
+              </select>
+              <label for="">Category</label>
+
+              <input id="img1" type="url" placeholder="image1" />
+              <label for="">Image 1</label>
+
+              <input id="img2" type="url" placeholder="image2" />
+              <label for="">Image 2</label>
+
+              <input id="img3" type="url" placeholder="image3" />
+              <label for="">Image 3</label>
+
+              <input id="vdo" type="url" placeholder="Video" />
+              <label for="">Video</label>
+
+              <input id="submit" type="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
+<script src="./admin.js"></script>
