@@ -1,0 +1,466 @@
+nav {
+  /* border: 1px solid #000; */
+  background-color: white;
+  width: 98%;
+  margin: auto;
+}
+.navbar > div {
+  font-size: 0.8rem;
+  width: 95%;
+  margin: auto;
+
+  background-color: white;
+}
+nav > div > div {
+  /* border: 1px solid #000; */
+  display: flex;
+  align-items: center;
+}
+.nav-right p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.nav-right p {
+  margin: 0;
+}
+
+/* right--------------------------- */
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+}
+.nav-right i {
+  font-size: 1rem;
+}
+/* ----------------middle----------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+
+  background: #242526;
+}
+nav .wrapper {
+  position: relative;
+  max-width: 1300px;
+  padding: 0px 30px;
+  height: 70px;
+  line-height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .logo a {
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.wrapper .nav-links {
+  display: inline-flex;
+}
+.nav-links li {
+  list-style: none;
+  /* border: 1px solid #000; */
+}
+.nav-links li a {
+  color: #020202;
+  text-decoration: none;
+  font-size: 0.7rem;
+  /* font-weight: 500; */
+  /* padding: 9px 15px; */
+  border-radius: 5px;
+  /* transition: all 0.3s ease; */
+}
+.nav-links li a:hover {
+  /* background: #0b4d8e; */
+}
+.nav-links .mobile-item {
+  display: none;
+}
+.nav-links .drop-menu {
+  position: absolute;
+  background: #242526;
+  width: 180px;
+  line-height: 45px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box {
+  /* transition: all 0.3s ease; */
+  top: 37px;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a {
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  border-radius: 0px;
+}
+.mega-box {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  /* padding: 0 30px; */
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+  /* border: 1px solid #000; */
+}
+.mega-box .content {
+  background: #ffffff;
+  padding: 25px 20px;
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.mega-box .content .row {
+  width: calc(25% - 30px);
+  line-height: 1.5rem;
+}
+
+.content .row .mega-links {
+  margin-left: -90px;
+  /* border-left: 1px solid rgba(255, 255, 255, 0.09); */
+  /* border: 1px solid #000; */
+}
+.row >div:last-child>p:first-child{
+ color: #506dfe;
+}
+.row .mega-links li a {
+  padding: 0px;
+  /* padding: 0 20px; */
+  color: #000000;
+  font-size: 0.9rem;
+  display: block;
+}
+.row .mega-links li a:hover {
+  text-decoration: underline;
+}
+.wrapper .btn {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.close-btn {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+nav input {
+  display: none;
+}
+
+.body-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  padding: 0 30px;
+}
+.body-text div {
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.row .nav-prod-img-div img {
+  width: 90%;
+  justify-self: flex-end;
+}
+.nav-prod-img-div {
+  width: 60%;
+}
+.row:last-child {
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* cart------------- */
+#offcanvasNavbar {
+  width: 450px;
+}
+#bag-name{
+  /* border: 1px solid #000; */
+  width: 90%;
+}
+/* cart------------- */
+
+/*-------search result -----------  */
+#search-bar {
+  width: 400px;
+  margin-right: 3rem;
+}
+#searchright {
+  border-radius: 10px;
+}
+
+#show-result {
+  position: absolute;
+  top: 40px;
+  border-radius: 10px;
+  display: none;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  z-index: 1200;
+  background: white;
+}
+
+.search-res-card {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  background: white;
+  font-size: 0.8rem;
+  padding: 5px 20px;
+  border-radius: 10px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.search-res-card:hover {
+  background-color: #e8e8e8;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.search-res-card > div {
+  width: 45px;
+}
+.search-res-card img {
+  width: 100%;
+}
+
+/* -------------------responsive start------------------ */
+
+@media only screen and (min-width: 970px) and (max-width: 1250px) {
+  .navbar-brand{
+    width: 60px;
+   }
+  #search-bar {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 495px) and (max-width: 970px) {
+  .navbar-brand{
+    width: 50px;
+   }
+  #search-bar {
+    width: 200px;
+    border: 1px solid #000;
+  }
+  #middle li {
+    display: none;
+  }
+  #middle li:first-child {
+    display: block;
+  }
+  #search-bar {
+    height: 32px;
+    border-radius: 10px;
+  }
+  #searchright {
+    height: 100%;
+    border-radius: 10px;
+  }
+  .search-res-card {
+    
+    padding: 5px 10px;
+    border-radius: 10px;
+  
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .search-res-card p{
+    
+    font-size: 0.7rem;
+   
+  }
+
+  .search-res-card >div {
+    width: 35px;
+    
+  }
+  #middle .mega-box {
+    display: none;
+  }
+  #show-result {
+    
+    top: 33px;
+   
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-brand{
+    width: 50px;
+   }
+  body {
+    font-size: 0.8rem;
+  }
+  #search-bar {
+    height: 32px;
+    border-radius: 10px;
+    margin-right: 0;
+  }
+  #searchright {
+    height: 100%;
+    border-radius: 10px;
+  }
+  #middle .mega-box {
+    display: none;
+  }
+  #show-result {
+    
+    top: 33px;
+   
+  }
+}
+
+@media only screen and (max-width: 495px) {
+  #middle li {
+    display: none;
+  }
+  #search-bar {
+    height: 28px;
+    border-radius: 10px;
+    margin-right: 0;
+  }
+  #searchright {
+    height: 100%;
+    border-radius: 10px;
+  }
+  #middle .mega-box {
+    display: none;
+  }
+  #show-result {
+    
+    top: 28px;
+   
+  }
+  .search-res-card {
+    
+    padding: 2px 5px;
+    border-radius: 10px;
+  border-radius: 2px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .search-res-card p{
+    
+    font-size: 0.3rem;
+   
+  }
+  .search-res-card > div {
+    width: 18px;
+  }
+  
+}
+
+@media only screen and (max-width: 435px) {
+  .navbar-brand{
+   width: 40px;
+  }
+
+  #middle .mega-box {
+    display: none;
+  }
+
+  #offcanvasNavbar {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+
+  .offcanvas-body {
+    padding: 0;
+
+    width: 90%;
+  }
+  #card-child-list {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+  }
+  #card-child-list > div {
+    width: 100%;
+  }
+  #search-bar {
+    height: 20px;
+    border-radius: 10px;
+    margin-right: 0;
+  }
+  #searchright {
+    height: 100%;
+    border-radius: 10px;
+  }
+  #show-result {
+    
+    top: 20px;
+   
+  }
+}
+
+@media only screen and (min-width: 345px) and (max-width: 495px) {
+  #search-bar {
+    width: 100px;
+    border: 1px solid #000;
+  }
+
+  .navbar #searchright {
+    font-size: 0.7rem;
+  }
+  #middle li {
+    display: none;
+  }
+  #middle li:first-child {
+    display: block;
+    font-size: 0.6rem;
+  }
+  #middle .mega-box {
+    display: none;
+  }
+  
+}
+@media only screen and (max-width: 345px) {
+  #search-bar {
+    width: 70px;
+    height: 18px;
+
+    border: 1px solid #000;
+  }
+  .navbar #searchright {
+    font-size: 0.7rem;
+  }
+  .navbar-brand {
+    font-size: 0.7rem;
+  }
+
+  .navbar #middle li:first-child {
+    display: block;
+    font-size: 0.2rem;
+  }
+  #middle .mega-box {
+    display: none;
+  }
+}
+
+/* -------------------responsive end------------------ */
+
+/* Add more CSS rules for your existing styles */
