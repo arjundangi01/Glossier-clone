@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="details-div">
+        <div id="checkout-logo">
+          <img
+            id="logo"
+            src="https://cdn.shopify.com/s/files/1/0627/9164/7477/files/g-sharing-logo.png?85400"
+            alt=""
+          />
+        </div>
+        <div id="links">
+          <h3>Checkout</h3>
+          <h3>></h3>
+          <a href="payment.html"><h3>Payment</h3></a>
+        </div>
+        <!-- <h1 id="checkout-logo">Checkout</h1> -->
+        <div id="contacts-details">
+          <div id="left-contacts">
+            <h2>Contacts</h2>
+          </div>
+          <div id="right-contacts">
+            <div id="name">
+              <input type="text" id="first-name" placeholder="First Name" />
+              <input type="text" id="last-name" placeholder="Last Name" />
+            </div>
+            <div id="phone-email">
+              <input type="text" id="phone" placeholder="Phone" />
+              <input type="text" id="email" placeholder="Email" />
+            </div>
+          </div>
+        </div>
+        <div id="shipping-details">
+          <div id="left-shipping">
+            <h2>Ships To</h2>
+          </div>
+          <div id="right-shipping">
+            <!-- <select name="" id="country">
+                  <option value="india">India</option>
+                  <option value="">USA</option>
+                  <option value="">London</option>
+                </select> -->
+            <select id="country" name="country">
+              <option value="">Select country</option>
+              <option value="India">India</option>
+              <option value="Canada">Canada</option>
+              <option value="Germany">Germany</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+            </select>
+            <div id="address-first">
+              <input type="text" placeholder="Address" id="address" /><input
+                type="text"
+                placeholder="Apt / Floor / Suite"
+              />
+            </div>
+            <div id="address-second">
+              <input id="city" type="text" placeholder="City" /><input
+                id="state"
+                type="text"
+                placeholder="State"
+              /><input type="text" id="zipcode" placeholder="Zipcode" />
+            </div>
+          </div>
+        </div>
+        <div id="delivery-details">
+          <div id="left-delivery">
+            <h2>Delivery</h2>
+          </div>
+          <div id="right-delivery">
+            <div class="main content">
+              <div id="left-del">
+                <input type="radio" class="radio" />
+                <h3>Standard</h3>
+                <h6 class="delivery-date" id="standard-delivery"></h6>
+              </div>
+              <div id="right">
+                <h3 data-charge="0">Free</h3>
+              </div>
+            </div>
+            <div class="main content">
+              <div id="left-del">
+                <input type="radio" class="radio" />
+                <h3>Expedited</h3>
+                <h6 class="delivery-date" id="expedited-delivery"></h6>
+              </div>
+              <div id="right">
+                <h3 data-charge="12">$12</h3>
+              </div>
+            </div>
+            <div class="main content">
+              <div id="left-del">
+                <input type="radio" class="radio" />
+                <h3>Overnight</h3>
+                <h6 class="delivery-date" id="overnight-delivery"></h6>
+              </div>
+              <div id="right">
+                <h3 data-charge="19">$19</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="payment-div">
+          <button id="payment-btn">Procced to pay</button>
+          <!-- <button id="rzp-button1" class="btn btn-outline-dark btn-lg">
+                <i class="fas fa-money-bill"></i> Procced to Checkout
+              </button> -->
+        </div>
+      </div>
+      <div id="cart-items-div">
+        <div id="cart-items"></div>
+        <!-- cart items will append here  -->
+        <hr id="firsthr" />
+        <div id="subtotal-div">
+          <p>Subtotal</p>
+          <h3 id="subtotal">$122</h3>
+          <!-- // total cost -->
+        </div>
+        <div id="shipping-charges-div">
+          <p>Shipping</p>
+          <h3 id="shipping">$ 0.00</h3>
+          <!-- // shipping charges -->
+        </div>
+        <hr id="secondhr" />
+        <div id="total-div">
+          <h1>Total</h1>
+          <h1 id="total">Total</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="checkout.js"></script>
