@@ -301,6 +301,11 @@ nav input {
   #middle .mega-box {
     display: none;
   }
+  #show-result {
+    
+    top: 33px;
+   
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -322,6 +327,11 @@ nav input {
   #middle .mega-box {
     display: none;
   }
+  #show-result {
+    
+    top: 33px;
+   
+  }
 }
 
 @media only screen and (max-width: 495px) {
@@ -342,7 +352,7 @@ nav input {
   }
   #show-result {
     
-    top: 30px;
+    top: 28px;
    
   }
   .search-res-card {
@@ -400,6 +410,11 @@ nav input {
     height: 100%;
     border-radius: 10px;
   }
+  #show-result {
+    
+    top: 20px;
+   
+  }
 }
 
 @media only screen and (min-width: 345px) and (max-width: 495px) {
@@ -421,6 +436,7 @@ nav input {
   #middle .mega-box {
     display: none;
   }
+  
 }
 @media only screen and (max-width: 345px) {
   #search-bar {
