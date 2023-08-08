@@ -8,11 +8,12 @@ window.hover = hover;
 
 document.getElementById("navbar").innerHTML = navbar();
 
-fetchData();
+fetchData(1);
 let output;
-async function fetchData() {
+async function fetchData(page) {
+  
   try {
-    let response = await fetch("https://project-1-1qlk.onrender.com/glossier");
+    let response = await fetch(`https://project-1-1qlk.onrender.com/glossier?_page=${page}&_limit=12`);
     output = await response.json();
    
     display(output);
@@ -124,7 +125,13 @@ function deleteItem(index) {
 let filters = document.querySelectorAll(".filter");
 filters.forEach((ele) => {
   ele.addEventListener("click", () => {
-    defaultclass(filters);
+    defaultclass(filters, "clicked");
+    if (ele.textContent != "All skincare") {
+      document.querySelector(".pagination").style.display = "none"
+    } else {
+      document.querySelector(".pagination").style.display = "block"
+      
+    }
     ele.classList.add("clicked");
     let value = ele.getAttribute("value");
     if (value == "") {
@@ -137,9 +144,9 @@ filters.forEach((ele) => {
     }
   });
 });
-function defaultclass(filters) {
+function defaultclass(filters,className) {
   filters.forEach((element) => {
-    element.classList.remove("clicked");
+    element.classList.remove(className);
   });
 }
 
@@ -182,6 +189,20 @@ function defaultclass(filters) {
 //   display(out);
 
 // }
+// ----------------------pagination----------------------------------------
+ 
+let pages = document.querySelectorAll(".page");
+pages.forEach((page) => {
+  page.addEventListener("click", () => {
+    defaultclass(pages,"is-active");
 
+    page.classList.add('is-active')
+    event.preventDefault();
+    let num = page.textContent;
+    console.log(num)
+    fetchData(num);
+
+  })
+})
 
 debounceALl()

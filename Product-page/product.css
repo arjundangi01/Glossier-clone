@@ -5,61 +5,52 @@ body p {
 }
 
 /* --------------------filter & sort start---------------------- */
-#filter{
+#filter {
   background-color: #e8e8e8;
   padding: 12px 30px;
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
-  margin-top: 30px;
+  margin-top: 60px;
 }
-#filter p:hover{
- text-decoration: underline;
- cursor: pointer;
+#filter p:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
-#filter-left{
+#filter-left {
   display: flex;
   gap: 10px;
-
 }
 #filter-right {
   display: flex;
   gap: 5px;
   margin-right: 1%;
-  
 }
-#filter-right p{
+#filter-right p {
   opacity: 0.8;
-
 }
 
-
-.clicked{
+.clicked {
   text-decoration: underline;
 }
 
-
-#sort-options{
+#sort-options {
   position: fixed;
   line-height: 2rem;
   right: 2%;
   font-size: 0.9rem;
 
   display: none;
-
 }
-#sort-options p{
- 
-   padding: 0px 5px;
-   cursor: pointer;
+#sort-options p {
+  padding: 0px 5px;
+  cursor: pointer;
 }
-#sort-options p:hover{
- background-color: #e8e8e8;
-
+#sort-options p:hover {
+  background-color: #e8e8e8;
 }
 
 /* --------------------filter & sort end---------------------- */
-
 
 /* --------------------container  start---------------------- */
 #container {
@@ -75,9 +66,9 @@ body p {
   width: 100%;
 }
 
-.prod-detail-div >p{
-    opacity: 0.8;
-    margin: 2px 0px;
+.prod-detail-div > p {
+  opacity: 0.8;
+  margin: 2px 0px;
 }
 
 .prod-price-card {
@@ -86,91 +77,122 @@ body p {
   margin-bottom: 10px;
 }
 
-
 .bag-btn {
   width: 100%;
-  background-color:white;
-  border:0;
+  background-color: white;
+  border: 0;
   padding: 10px;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
 }
 
-
 .bag-btn:hover {
   border: 1px dashed;
-  
 }
+/* ---------------------------pagination start ------------- */
+
+a {
+  text-decoration: none;
+}
+
+p,
+li,
+a {
+  font-size: 0.8rem;
+}
+
+.page-container {
+  width: fit-content;
+  margin: 20px auto;
+  position: relative;
+  text-align: center;
+  /* border: 1px solid #000; */
+}
+
+.pagination ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 10px 18px;
+  color: #222;
+}
+
+.p2 .is-active li {
+  font-weight: bold;
+  border-bottom: 3px solid #2ecc71;
+}
+/* ---------------------------pagination end ------------- */
 
 /* -------------------responsive start------------------ */
 
 @media only screen and (min-width: 900px) and (max-width: 1250px) {
   #container {
-          
-      grid-template-columns: repeat(3, 1fr);
-      
-    }
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media only screen and (max-width: 900px) {
   #container {
-          
-      grid-template-columns: repeat(2, 1fr);
-      /* width: 100%; */
-      
-    }
-}
-@media only screen and (max-width: 650px) {
- #filter-left{
-     font-size: 0.7rem;
- }
- #filter #filter-right {
-  font-size: 0.7rem;
+    grid-template-columns: repeat(2, 1fr);
+    /* width: 100%; */
+  }
 }
 
+@media only screen and (min-width: 450px) and (max-width: 600px) {
+  body {
+    font-size: 0.8rem;
+  }
 }
-@media only screen and (max-width: 600px) {
- body{
-  font-size: 0.8rem;
- }
-
+@media only screen and (min-width: 524px) and (max-width: 650px) {
+  
+  #filter #filter-right {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (min-width: 450px) and (max-width: 650px) {
+  #filter-left {
+    gap: 5px;
+    font-size: 0.6rem;
+  }
+  #filter-left {
+    font-size: 0.7rem;
+  }
+  
 }
 
-@media only screen and (max-width: 520px) {
- 
+@media only screen and (max-width: 524px) {
   #filter-right {
     display: none;
   }
 }
 
 @media only screen and (max-width: 450px) {
-  body{
-   font-size: 0.7rem;
-  }
- 
- }
- @media only screen and (max-width: 425px) {
-  #filter{
-    
-    padding-left: 5px;
-  }
- 
-  #filter-left {
-    gap: 4px;
-    
+  body {
+    font-size: 0.7rem;
   }
 }
 
-
- @media only screen and (max-width: 361px) {
-  #filter{
-   
-    padding-left: 5px;
+@media only screen and (min-width: 420px) and (max-width: 450px) {
+  #filter {
+    padding-left: 10px;
   }
- 
   #filter-left {
     gap: 4px;
     font-size: 0.6rem;
-    
+  }
+}
+@media only screen and (max-width: 420px) {
+  #filter {
+    padding-left: 10px;
+  }
+  #filter-left {
+    gap: 5px;
+  }
+  #filter-left p {
+    font-size: 0.6rem;
   }
 }
 /* -------------------responsive end------------------ */

@@ -1,13 +1,14 @@
 nav {
   /* border: 1px solid #000; */
   background-color: white;
-  width: 99%;
+  width: 98%;
   margin: auto;
 }
-nav > div {
+.navbar > div {
   font-size: 0.8rem;
-
+  width: 95%;
   margin: auto;
+
   background-color: white;
 }
 nav > div > div {
@@ -32,7 +33,7 @@ nav > div > div {
 .nav-right i {
   font-size: 1rem;
 }
-
+/* ----------------middle----------------- */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -82,7 +83,6 @@ nav .wrapper {
 }
 .nav-links li a:hover {
   /* background: #0b4d8e; */
- 
 }
 .nav-links .mobile-item {
   display: none;
@@ -110,7 +110,6 @@ nav .wrapper {
   padding: 0 0 0 15px;
   font-weight: 400;
   border-radius: 0px;
-  
 }
 .mega-box {
   position: absolute;
@@ -130,22 +129,19 @@ nav .wrapper {
 
   justify-content: space-between;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  
 }
 .mega-box .content .row {
   width: calc(25% - 30px);
   line-height: 1.5rem;
 }
 
-
 .content .row .mega-links {
   margin-left: -90px;
   /* border-left: 1px solid rgba(255, 255, 255, 0.09); */
   /* border: 1px solid #000; */
 }
-.row .mega-links li {
-  /* padding: 0 20px; */
-  /* border: 1px solid #000; */
+.row >div:last-child>p:first-child{
+ color: #506dfe;
 }
 .row .mega-links li a {
   padding: 0px;
@@ -169,7 +165,6 @@ nav .wrapper {
   top: 10px;
 }
 
-
 nav input {
   display: none;
 }
@@ -188,150 +183,268 @@ nav input {
   font-weight: 600;
 }
 
-.row .nav-prod-img-div img{
- 
- width: 90%;
- justify-self: flex-end;
+.row .nav-prod-img-div img {
+  width: 90%;
+  justify-self: flex-end;
 }
 .nav-prod-img-div {
-   width: 60%;
+  width: 60%;
 }
-.row:last-child{
-   /* border: 1px solid #000; */
-    display: flex;
-    justify-content: flex-end;
+.row:last-child {
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: flex-end;
 }
-
-
 
 /* cart------------- */
-#offcanvasNavbar{
+#offcanvasNavbar {
   width: 450px;
 }
+#bag-name{
+  /* border: 1px solid #000; */
+  width: 90%;
+}
 /* cart------------- */
 
-
-
-
-
-
-
-
 /*-------search result -----------  */
-#search-bar{
- width: 400px;
- 
+#search-bar {
+  width: 400px;
+  margin-right: 3rem;
 }
-#show-result{
-  position: fixed;
-  top: 45px;
-  right: 11%;
-	
+#searchright {
+  border-radius: 10px;
+}
+
+#show-result {
+  position: absolute;
+  top: 40px;
+  border-radius: 10px;
   display: none;
-
-  z-index: 5000;
-	width: 400px; /* Bar width+1px */
-
-  border: 1px solid rgba(0,0,0,0.2);
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   z-index: 1200;
   background: white;
-
 }
 
 .search-res-card {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   background: white;
   font-size: 0.8rem;
   padding: 5px 20px;
+  border-radius: 10px;
 
-  border-top: 1px solid rgba(0,0,0,0.2);
-  
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
-.search-res-card:hover{
+.search-res-card:hover {
   background-color: #e8e8e8;
-  transition: .2s;
+  transition: 0.2s;
   cursor: pointer;
-  
 }
-.search-res-card >div {
+.search-res-card > div {
   width: 45px;
-  
 }
-.search-res-card img{
+.search-res-card img {
   width: 100%;
 }
-
-
 
 /* -------------------responsive start------------------ */
 
 @media only screen and (min-width: 970px) and (max-width: 1250px) {
-  #search-bar{
-    width: 300px;
-    
-    
+  .navbar-brand{
+    width: 60px;
    }
+  #search-bar {
+    width: 300px;
+  }
 }
 @media only screen and (min-width: 495px) and (max-width: 970px) {
-  #search-bar{
+  .navbar-brand{
+    width: 50px;
+   }
+  #search-bar {
     width: 200px;
     border: 1px solid #000;
-   
-    
-   }
-   #middle{
+  }
+  #middle li {
     display: none;
-   }
+  }
+  #middle li:first-child {
+    display: block;
+  }
+  #search-bar {
+    height: 32px;
+    border-radius: 10px;
+  }
+  #searchright {
+    height: 100%;
+    border-radius: 10px;
+  }
+  .search-res-card {
+    
+    padding: 5px 10px;
+    border-radius: 10px;
+  
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .search-res-card p{
+    
+    font-size: 0.7rem;
    
+  }
+
+  .search-res-card >div {
+    width: 35px;
+    
+  }
+  #middle .mega-box {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-  body{
-   font-size: 0.8rem;
+  .navbar-brand{
+    width: 50px;
+   }
+  body {
+    font-size: 0.8rem;
   }
- 
- }
-
-@media only screen  and (max-width: 495px) {
-  #search-bar{
-    width: 110px;
-    border: 1px solid #000;
-   
-   
-    
-   }
-   #middle{
+  #search-bar {
+    height: 32px;
+    border-radius: 10px;
+    margin-right: 0;
+  }
+  #searchright {
+    height: 100%;
+    border-radius: 10px;
+  }
+  #middle .mega-box {
     display: none;
-   }
-   
+  }
 }
 
+@media only screen and (max-width: 495px) {
+  #middle li {
+    display: none;
+  }
+  #search-bar {
+    height: 28px;
+    border-radius: 10px;
+    margin-right: 0;
+  }
+  #searchright {
+    height: 100%;
+    border-radius: 10px;
+  }
+  #middle .mega-box {
+    display: none;
+  }
+  #show-result {
+    
+    top: 30px;
+   
+  }
+  .search-res-card {
+    
+    padding: 2px 5px;
+    border-radius: 10px;
+  border-radius: 2px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .search-res-card p{
+    
+    font-size: 0.3rem;
+   
+  }
+  .search-res-card > div {
+    width: 18px;
+  }
+  
+}
 
 @media only screen and (max-width: 435px) {
-  #offcanvasNavbar{
-    width: 100%;
-   font-size: 0.6rem;
-  
-
+  .navbar-brand{
+   width: 40px;
   }
-  .offcanvas-body{
+
+  #middle .mega-box {
+    display: none;
+  }
+
+  #offcanvasNavbar {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+
+  .offcanvas-body {
     padding: 0;
-   
+
     width: 90%;
   }
   #card-child-list {
     width: 100%;
-   
+
     margin: 0;
     padding: 0;
   }
-  #card-child-list >div{
+  #card-child-list > div {
     width: 100%;
   }
-  
+  #search-bar {
+    height: 20px;
+    border-radius: 10px;
+    margin-right: 0;
+  }
+  #searchright {
+    height: 100%;
+    border-radius: 10px;
+  }
 }
 
+@media only screen and (min-width: 345px) and (max-width: 495px) {
+  #search-bar {
+    width: 100px;
+    border: 1px solid #000;
+  }
+
+  .navbar #searchright {
+    font-size: 0.7rem;
+  }
+  #middle li {
+    display: none;
+  }
+  #middle li:first-child {
+    display: block;
+    font-size: 0.6rem;
+  }
+  #middle .mega-box {
+    display: none;
+  }
+}
+@media only screen and (max-width: 345px) {
+  #search-bar {
+    width: 70px;
+    height: 18px;
+
+    border: 1px solid #000;
+  }
+  .navbar #searchright {
+    font-size: 0.7rem;
+  }
+  .navbar-brand {
+    font-size: 0.7rem;
+  }
+
+  .navbar #middle li:first-child {
+    display: block;
+    font-size: 0.2rem;
+  }
+  #middle .mega-box {
+    display: none;
+  }
+}
 
 /* -------------------responsive end------------------ */
+
+/* Add more CSS rules for your existing styles */

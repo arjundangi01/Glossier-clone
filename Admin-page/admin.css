@@ -148,10 +148,13 @@ header {
 
 .box-container {
   display: flex;
-  justify-content: space-evenly;
+  /* padding-left: 20px; */
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: 50px;
+  /* width: 100%; */
+  
 }
 .nav {
   min-height: 91vh;
@@ -208,13 +211,14 @@ header {
 
 .box {
   height: 130px;
-  width: 230px;
+  width: 40%;
   border-radius: 20px;
   box-shadow: 3px 3px 10px rgba(123, 127, 134, 0.751);
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  gap: 40px;
+  /* justify-content: space-around; */
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
@@ -276,7 +280,7 @@ header {
 .recent-Articles {
   font-size: 30px;
   font-weight: 600;
-  color: #f03d37;
+  color: #262525;
 }
 
 .view {
@@ -301,6 +305,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.item1 h3:first-child{
+
+  width: 170px;
+}
+.item1 h3:nth-child(2){
+ 
+  margin-left: -70px;
 }
 .t-op {
   font-size: 18px;
