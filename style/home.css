@@ -1,0 +1,400 @@
+body{
+    background-color: #e1e5ee;
+}
+#upper{
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+ 
+}
+a>#main-photo{
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  width: 100%;
+  height: auto;
+}
+#inner{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+#inner>a{
+    text-decoration: none;
+}
+#inner>a>h2{
+    font-size: 3rem;
+    margin-bottom: -10px;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+    color: black;
+}
+#inner>a>p{
+    margin-top: 4%;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+    color: black;
+}
+#inner>img{
+    width: 60%;
+}
+#inner>a>button{
+    width: 55%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#middle>h3{
+    font-size: 4rem;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+    text-align: right;
+    font-weight: 500;
+}
+#middle>h3>span{
+    margin-right: 20%;
+   
+}
+#middle>p{
+    text-align: justify;
+    margin-top: -3%;
+    font-size: 1.5rem;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+    width: 600px;
+    margin: auto;
+}
+.sellers{
+    margin-top: 120px;
+}
+
+.sellers>p{
+    margin-bottom: -20px;
+    margin-left: 80px;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+.sellers>a{
+    margin-left: 86%;
+    color: black;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+
+#best{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 40px;
+    width: 80%;
+    margin-left: 5%;
+}
+#best>.product>a>img{
+    width: 100%;
+    height: 300px;
+}
+.product{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #edeef2 ;
+    width: 95%;
+}
+.product>p{
+    color: #aeb0b8 ;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+    margin-left: 10px;
+}
+
+#best>.product:last-child{
+    width: 140%;
+}
+
+.sibl{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -4%;
+    margin-right: 20px;
+    margin-left: 10px;
+    color: #484a52 ;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+#cater{
+    margin-left: 80px;
+    margin-top: 80px;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+#cat{
+  display: flex;
+  margin: auto;
+  width: 90%;
+  height: 70%;
+}
+.cat1>img{
+    width: 110%;
+    height: 600px;
+}
+#cat>.cat1:last-child{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-left: 40px;
+    width: 32%;
+    height: 600px;
+}
+.cat1>#items>h2{
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+    font-weight: 400;
+}
+.cat1>#items>p{
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+.cat1>#items>button{
+    border-radius: 20px;
+    width: 170px;
+    height: 40px;
+    cursor: pointer;
+    background-color:  #e1e5ee;
+}
+#items{
+    margin-top: 200px;
+    margin-left: 30px;
+}
+#cat2{
+    display: flex;
+    margin: auto;
+    width: 90%;
+    height: 70%;
+    margin-top: 20px;
+}
+.cat>img{
+    width: 100%;
+    height: 600px;
+}
+#cat2>.cat:first-child{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 32%;
+    height: 600px;
+}
+#item{
+text-align: right;
+margin-top: 200px;
+margin-right: 20px;
+}
+#item>h2{
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+    font-weight: 400;
+}
+#item>p{
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+#item>button{
+    border-radius: 20px;
+    width: 170px;
+    height: 40px;
+    cursor: pointer;
+    background-color:  #e1e5ee;
+
+}
+#quot{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: -1%;
+}
+#quot>.q{
+    margin-left: 80px;
+}
+#quo{
+    margin-top: 70px;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+    margin-left: 80px;
+}
+
+#quiz{
+    margin-top: 50px;
+}
+
+#quiz>p{
+    margin-bottom: -20px;
+    margin-left: 80px;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+#quiz>a{
+    margin-left: 86%;
+    color: black;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+#videos{
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr); */
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+}
+.vid{
+    margin-left: 120px;
+}
+.video1{
+    width: 100%;
+    height: 300px;
+  background-color: white;
+  border-radius: 20px;
+}
+#set{
+    margin-top: 80px;
+}
+#set>p{
+    margin-bottom: -20px;
+    margin-left: 80px;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+#set>a{
+    margin-left: 86%;
+    color: black;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+
+#sets{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 40px;
+    width: 80%;
+}
+#sets>.set1>a>img{
+    width: 100%;
+    height: 300px;
+}
+.set1{
+    position: relative;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #edeef2 ;
+    width: 95%;
+    margin-left: 80px;
+}
+
+.set1>p{
+    color: #aeb0b8 ;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+    margin-left: 10px;
+}
+
+#sets>.set1:first-child{
+    width:130%;
+}
+#sets>.set1:nth-child(2){
+    margin-left: 54%;
+}
+#sets>.set1:last-child{
+    margin-left: 52%;
+}
+
+.sibl1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -4%;
+    margin-right: 20px;
+    margin-left: 10px;
+    color: #484a52 ;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+strike{
+    color: #aeb0b8 ;
+    margin-top: 20px;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+.sibl1>.price{
+    color: #e83968 ;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+.save{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 2px solid #e83968 ;
+    border-radius: 7px;
+    background-color: #e83968 ;
+    color: white;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+#see{
+    display: flex;
+    margin: auto;
+    margin-left: 80px;
+    margin-top: 40px;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+#see>#real{
+    margin-left: 16%;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.para{
+    text-align: justify;
+    margin-top: -3px;
+    font-size: 1.5rem;
+    font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+    width: 600px;
+    margin: auto;
+}
+
+#parent{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    width: 90%;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+.child>img{
+    width: 100%;
+    height: 350px;
+}
+#insta{
+    width: 250px;
+    height: 50px;
+    margin-left: 78%;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#main{
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr); */
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    width: 90%;
+    height: 100px;
+    margin-left: 50px;
+    border-radius: 20px;
+    margin-bottom: 80px;
+}
+#main>#mailimg{
+    margin-left: 200px;
+    margin-right: 100px;
+    margin-top: 10px;
+}
+#main>#mail{
+    margin-top: 20px;
+    font-size: 1rem;
+    margin-right: 100px;
+    font-weight: 500;
+}
+#mail>p{
+    width: 340px;
+    margin-right: 20px;
+}
+#input>input{
+    width: 380px;
+    margin-top: 40px;
+    height: 25px;
+}
+#input>button{
+    margin-right: 20px;
+    border-radius: 5px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+#input>p{
+    color: #aeb0b8 ;
+    margin-top: -1px;
+}
