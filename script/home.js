@@ -8,3 +8,8 @@ for (let i = 0; i < clip.length; i++) {
   });
 }
 
+let insta=document.querySelector("#insta");
+
+insta.addEventListener("click",function(){
+  window.location.href="https://www.instagram.com/glossier/feed/?hl=en";
+})
