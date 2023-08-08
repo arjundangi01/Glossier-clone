@@ -57,7 +57,7 @@
                   <hr class="my-4">
       
                   <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
-                    type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
+                    type="submit" id="googlebtn" ><i class="fab fa-google me-2"></i> Sign in with google</button>
                     <h6>Have account?
                       <a href="login.html">Sign in</a>
                     </h6>
@@ -126,6 +126,29 @@
   });
 
     });
+
+    
+let googlebtn=document.getElementById("googlebtn")
+googlebtn.addEventListener("click",()=>{
+  signInWithPopup(auth, provider)
+  .then((result) => {
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    const user = result.user;
+    alert ("Login Successfull")
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+})
+
 
 
   </script>
