@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <section class="vh-100" style="background-color: whitesmoke">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+      
+                  <h3 class="mb-5">Sign Up</h3>
+                  
+                  <div class="form-outline mb-4">
+                    <input type="text" id="name" class="form-control form-control-lg"  />
+                    <label class="form-label" for="typeEmailX-2">Full Name</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" id="typeEmailX-2" class="form-control form-control-lg"  />
+                    <label class="form-label" for="typeEmailX-2">Email</label>
+                  </div>
+                  
+      
+                  <div class="form-outline mb-4">
+                    <input type="text" id="typePasswordX-2" class="form-control form-control-lg"  />
+                    <label class="form-label" for="typePasswordX-2">Password</label>
+                  </div>
+      
+                  <!-- Checkbox -->
+                  <div class="form-check d-flex justify-content-start mb-4">
+                    <input class="form-check-input" type="checkbox" value="" id="form1Example3"  />
+                    <label class="form-check-label" for="form1Example3"> Remember password </label>
+                  </div>
+      
+                  <button class="btn btn-primary btn-lg btn-block" type="submit" id="signupbtn" >Sign Up</button>
+                  
+                  <hr class="my-4">
+      
+                  <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
+                    type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
+                    <h6>Have account?
+                      <a href="login.html">Sign in</a>
+                    </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+></script>
+
+
+  
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+   
+   
+    const firebaseConfig = {
+      apiKey: "AIzaSyAGpHrB0sm21lPXpz4OtoSKWVLFb-jisb8",
+      authDomain: "glossier-eba28.firebaseapp.com",
+      projectId: "glossier-eba28",
+      storageBucket: "glossier-eba28.appspot.com",
+      messagingSenderId: "79396284003",
+      appId: "1:79396284003:web:e7b409f936564e49b6fa56",
+      measurementId: "G-G7STPRSJ5S"
+    };
+  
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+
+
+    const signUpButton = document.getElementById("signupbtn");
+
+    signUpButton.addEventListener("click", function () {
+      const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("typeEmailX-2");
+    const passwordInput = document.getElementById("typePasswordX-2");
+      const name = nameInput.value;
+      const email = emailInput.value;
+      const password = passwordInput.value;
+      if(!name||!email||!password){
+        alert("Enter all details!")
+      }
+      createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+ alert ("Sign Up Successfull")
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+
+    });
+
+
+  </script>
+ 
