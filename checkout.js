@@ -81,6 +81,10 @@ document.querySelector("#total").textContent = `$ ${Math.round(
   totalPrice
 ).toFixed(2)}`;
 
+document.querySelector("#sstotal").textContent = `Total : $${Math.round(
+  totalPrice
+).toFixed(2)}`;
+
 document.querySelector("#subtotal").textContent = `$ ${Math.round(
   totalPrice
 ).toFixed(2)}`;
@@ -107,6 +111,10 @@ content.forEach((div) => {
     console.log(totalPrice);
     document.querySelector("#total").textContent = `$ ${Math.round(
       newTotal
+    ).toFixed(2)}`;
+
+    document.querySelector("#sstotal").textContent = `Total : $${Math.round(
+      totalPrice
     ).toFixed(2)}`;
 
     document.querySelector("#shipping").textContent = `$ ${Math.round(
@@ -191,6 +199,17 @@ document.querySelector("#payment-btn").addEventListener("click", () => {
   let city = document.querySelector("#city").value;
   let state = document.querySelector("#state").value;
   let zipcode = document.querySelector("#zipcode").value;
+  if (
+    email == "" ||
+    country == "" ||
+    address == "" ||
+    city == "" ||
+    state == "" ||
+    zipcode == ""
+  ) {
+    alert("Please Fill all the required details!");
+    return;
+  }
 
   let deliveryDetails = {
     email: email,

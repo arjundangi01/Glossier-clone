@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <!-- <link rel="stylesheet" href="checkout.css" /> -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+      html {
+        height: 100%;
+        /* width: 100%; */
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: #f9f9f9;
+        font-family: "Poppins", sans-serif;
+        height: 100%;
+      }
+      #main {
+        height: 100%;
+        width: 100%;
+        display: flex;
+      }
+      #details-div {
+        margin-top: 80px;
+        width: 60%;
+      }
+      #logo {
+        width: 194px;
+        height: 40px;
+        margin-left: 13%;
+      }
+      #links {
+        display: flex;
+        gap: 20px;
+        margin-left: 3%;
+        justify-content: center;
+        font-style: italic;
+      }
+      #links > h3 {
+        font-weight: lighter;
+        padding-left: 0;
+        margin-right: 0;
+      }
+      #prevPage {
+        font-weight: bolder;
+      }
+      #links a {
+        text-decoration: none;
+        color: inherit;
+      }
+      #cart-items-div {
+        padding-top: 80px;
+        width: 40%;
+      }
+      #contacts-details {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 50px;
+      }
+      #contacts-details h2,
+      #checkout-logo h1 {
+        margin-left: 35%;
+      }
+
+      h2,
+      h3,
+      h4,
+      p,
+      h1 {
+        font-weight: 500;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      #left-contacts h2 {
+        font-weight: 400;
+      }
+      #right-contacts h4 {
+        font-weight: 300;
+      }
+      #left-contacts,
+      #checkout-logo > h1 {
+        width: 40%;
+        margin-left: 2%;
+      }
+      #checkout-logo h1 {
+        text-align: center;
+        padding: 12px;
+        padding-left: 12%;
+      }
+
+      #right-contacts,
+      #logo > div {
+        width: 70%;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+      #address-first,
+      #address-second {
+        display: flex;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #808080;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+      }
+      #delivery-details {
+        display: flex;
+      }
+      #left-del {
+        display: flex;
+      }
+      .main {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        align-items: center;
+        padding: 0px 15px;
+        height: 40px;
+        background-color: #f9f9f9;
+        border: 1px solid gray;
+        border-radius: 3px;
+        cursor: pointer;
+        /* border: 0; */
+        border-radius: 4px;
+      }
+
+      .radio {
+        margin-right: 10px;
+      }
+      .delivery-date {
+        margin-left: 10px;
+      }
+      hr {
+        width: 100%;
+        /* margin-bottom: -15px; */
+        /* margin-top: -5px; */
+        /* width: 0; */
+        border: 1px solid rgba(0, 0, 0, 0.03);
+      }
+      #secondhr {
+        margin-top: -10px;
+        margin-bottom: -20px;
+      }
+      #shipping-charges-div {
+        margin-top: -20px;
+      }
+      #payment-div {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+      #payment-btn {
+        padding: 11px 22px;
+        border: 0;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        font-size: 1rem;
+      }
+      #payment-btn:hover {
+        border: 1px dashed black;
+        cursor: pointer;
+      }
+
+      #cart-items-div {
+        padding-right: 30px;
+        background-color: #f3f3f3;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      #cart-items {
+        display: grid;
+        width: 80%;
+        margin: auto;
+        height: 400px;
+        overflow: scroll;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      #cart-items > div {
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      #cart-items img {
+        width: 50px;
+        margin-right: 20px;
+      }
+      #price {
+        font-size: 1.2vw;
+        font-weight: 800;
+      }
+      #leftCartDiv {
+        display: flex;
+        align-items: center;
+      }
+      #eachCardDiv {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 30px;
+      }
+      #eachCardDiv p,
+      #eachCardDiv h4 {
+        font-size: 1.1vw;
+      }
+      #total {
+        text-align: center;
+      }
+      #subtotal-div,
+      #shipping-charges-div,
+      #total-div {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 80px;
+      }
+      #rzp-button1 {
+        padding: 11px 30px;
+        border: 0;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      #rzp-button1:hover {
+        border: 1px dashed black;
+      }
+      #sstotal {
+        display: none;
+      }
+      @media screen and (max-width: 1000px) {
+        #sstotal-div {
+          display: flex;
+        }
+        #sstotal {
+          display: block;
+          margin: auto;
+        }
+        #details-div {
+          margin-top: 50px;
+        }
+        #contacts-details,
+        #checkout-logo {
+          margin: 0;
+          margin-bottom: 5px;
+        }
+        #right-contacts,
+        #right-shipping,
+        #right-delivery,
+        #checkout-logo h1 {
+          padding: 0;
+          width: 70%;
+        }
+        #left-contacts,
+        #left-shipping,
+        #left-delivery {
+          width: 30%;
+          margin-left: -8%;
+        }
+
+        #cart-items-div {
+          display: none;
+        }
+        #details-div {
+          width: 100%;
+        }
+        #checkout-logo {
+          margin-bottom: 8px;
+          display: flex;
+          justify-content: center;
+          margin: auto;
+        }
+        #logo {
+          width: 144px;
+          height: 30px;
+        }
+        #contacts-details {
+          width: 100%;
+          margin: 0;
+        }
+        #contacts-details h4 {
+          font-size: 0.8rem;
+        }
+        #contacts-details h2 {
+          font-size: 0.8rem;
+        }
+        #payment-div {
+          margin-top: 30px;
+        }
+      }
+      @media screen and (min-width: 1274px) {
+        #eachCardDiv p,
+        #eachCardDiv h4 {
+          font-size: 1vw;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="details-div">
+        <div id="checkout-logo">
+          <img
+            id="logo"
+            src="https://cdn.shopify.com/s/files/1/0627/9164/7477/files/g-sharing-logo.png?85400"
+            alt=""
+          />
+        </div>
+        <div id="links">
+          <a href="checkout.html"><h3>Checkout</h3></a>
+          <h3>></h3>
+          <a href="payment.html"><h3 id="prevPage">Payment</h3></a>
+        </div>
+        <div id="sstotal-div">
+          <h1 id="sstotal">Total : $100</h1>
+        </div>
+        <div id="contacts-details">
+          <div id="left-contacts">
+            <h2>Contacts</h2>
+
+            <h2>Ship to</h2>
+
+            <h2>Method</h2>
+          </div>
+          <div id="right-contacts">
+            <h4 id="contact">Rnoad</h4>
+
+            <h4 id="shipping">Shipping</h4>
+
+            <h4 id="method">Mehto</h4>
+          </div>
+        </div>
+        <div id="payment-div">
+          <!-- <button id="payment-btn">Procced to pay</button> -->
+          <!-- <button id="rzp-button1" class="btn btn-outline-dark btn-lg">
+                <i class="fas fa-money-bill"></i> Procced to Checkout
+              </button> -->
+          <button id="rzp-button1" class="btn btn-outline-dark btn-lg">
+            <i class="fas fa-money-bill"></i>Pay now
+          </button>
+        </div>
+      </div>
+      <div id="cart-items-div">
+        <div id="cart-items"></div>
+        <!-- cart items will append here  -->
+        <hr id="firsthr" />
+        <div id="subtotal-div">
+          <p>Subtotal</p>
+          <h3 id="subtotal">$122</h3>
+          <!-- // total cost -->
+        </div>
+        <div id="shipping-charges-div">
+          <p>Shipping</p>
+          <h3 id="shipping">$ 0.00</h3>
+          <!-- // shipping charges -->
+        </div>
+        <hr id="secondhr" />
+        <div id="total-div">
+          <h1>Total</h1>
+          <h1 id="total">Total</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  // let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
+  let cartArr = [
+    {
+      image1:
+        "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+      image2:
+        "https://glossier-prod.imgix.net/products/futuredew-9.jpg?auto=compress,format&cs=srgb&w=540",
+      image3:
+        "https://glossier-prod.imgix.net/files/glossier-futuredew-module-03.png?auto=compress,format&cs=srgb&w=540",
+      video1:
+        "https://player.vimeo.com/progressive_redirect/playback/815642486/rendition/480p/file.mp4?loc=external&signature=0574411195b6974759ec4c9046dd265d50671f804c539f26d1de22499ec0e2b6",
+      name: "Futuredew",
+      desc: "Oil serum hybrid",
+      skinType: "Dry",
+      rating: 2161,
+      price: 26,
+      category: "Treatments",
+      bestSelling: "yes",
+      quantity: 1,
+    },
+    {
+      image1:
+        "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+      image2:
+        "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+      image3:
+        "https://glossier-prod.imgix.net/files/glossier-mjc-ugc-02.png?auto=compress,format&cs=srgb&w=540",
+      video1:
+        "https://player.vimeo.com/progressive_redirect/playback/815656484/rendition/480p/file.mp4?loc=external&signature=6f6c77bf3ae648324b247d8ed8798e9119d4e5513bb53bb899929122e35eba41",
+      name: "Milky Jelly Cleanser",
+      desc: "Conditioning face wash",
+      skinType: "Dry",
+      rating: 4004,
+      price: 19,
+      category: "Cleansers",
+      bestSelling: "yes",
+      quantity: 1,
+    },
+    {
+      image1:
+        "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+      image2:
+        "https://glossier-prod.imgix.net/products/futuredew-9.jpg?auto=compress,format&cs=srgb&w=540",
+      image3:
+        "https://glossier-prod.imgix.net/files/glossier-futuredew-module-03.png?auto=compress,format&cs=srgb&w=540",
+      video1:
+        "https://player.vimeo.com/progressive_redirect/playback/815642486/rendition/480p/file.mp4?loc=external&signature=0574411195b6974759ec4c9046dd265d50671f804c539f26d1de22499ec0e2b6",
+      name: "Futuredew",
+      desc: "Oil serum hybrid",
+      skinType: "Dry",
+      rating: 2161,
+      price: 26,
+      category: "Treatments",
+      bestSelling: "yes",
+      quantity: 1,
+    },
+    {
+      image1:
+        "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+      image2:
+        "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+      image3:
+        "https://glossier-prod.imgix.net/files/glossier-mjc-ugc-02.png?auto=compress,format&cs=srgb&w=540",
+      video1:
+        "https://player.vimeo.com/progressive_redirect/playback/815656484/rendition/480p/file.mp4?loc=external&signature=6f6c77bf3ae648324b247d8ed8798e9119d4e5513bb53bb899929122e35eba41",
+      name: "Milky Jelly Cleanser",
+      desc: "Conditioning face wash",
+      skinType: "Dry",
+      rating: 4004,
+      price: 19,
+      category: "Cleansers",
+      bestSelling: "yes",
+      quantity: 1,
+    },
+  ];
+
+  let totalPrice = cartArr.reduce((acc, el) => acc + el.quantity * el.price, 0);
+  let orgPrice = totalPrice;
+
+  document.querySelector("#total").textContent = `$ ${Math.round(
+    totalPrice
+  ).toFixed(2)}`;
+
+  document.querySelector("#subtotal").textContent = `$ ${Math.round(
+    totalPrice
+  ).toFixed(2)}`;
+  console.log(totalPrice);
+  displayCart(cartArr);
+
+  // Appending cart items;
+
+  function displayCart(arr) {
+    arr.forEach((el, i) => {
+      let div = document.createElement("div");
+      div.setAttribute("id", "eachCardDiv");
+
+      let leftCartDiv = document.createElement("div");
+      leftCartDiv.setAttribute("id", "leftCartDiv");
+      let firstDiv = document.createElement("div");
+      let img = document.createElement("img");
+      img.setAttribute("src", el.image1);
+      // leftCartDiv.append(img, name);
+      firstDiv.append(img);
+
+      let secondDiv = document.createElement("div");
+      let name = document.createElement("h4");
+      name.textContent = el.name;
+      let desc = document.createElement("p");
+      desc.textContent = el.desc;
+
+      secondDiv.append(name, desc);
+      leftCartDiv.append(firstDiv, secondDiv);
+
+      let rightCartDiv = document.createElement("div");
+      let price = document.createElement("p");
+      price.setAttribute("id", "price");
+      let cost = Math.round(el.price);
+      price.textContent = `$ ${cost.toFixed(2)}`;
+      rightCartDiv.append(price);
+
+      div.append(leftCartDiv, rightCartDiv);
+      document.querySelector("#cart-items").append(div);
+    });
+  }
+  // document.querySelector
+</script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  let deliveryDetails = JSON.parse(localStorage.getItem("deliveryDetails"));
+  console.log(deliveryDetails);
+  dispalyData(deliveryDetails);
+  function dispalyData(data) {
+    document.querySelector("#contact").textContent = data.email;
+    let address = [data.address, data.state, data.country, data.zipcode];
+    address.join(",");
+    document.querySelector("#shipping").textContent = address;
+    if (data.orgPrice == data.finalPrice) {
+      document.querySelector("#method").textContent =
+        "Standard delivery (7 - 10 business days) • $0";
+    } else if (data.finalPrice - data.orgPrice == 12) {
+      document.querySelector("#method").textContent =
+        "Expedited delivery (3 - 4 business days) • $12";
+    } else if (data.finalPrice - data.orgPrice == 19) {
+      document.querySelector("#method").textContent =
+        "Overnight delivery (7 - 10 business days) • $19";
+    }
+  }
+</script>
+<script>
+  var options = {
+    name: "Glossier",
+    key: "rzp_test_mwf4cJrbWOSkab", // Enter the Key ID generated from the Dashboard
+    amount: deliveryDetails.finalPrice * 100,
+    currency: "USD",
+    description: "Glossier",
+    image:
+      "https://cdn.shopify.com/s/files/1/0627/9164/7477/files/g-sharing-logo.png?85492",
+    prefill: {
+      email: "gaurav.kumar@example.com",
+      contact: +919900000000,
+    },
+    config: {
+      display: {
+        blocks: {
+          utib: {
+            //name for Axis block
+            name: "Pay using Axis Bank",
+            instruments: [
+              {
+                method: "card",
+                issuers: ["UTIB"],
+              },
+              {
+                method: "netbanking",
+                banks: ["UTIB"],
+              },
+            ],
+          },
+          other: {
+            //  name for other block
+            name: "Other Payment modes",
+            instruments: [
+              {
+                method: "card",
+                issuers: ["ICIC"],
+              },
+              {
+                method: "netbanking",
+              },
+            ],
+          },
+        },
+        hide: [
+          {
+            method: "upi",
+          },
+        ],
+        sequence: ["block.utib", "block.other"],
+        preferences: {
+          show_default_blocks: false, // Should Checkout show its default blocks?
+        },
+      },
+    },
+    handler: function (response) {
+      // alert(response.razorpay_payment_id);.
+      window.location.href = "thank-you.html";
+    },
+    modal: {
+      ondismiss: function () {
+        if (confirm("Are you sure, you want to close the form?")) {
+          txt = "You pressed OK!";
+          console.log("Checkout form closed by the user");
+        } else {
+          txt = "You pressed Cancel!";
+          console.log("Complete the Payment");
+        }
+      },
+    },
+  };
+  var rzp1 = new Razorpay(options);
+  document.getElementById("rzp-button1").onclick = function (e) {
+    rzp1.open();
+    e.preventDefault();
+  };
+</script>
