@@ -280,7 +280,9 @@ margin-right: 20px;
 #sets>.set1:last-child{
     margin-left: 52%;
 }
-
+.name1{
+    font-size: 1.5rem;
+}
 .sibl1{
     display: flex;
     justify-content: space-between;
@@ -364,7 +366,7 @@ strike{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: white;
     width: 90%;
-    height: 100px;
+    height: 150px;
     margin-left: 50px;
     border-radius: 20px;
     margin-bottom: 80px;
@@ -372,13 +374,11 @@ strike{
 #main>#mailimg{
     margin-left: 200px;
     margin-right: 100px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 #main>#mail{
-    margin-top: 20px;
-    font-size: 1rem;
     margin-right: 100px;
-    font-weight: 500;
+    margin-top: 40px;
 }
 #mail>p{
     width: 340px;
@@ -386,14 +386,17 @@ strike{
 }
 #input>input{
     width: 380px;
-    margin-top: 40px;
+    margin-top: 45px;
     height: 25px;
 }
 #input>button{
-    margin-right: 20px;
+    margin-left: -1.4%;
     border-radius: 5px;
-    height: 30px;
+    height: 25px;
     border: none;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
     cursor: pointer;
 }
 #input>p{
