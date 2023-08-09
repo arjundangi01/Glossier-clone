@@ -24,7 +24,7 @@ nav > div > div {
   margin: 0;
 }
 
-/* right--------------------------- */
+/* right start--------------------------- */
 
 .nav-right {
   display: flex;
@@ -33,6 +33,18 @@ nav > div > div {
 .nav-right i {
   font-size: 1rem;
 }
+#user-detail-div{
+  width: 40px;
+  /* border: 1px solid #000; */
+}
+#logout-btn{
+  display: none;
+  position: relative;
+
+}
+
+/* right end--------------------------- */
+
 /* ----------------middle----------------- */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
