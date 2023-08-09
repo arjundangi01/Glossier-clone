@@ -227,9 +227,13 @@ function navbar() {
      
     </div>
         
-        <a href="/Signup.html"><p><i class="fa-regular fa-user" style="color: #000000"></i></p></a>
-        
-        <p id="user-name"></p>
+    <div id="user-detail-div">
+    <a href="#"> <p id="user-name"><i class="fa-regular fa-user" style="color: #000000">
+    </i></p></a>
+    <p id="logout-btn"> logout </p>
+
+   </div>
+
         <p
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"

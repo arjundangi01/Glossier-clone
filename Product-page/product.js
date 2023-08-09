@@ -4,9 +4,8 @@ window.addToCart = addToCart;
 window.reduceQuantity = reduceQuantity;
 window.addQuantity = addQuantity;
 window.deleteItem = deleteItem;
-window.hover = hover;
-window.hover2 = hover2;
-
+window.moveToDetailPage = moveToDetailPage;
+// window.hover = hover;
 document.getElementById("navbar").innerHTML = navbar();
 
 fetchData(1);
@@ -31,7 +30,7 @@ function display(array) {
     container.innerHTML += ` 
     <div class="prod-card">
       <div class="prod-img-div">
-          <img  onmouseover="hover(${index})" onmouseout="hover2(${index})"  src="${element.image1}" alt="">
+          <img onclick="moveToDetailPage(${index})"  src="${element.image1}" alt="">
       </div>
 
       <div class="prod-detail-div">
