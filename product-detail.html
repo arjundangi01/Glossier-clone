@@ -26,8 +26,7 @@
         text-align: center;
       }
       #product-detail {
-        margin-top: 40px;
-        /* border: 1px solid black; */
+        margin-top: 08%;
         padding-left: 20px;
         padding-right: 20px;
       }
@@ -38,20 +37,17 @@
         width: 65%;
         margin: auto;
         margin-top: 80px;
-        /* border: 1px solid gold; */
         display: flex;
         align-items: center;
         justify-content: space-evenly;
       }
       #quantity-and-btn-div {
-        /* border: 1px solid crimson; */
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: 30%;
       }
       #quantity-and-btn-div button {
-        /* border: 0; */
         width: 40%;
         height: 45px;
         font-size: 1.1rem;
@@ -107,7 +103,6 @@
       #whydiv,
       #howtouse {
         display: flex;
-        /* border: 1px solid green; */
         width: 80%;
         margin: auto;
       }
@@ -115,7 +110,7 @@
         width: 40%;
       }
       #right-why-div p {
-        width: 80%;
+        width: 100%;
       }
       #right-why-div,
       #right-ingredients {
@@ -123,7 +118,6 @@
       }
       #img-div {
         display: flex;
-        /* justify-content: center; */
       }
       #howtouse {
         margin-top: 40px;
@@ -138,7 +132,6 @@
         width: 60%;
       }
       #righthowtouse {
-        /* border: 1px solid red; */
         display: flex;
         justify-content: center;
       }
@@ -148,12 +141,30 @@
         gap: 10px;
         margin-right: 15px;
       }
-      #img-div img {
-        /* width: 350px; */
-        /* height: 500px; */
-        /* width: 100%; */
-        /* height: 400px; */
-        /* margin-right: 20px; */
+      /* #product-img { */
+      /* border: 1px solid gold; */
+      /* height: 450px; */
+      /* } */
+      /* #product-img img { */
+      /* width: 350px; */
+      /* height: 500px; */
+      /* width: 100%; */
+      /* height: 400px; */
+      /* margin-right: 20px; */
+      /* max-width: 450px; */
+      /* } */
+      #product-img {
+        padding-top: 60px;
+        width: 450px;
+        /* border: 1px solid #ccc; */
+        overflow: hidden;
+      }
+
+      #product-img img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: 0 auto;
       }
       #ingredients {
         display: flex;
@@ -168,7 +179,6 @@
         justify-content: space-between;
       }
       #right-ingredients p {
-        /* border: 1px solid red; */
         font-weight: lighter;
         width: 70%;
       }
@@ -194,12 +204,19 @@
       }
       @media screen and (max-width: 800px) {
         #top-div {
-          /* border: 1px solid yellow; */
           flex-direction: column;
+          justify-content: center;
         }
         #top-div img {
-          width: 40%;
+          width: 50%;
         }
+        #product-img {
+          width: 100%;
+          margin: auto;
+          padding-top: 0px;
+          margin-top: -20px;
+        }
+
         #product-detail h1,
         #product-detail h3,
         #product-detail p {
@@ -213,8 +230,6 @@
         #cart-and-quantity-btn {
           margin-top: 10px;
           width: 80%;
-          border: 1px solid green;
-          color: aqua;
         }
         #whydiv {
           flex-direction: column;
@@ -222,7 +237,6 @@
         }
         #right-why-div {
           width: 100%;
-          /* border: 1px solid green; */
         }
         #right-why-div p {
           width: 100%;
@@ -269,14 +283,9 @@
         }
         #product-detail h1 {
           width: 100%;
-          /* border: 1px solid red; */
         }
         #product-detail button {
           height: 30px;
-        }
-        #quantity-and-btn-div {
-          /* width: 100%; */
-          border: 1px solid palegreen;
         }
       }
       @media screen and (max-width: 1100px) {
@@ -299,11 +308,9 @@
           height: 35px;
         }
         #cart-and-quantity-btn > div:nth-child(1) {
-          /* border: 1px solid rebeccapurple; */
           width: 40%;
         }
         #cart-btn {
-          /* border: 1px solid rebeccapurple; */
           width: 60%;
         }
       }
@@ -323,12 +330,12 @@
       </div>
       <div id="product-detail">
         <div id="name-and-desc">
-          <div><h1>Milky Jelly Cleasner</h1></div>
-          <div><h3>$12</h3></div>
+          <div><h1 id="product-name">Milky Jelly Cleanser</h1></div>
+          <div><h3 id="price">$12</h3></div>
           <div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed et
-              neque id.
+            <p id="desc">
+              A nourishing and pH-balanced gel-cream cleanser that plays nicely
+              with all skin types.
             </p>
           </div>
         </div>
@@ -378,6 +385,7 @@
         <div id="img-div">
           <div>
             <img
+              id="image2"
               class="resized-image"
               src="https://glossier-prod.imgix.net/products/glossier-mjc-carousel-08.png?auto=compress,format&cs=srgb&w=540"
               alt=""
@@ -385,6 +393,7 @@
           </div>
           <div>
             <img
+              id="image3"
               class="resized-image"
               src="https://glossier-prod.imgix.net/files/glossier-mjc-ugc-02.png?auto=compress,format&cs=srgb&w=540"
               alt=""
@@ -449,6 +458,7 @@
           mascara, add water, massage over the rest of your face, and rinse.
         </p>
         <video
+          id="video1"
           height="400px"
           autoplay
           loop
@@ -460,3 +470,122 @@
   </body>
 </html>
 <script type="module"></script>
+<script>
+  // let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
+  // let currProduct = JSON.parse(localStorage.getItem("singleItem"))
+
+  //  <---- For checking --->
+  let currProduct = {
+    image1:
+      "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+    image2:
+      "https://glossier-prod.imgix.net/products/futuredew-9.jpg?auto=compress,format&cs=srgb&w=540",
+    image3:
+      "https://glossier-prod.imgix.net/files/glossier-futuredew-module-03.png?auto=compress,format&cs=srgb&w=540",
+    video1:
+      "https://player.vimeo.com/progressive_redirect/playback/815642486/rendition/480p/file.mp4?loc=external&signature=0574411195b6974759ec4c9046dd265d50671f804c539f26d1de22499ec0e2b6",
+    name: "Futuredew",
+    desc: "Oil serum hybrid",
+    skinType: "Dry",
+    rating: 2161,
+    price: 26,
+    category: "Treatments",
+    bestSelling: "yes",
+    quantity: 1,
+  };
+
+  let cartArr = [
+    {
+      image1:
+        "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+      image2:
+        "https://glossier-prod.imgix.net/products/futuredew-9.jpg?auto=compress,format&cs=srgb&w=540",
+      image3:
+        "https://glossier-prod.imgix.net/files/glossier-futuredew-module-03.png?auto=compress,format&cs=srgb&w=540",
+      video1:
+        "https://player.vimeo.com/progressive_redirect/playback/815642486/rendition/480p/file.mp4?loc=external&signature=0574411195b6974759ec4c9046dd265d50671f804c539f26d1de22499ec0e2b6",
+      name: "Futuredew",
+      desc: "Oil serum hybrid",
+      skinType: "Dry",
+      rating: 2161,
+      price: 26,
+      category: "Treatments",
+      bestSelling: "yes",
+      quantity: 1,
+      id: 1,
+    },
+    {
+      image1:
+        "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+      image2:
+        "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+      image3:
+        "https://glossier-prod.imgix.net/files/glossier-mjc-ugc-02.png?auto=compress,format&cs=srgb&w=540",
+      video1:
+        "https://player.vimeo.com/progressive_redirect/playback/815656484/rendition/480p/file.mp4?loc=external&signature=6f6c77bf3ae648324b247d8ed8798e9119d4e5513bb53bb899929122e35eba41",
+      name: "Milky Jelly Cleanser",
+      desc: "Conditioning face wash",
+      skinType: "Dry",
+      rating: 4004,
+      price: 19,
+      category: "Cleansers",
+      bestSelling: "yes",
+      quantity: 1,
+      id: 2,
+    },
+  ];
+  //  <---------->
+
+  let quantity = document.querySelector("#quantity").innerText;
+  let minBtn = document.querySelector("#minus");
+  let plusBtn = document.querySelector("#plus");
+  let cartBtn = document.querySelector("#cart-btn");
+
+  function updateButtonState() {
+    minBtn.disabled = quantity <= 1;
+  }
+  updateButtonState();
+
+  document.querySelector("#minus").addEventListener("click", () => {
+    if (quantity > 1) {
+      quantity--;
+      document.querySelector("#quantity").innerText = quantity;
+      updateButtonState();
+    }
+  });
+
+  plusBtn.addEventListener("click", () => {
+    quantity++;
+    document.querySelector("#quantity").innerText = quantity;
+    updateButtonState();
+  });
+
+  // add to cart btn
+  cartBtn.addEventListener("click", () => {
+    let currProdId = currProduct.id;
+
+    let prodIdx = cartArr.findIndex((obj) => obj.id === currProdId);
+
+    if (prodIdx !== -1) {
+      cartArr[prodIdx].quantity++;
+    } else {
+      cartArr.push({ ...currProduct, quantity: 1 });
+    }
+
+    localStorage.setItem("cartArr", JSON.stringify(cartArr));
+  });
+
+  //
+  document
+    .querySelector("#product-img img")
+    .setAttribute("src", currProduct.image1);
+
+  document.querySelector("#image2").setAttribute("src", currProduct.image2);
+  document.querySelector("#image3").setAttribute("src", currProduct.image3);
+  document.querySelector("#video1").setAttribute("src", currProduct.video1);
+  document.querySelector("#product-name").textContent = currProduct.name;
+  document.querySelector("#price").textContent = `$ ${Math.round(
+    currProduct.price
+  ).toFixed(2)}`;
+  // document.querySelector("#desc").textContent = currProduct.desc;
+</script>
