@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/ab7e10d51f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../Navbar/navbar.css" />
+    <link rel="stylesheet" href="../cart-page/cart.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap");
       body {
@@ -317,6 +334,7 @@
     </style>
   </head>
   <body>
+    <div id="navbar"></div>
     <div id="top-div">
       <div id="product-img">
         <img
@@ -348,7 +366,15 @@
             <button id="quantity">1</button>
             <button id="plus">+</button>
           </div>
-          <button id="cart-btn">Add to bag</button>
+          <button
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+            id="cart-btn"
+          >
+            Add to bag
+          </button>
           <div id="wishlist-div">
             <img
               width="70"
@@ -470,70 +496,32 @@
   </body>
 </html>
 <script type="module"></script>
-<script>
-  // let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
-  // let currProduct = JSON.parse(localStorage.getItem("singleItem"))
-  // fd
-  //  <---- For checking --->
-  let currProduct = {
-    image1:
-      "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540",
-    image2:
-      "https://glossier-prod.imgix.net/products/futuredew-9.jpg?auto=compress,format&cs=srgb&w=540",
-    image3:
-      "https://glossier-prod.imgix.net/files/glossier-futuredew-module-03.png?auto=compress,format&cs=srgb&w=540",
-    video1:
-      "https://player.vimeo.com/progressive_redirect/playback/815642486/rendition/480p/file.mp4?loc=external&signature=0574411195b6974759ec4c9046dd265d50671f804c539f26d1de22499ec0e2b6",
-    name: "Futuredew",
-    desc: "Oil serum hybrid",
-    skinType: "Dry",
-    rating: 2161,
-    price: 26,
-    category: "Treatments",
-    bestSelling: "yes",
-    quantity: 1,
-  };
+<script type="module">
+  import { showCart } from "../nav-comp/nav.js";
 
-  let cartArr = [
-    {
-      image1:
-        "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540",
-      image2:
-        "https://glossier-prod.imgix.net/products/futuredew-9.jpg?auto=compress,format&cs=srgb&w=540",
-      image3:
-        "https://glossier-prod.imgix.net/files/glossier-futuredew-module-03.png?auto=compress,format&cs=srgb&w=540",
-      video1:
-        "https://player.vimeo.com/progressive_redirect/playback/815642486/rendition/480p/file.mp4?loc=external&signature=0574411195b6974759ec4c9046dd265d50671f804c539f26d1de22499ec0e2b6",
-      name: "Futuredew",
-      desc: "Oil serum hybrid",
-      skinType: "Dry",
-      rating: 2161,
-      price: 26,
-      category: "Treatments",
-      bestSelling: "yes",
-      quantity: 1,
-      id: 1,
-    },
-    {
-      image1:
-        "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-01.png?auto=compress,format&cs=srgb&w=540",
-      image2:
-        "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-08.png?auto=compress,format&cs=srgb&w=540",
-      image3:
-        "https://glossier-prod.imgix.net/files/glossier-mjc-ugc-02.png?auto=compress,format&cs=srgb&w=540",
-      video1:
-        "https://player.vimeo.com/progressive_redirect/playback/815656484/rendition/480p/file.mp4?loc=external&signature=6f6c77bf3ae648324b247d8ed8798e9119d4e5513bb53bb899929122e35eba41",
-      name: "Milky Jelly Cleanser",
-      desc: "Conditioning face wash",
-      skinType: "Dry",
-      rating: 4004,
-      price: 19,
-      category: "Cleansers",
-      bestSelling: "yes",
-      quantity: 1,
-      id: 2,
-    },
-  ];
+  let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
+  let currProduct = JSON.parse(localStorage.getItem("singleItem"));
+
+  //  <---- For checking --->
+  // let currProduct = {
+  //   image1:
+  //     "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+  //   image2:
+  //     "https://glossier-prod.imgix.net/products/futuredew-9.jpg?auto=compress,format&cs=srgb&w=540",
+  //   image3:
+  //     "https://glossier-prod.imgix.net/files/glossier-futuredew-module-03.png?auto=compress,format&cs=srgb&w=540",
+  //   video1:
+  //     "https://player.vimeo.com/progressive_redirect/playback/815642486/rendition/480p/file.mp4?loc=external&signature=0574411195b6974759ec4c9046dd265d50671f804c539f26d1de22499ec0e2b6",
+  //   name: "Futuredew",
+  //   desc: "Oil serum hybrid",
+  //   skinType: "Dry",
+  //   rating: 2161,
+  //   price: 26,
+  //   category: "Treatments",
+  //   bestSelling: "yes",
+  //   quantity: 1,
+  // };
+
   //  <---------->
 
   let quantity = document.querySelector("#quantity").innerText;
@@ -549,6 +537,7 @@
   document.querySelector("#minus").addEventListener("click", () => {
     if (quantity > 1) {
       quantity--;
+
       document.querySelector("#quantity").innerText = quantity;
       updateButtonState();
     }
@@ -556,6 +545,7 @@
 
   plusBtn.addEventListener("click", () => {
     quantity++;
+
     document.querySelector("#quantity").innerText = quantity;
     updateButtonState();
   });
@@ -563,16 +553,18 @@
   // add to cart btn
   cartBtn.addEventListener("click", () => {
     let currProdId = currProduct.id;
+    cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
 
     let prodIdx = cartArr.findIndex((obj) => obj.id === currProdId);
 
     if (prodIdx !== -1) {
-      cartArr[prodIdx].quantity++;
+      cartArr[prodIdx].quantity = cartArr[prodIdx].quantity + +quantity;
     } else {
       cartArr.push({ ...currProduct, quantity: 1 });
     }
 
     localStorage.setItem("cartArr", JSON.stringify(cartArr));
+    showCart();
   });
 
   //
