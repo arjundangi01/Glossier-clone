@@ -230,8 +230,7 @@ function navbar() {
           </i></p></a>
           <p id="logout-btn"> logout </p>
   
-         </div>
-      
+         </div>      
         <p
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
