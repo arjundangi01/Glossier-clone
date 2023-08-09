@@ -29,8 +29,8 @@ function display(array) {
   array.forEach((element, index, array) => {
     container.innerHTML += ` 
     <div class="prod-card">
-      <div class="prod-img-div">
-          <img onclick="moveToDetailPage(${index})"  src="${element.image1}" alt="">
+      <div onclick="moveToDetailPage(${index})" class="prod-img-div">
+          <img   src="${element.image1}" alt="">
       </div>
 
       <div class="prod-detail-div">
