@@ -92,6 +92,22 @@
         padding-left: 12%;
       }
 
+      #cartImg {
+        position: relative;
+        margin-right: 20px;
+      }
+
+      #quantityDiv {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: -10px;
+        right: -10px;
+        background-color: #808080;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+      }
       #right-contacts,
       #logo > div {
         width: 70%;
@@ -359,7 +375,7 @@
         </div>
         <div id="shipping-charges-div">
           <p>Shipping</p>
-          <h3 id="shipping">$ 0.00</h3>
+          <h3 id="shipping-charges">$ 0.00</h3>
           <!-- // shipping charges -->
         </div>
         <hr id="secondhr" />
@@ -390,7 +406,7 @@
       price: 26,
       category: "Treatments",
       bestSelling: "yes",
-      quantity: 1,
+      quantity: 4,
     },
     {
       image1:
@@ -408,7 +424,7 @@
       price: 19,
       category: "Cleansers",
       bestSelling: "yes",
-      quantity: 1,
+      quantity: 2,
     },
     {
       image1:
@@ -451,10 +467,6 @@
   let totalPrice = cartArr.reduce((acc, el) => acc + el.quantity * el.price, 0);
   let orgPrice = totalPrice;
 
-  document.querySelector("#total").textContent = `$ ${Math.round(
-    totalPrice
-  ).toFixed(2)}`;
-
   document.querySelector("#subtotal").textContent = `$ ${Math.round(
     totalPrice
   ).toFixed(2)}`;
@@ -471,12 +483,17 @@
       let leftCartDiv = document.createElement("div");
       leftCartDiv.setAttribute("id", "leftCartDiv");
       let firstDiv = document.createElement("div");
+      firstDiv.setAttribute("id", "cartImg");
+      let quantityDiv = document.createElement("div");
+      quantityDiv.setAttribute("id", "quantityDiv");
+      quantityDiv.textContent = el.quantity;
       let img = document.createElement("img");
       img.setAttribute("src", el.image1);
       // leftCartDiv.append(img, name);
-      firstDiv.append(img);
+      firstDiv.append(img, quantityDiv);
 
       let secondDiv = document.createElement("div");
+      secondDiv.setAttribute("id", "secDiv");
       let name = document.createElement("h4");
       name.textContent = el.name;
       let desc = document.createElement("p");
@@ -501,6 +518,15 @@
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
   let deliveryDetails = JSON.parse(localStorage.getItem("deliveryDetails"));
+
+  document.querySelector("#total").textContent = `$ ${Math.round(
+    deliveryDetails.finalPrice
+  ).toFixed(2)}`;
+
+  document.querySelector("#shipping-charges").textContent = `$ ${Math.round(
+    deliveryDetails.finalPrice - deliveryDetails.orgPrice
+  ).toFixed(2)}`;
+
   console.log(deliveryDetails);
   dispalyData(deliveryDetails);
   function dispalyData(data) {
@@ -516,7 +542,7 @@
         "Expedited delivery (3 - 4 business days) • $12";
     } else if (data.finalPrice - data.orgPrice == 19) {
       document.querySelector("#method").textContent =
-        "Overnight delivery (7 - 10 business days) • $19";
+        "Overnight delivery (1 - 2 business days) • $19";
     }
   }
 </script>
