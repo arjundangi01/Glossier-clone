@@ -6,7 +6,6 @@ window.addQuantity = addQuantity;
 window.deleteItem = deleteItem;
 window.moveToDetailPage = moveToDetailPage;
 // window.hover = hover;
-
 document.getElementById("navbar").innerHTML = navbar();
 
 fetchData(1);
