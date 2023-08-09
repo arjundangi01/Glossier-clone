@@ -339,7 +339,7 @@ function displayCart(array) {
         <div
           class="cart-prod-det-2 d-flex flex-column  justify-content-xxl-between"
         >
-          <p>${element.price}</p>
+          <p>${element.price*element.quantity}</p>
           <p onclick="deleteItem(${index})" id="remove-item">Remove</p>
         </div>
       </div>
