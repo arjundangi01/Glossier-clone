@@ -290,5 +290,6 @@ logoutBtn.addEventListener("click", () => {
 function moveToDetailPage(index) {
   let singleItem = output[index]
   localStorage.setItem("singleItem", JSON.stringify(singleItem));
-  console.log(singleItem)
+  // console.log(singleItem)
+  window.location.assign("../product-detail.html")
 }

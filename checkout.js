@@ -1,78 +1,78 @@
-// let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
-let cartArr = [
-  {
-    image1:
-      "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540",
-    image2:
-      "https://glossier-prod.imgix.net/products/futuredew-9.jpg?auto=compress,format&cs=srgb&w=540",
-    image3:
-      "https://glossier-prod.imgix.net/files/glossier-futuredew-module-03.png?auto=compress,format&cs=srgb&w=540",
-    video1:
-      "https://player.vimeo.com/progressive_redirect/playback/815642486/rendition/480p/file.mp4?loc=external&signature=0574411195b6974759ec4c9046dd265d50671f804c539f26d1de22499ec0e2b6",
-    name: "Futuredew",
-    desc: "Oil serum hybrid",
-    skinType: "Dry",
-    rating: 2161,
-    price: 26,
-    category: "Treatments",
-    bestSelling: "yes",
-    quantity: 2,
-  },
-  {
-    image1:
-      "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-01.png?auto=compress,format&cs=srgb&w=540",
-    image2:
-      "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-08.png?auto=compress,format&cs=srgb&w=540",
-    image3:
-      "https://glossier-prod.imgix.net/files/glossier-mjc-ugc-02.png?auto=compress,format&cs=srgb&w=540",
-    video1:
-      "https://player.vimeo.com/progressive_redirect/playback/815656484/rendition/480p/file.mp4?loc=external&signature=6f6c77bf3ae648324b247d8ed8798e9119d4e5513bb53bb899929122e35eba41",
-    name: "Milky Jelly Cleanser",
-    desc: "Conditioning face wash",
-    skinType: "Dry",
-    rating: 4004,
-    price: 19,
-    category: "Cleansers",
-    bestSelling: "yes",
-    quantity: 4,
-  },
-  {
-    image1:
-      "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540",
-    image2:
-      "https://glossier-prod.imgix.net/products/futuredew-9.jpg?auto=compress,format&cs=srgb&w=540",
-    image3:
-      "https://glossier-prod.imgix.net/files/glossier-futuredew-module-03.png?auto=compress,format&cs=srgb&w=540",
-    video1:
-      "https://player.vimeo.com/progressive_redirect/playback/815642486/rendition/480p/file.mp4?loc=external&signature=0574411195b6974759ec4c9046dd265d50671f804c539f26d1de22499ec0e2b6",
-    name: "Futuredew",
-    desc: "Oil serum hybrid",
-    skinType: "Dry",
-    rating: 2161,
-    price: 26,
-    category: "Treatments",
-    bestSelling: "yes",
-    quantity: 1,
-  },
-  {
-    image1:
-      "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-01.png?auto=compress,format&cs=srgb&w=540",
-    image2:
-      "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-08.png?auto=compress,format&cs=srgb&w=540",
-    image3:
-      "https://glossier-prod.imgix.net/files/glossier-mjc-ugc-02.png?auto=compress,format&cs=srgb&w=540",
-    video1:
-      "https://player.vimeo.com/progressive_redirect/playback/815656484/rendition/480p/file.mp4?loc=external&signature=6f6c77bf3ae648324b247d8ed8798e9119d4e5513bb53bb899929122e35eba41",
-    name: "Milky Jelly Cleanser",
-    desc: "Conditioning face wash",
-    skinType: "Dry",
-    rating: 4004,
-    price: 19,
-    category: "Cleansers",
-    bestSelling: "yes",
-    quantity: 1,
-  },
-];
+let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
+// let cartArr = [
+//   {
+//     image1:
+//       "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+//     image2:
+//       "https://glossier-prod.imgix.net/products/futuredew-9.jpg?auto=compress,format&cs=srgb&w=540",
+//     image3:
+//       "https://glossier-prod.imgix.net/files/glossier-futuredew-module-03.png?auto=compress,format&cs=srgb&w=540",
+//     video1:
+//       "https://player.vimeo.com/progressive_redirect/playback/815642486/rendition/480p/file.mp4?loc=external&signature=0574411195b6974759ec4c9046dd265d50671f804c539f26d1de22499ec0e2b6",
+//     name: "Futuredew",
+//     desc: "Oil serum hybrid",
+//     skinType: "Dry",
+//     rating: 2161,
+//     price: 26,
+//     category: "Treatments",
+//     bestSelling: "yes",
+//     quantity: 2,
+//   },
+//   {
+//     image1:
+//       "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+//     image2:
+//       "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+//     image3:
+//       "https://glossier-prod.imgix.net/files/glossier-mjc-ugc-02.png?auto=compress,format&cs=srgb&w=540",
+//     video1:
+//       "https://player.vimeo.com/progressive_redirect/playback/815656484/rendition/480p/file.mp4?loc=external&signature=6f6c77bf3ae648324b247d8ed8798e9119d4e5513bb53bb899929122e35eba41",
+//     name: "Milky Jelly Cleanser",
+//     desc: "Conditioning face wash",
+//     skinType: "Dry",
+//     rating: 4004,
+//     price: 19,
+//     category: "Cleansers",
+//     bestSelling: "yes",
+//     quantity: 4,
+//   },
+//   {
+//     image1:
+//       "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+//     image2:
+//       "https://glossier-prod.imgix.net/products/futuredew-9.jpg?auto=compress,format&cs=srgb&w=540",
+//     image3:
+//       "https://glossier-prod.imgix.net/files/glossier-futuredew-module-03.png?auto=compress,format&cs=srgb&w=540",
+//     video1:
+//       "https://player.vimeo.com/progressive_redirect/playback/815642486/rendition/480p/file.mp4?loc=external&signature=0574411195b6974759ec4c9046dd265d50671f804c539f26d1de22499ec0e2b6",
+//     name: "Futuredew",
+//     desc: "Oil serum hybrid",
+//     skinType: "Dry",
+//     rating: 2161,
+//     price: 26,
+//     category: "Treatments",
+//     bestSelling: "yes",
+//     quantity: 1,
+//   },
+//   {
+//     image1:
+//       "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-01.png?auto=compress,format&cs=srgb&w=540",
+//     image2:
+//       "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+//     image3:
+//       "https://glossier-prod.imgix.net/files/glossier-mjc-ugc-02.png?auto=compress,format&cs=srgb&w=540",
+//     video1:
+//       "https://player.vimeo.com/progressive_redirect/playback/815656484/rendition/480p/file.mp4?loc=external&signature=6f6c77bf3ae648324b247d8ed8798e9119d4e5513bb53bb899929122e35eba41",
+//     name: "Milky Jelly Cleanser",
+//     desc: "Conditioning face wash",
+//     skinType: "Dry",
+//     rating: 4004,
+//     price: 19,
+//     category: "Cleansers",
+//     bestSelling: "yes",
+//     quantity: 1,
+//   },
+//];
 
 let totalPrice = cartArr.reduce((acc, el) => acc + el.quantity * el.price, 0);
 let orgPrice = totalPrice;

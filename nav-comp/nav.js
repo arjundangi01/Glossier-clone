@@ -277,7 +277,9 @@ function navbar() {
         </div>
         </div>
         <div id="checkout-div" class="offcanvas-bottom">
-            <button id="checkout-btn"><span></span> - Checkout</button>
+       <a href="../checkout.html"><button id="checkout-btn"><span></span> - Checkout</button></a>
+
+            
         </div>
       </div>
     </div>
