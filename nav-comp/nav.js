@@ -2,7 +2,9 @@ function navbar() {
   return ` <nav class="navbar  bg-white fixed-top">
     <div class="container-fluid align-items-center">
       <div>
-      <img class="navbar-brand" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAAZCAMAAAA8GUGSAAAAbFBMVEX///8hHR8AAAAeGhwTDRAbFhj4+PjV1dUXERS4uLgNBAkEAADv7+/q6ur8/Pz19fV7ent1dHXCwsKHhobj4+M/PT6vr69gXl/Ozs7JyMkqJylZV1hJR0hEQkNSUFGhoKGXl5dsa2wzMTKPj483yXg9AAAEXElEQVRIiZVW7bKjIAyVgBbRqpVWb7Vf6vu/4+YEtN7Z3ZmWP20iIcnJSSBJ4qpaPw5aPfxh1SRWK/pJvl3V65R/vDnzRCZVSqWGHnXQHUkpqr/2O5Kh7sO9LTm1LaPrqFRaf+0242jt47O9T9JKaUe8kLMJZotTdvrab8JnudNHOzsOUTm7XM/n/IH/1ELdW+Ve3/ttiYbjJxsP4qqpguQLLrIkrHUM4MtVnz/bd2Fs6flb5AqXoNUWeHk8Zr+symP9X2mvL//SVUGX8/lmV5CWCko55CvTygXVz6RR+9vWH8eTZfke5drj8yWQeBnmoYkn9dhlTzH/XM3zIzlPrBtCfpqqXTx9JxufTqWjxDeR0SB6SreQ809QpNRDOhcuSHec8jA6gHeYyUKvDYX4vNPO5zA1nq043X/SZ2JaLYBqcDB2Bky/SCAFn2fgjPiAZE4hoToIw8Vhk6M1UucsyCOz6JZyIgyitZC7Yl/G3VJ8AAKd2dIp/2zQbLTEyhT+NTvqayQPVj5vXIcypEFl0Gq6vZ49/0klXNA3VYWZesDcGKWHf7itcAAD3hQxLTlSFwDMKAcoJ8HzWQhuifeBHRwvrDW7vULTxYNgzv9WaB/pezpcT40sMAHdVVTCahO/v1yArIl+N6343STby8yJ6DJgDFwXUFK0UXPgcyP/koaMLODO+Ke36Cv2iGDYYbztG6+FtKzEjMOGq2xPWYlVn6yEiVDc6omng3qHi9YFA1XAH3rA0cfPNSBgvxlIVNASG1oIQL7cWNFKdZWhsJiQ8MsR6eI9A3jDinPFmwrIfYgBPpi6G9vhV4DizkGpXbgkjwpGTr7EYfMs1K8FlLip3LseyV2rdI7/syyDPzgSWh3kp1ghFZzFV31CFprCRKh8kK5h2FhhnrK0W4dwq77v9oTRV/SeqFKtNvrI5FbbONTtLuTjBMKtFSib2C2cqB3Fr50OuxUiSt9upX+3CiYlBhFoxezT6Lr9EL2nQrWqk7CZcXI95+0WE7eWkWHz2l2hhzA/efzZcee3FHovcQ83dpjK3gV/PIy0C2wQGufZ4sJ4ZOC48V+KQpWCX96OOqOLo9XR0YzKr+NvWw2eGnTvDod8Ihm0uAWZx1LXF+AYKzyb8JC4cwF0CHORBHDLNyFfjqKOMyI8OsDwll9P1rH9sN2q1SSfKi3vKlSfmc7/JSwTx2yGUKwbH85hE1egZ84Uqp8LoSmua2fGC4ndIWTNQcExPUYtc+ucbBEhUdIOiB+NWfluhz4AtY5Z8AFvoDRFnxsY1hj4rGCZEa4GC0kjqEyGzV0OvwBFsZJbAB0tMzbQRBn8qXtyqdb8lLxl3CAIqyW+YcK2H8v3GX/lsoaKnQcoePcd3K4vURrYDNaxR3t+n4rV7RjIYYpbLCytL7jk/Oovl9EzsJ33KFfbeL9Nwvx0m+/T891s+XS/PPw1Su3pPj8aqd3Le7++uA/LOF/6JbYsn+vjbK5Odiz/AK1iOizB5UCEAAAAAElFTkSuQmCC" alt="">
+<a href="/index.html"><img class="navbar-brand" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAAZCAMAAAA8GUGSAAAAbFBMVEX///8hHR8AAAAeGhwTDRAbFhj4+PjV1dUXERS4uLgNBAkEAADv7+/q6ur8/Pz19fV7ent1dHXCwsKHhobj4+M/PT6vr69gXl/Ozs7JyMkqJylZV1hJR0hEQkNSUFGhoKGXl5dsa2wzMTKPj483yXg9AAAEXElEQVRIiZVW7bKjIAyVgBbRqpVWb7Vf6vu/4+YEtN7Z3ZmWP20iIcnJSSBJ4qpaPw5aPfxh1SRWK/pJvl3V65R/vDnzRCZVSqWGHnXQHUkpqr/2O5Kh7sO9LTm1LaPrqFRaf+0242jt47O9T9JKaUe8kLMJZotTdvrab8JnudNHOzsOUTm7XM/n/IH/1ELdW+Ve3/ttiYbjJxsP4qqpguQLLrIkrHUM4MtVnz/bd2Fs6flb5AqXoNUWeHk8Zr+symP9X2mvL//SVUGX8/lmV5CWCko55CvTygXVz6RR+9vWH8eTZfke5drj8yWQeBnmoYkn9dhlTzH/XM3zIzlPrBtCfpqqXTx9JxufTqWjxDeR0SB6SreQ809QpNRDOhcuSHec8jA6gHeYyUKvDYX4vNPO5zA1nq043X/SZ2JaLYBqcDB2Bky/SCAFn2fgjPiAZE4hoToIw8Vhk6M1UucsyCOz6JZyIgyitZC7Yl/G3VJ8AAKd2dIp/2zQbLTEyhT+NTvqayQPVj5vXIcypEFl0Gq6vZ49/0klXNA3VYWZesDcGKWHf7itcAAD3hQxLTlSFwDMKAcoJ8HzWQhuifeBHRwvrDW7vULTxYNgzv9WaB/pezpcT40sMAHdVVTCahO/v1yArIl+N6343STby8yJ6DJgDFwXUFK0UXPgcyP/koaMLODO+Ke36Cv2iGDYYbztG6+FtKzEjMOGq2xPWYlVn6yEiVDc6omng3qHi9YFA1XAH3rA0cfPNSBgvxlIVNASG1oIQL7cWNFKdZWhsJiQ8MsR6eI9A3jDinPFmwrIfYgBPpi6G9vhV4DizkGpXbgkjwpGTr7EYfMs1K8FlLip3LseyV2rdI7/syyDPzgSWh3kp1ghFZzFV31CFprCRKh8kK5h2FhhnrK0W4dwq77v9oTRV/SeqFKtNvrI5FbbONTtLuTjBMKtFSib2C2cqB3Fr50OuxUiSt9upX+3CiYlBhFoxezT6Lr9EL2nQrWqk7CZcXI95+0WE7eWkWHz2l2hhzA/efzZcee3FHovcQ83dpjK3gV/PIy0C2wQGufZ4sJ4ZOC48V+KQpWCX96OOqOLo9XR0YzKr+NvWw2eGnTvDod8Ihm0uAWZx1LXF+AYKzyb8JC4cwF0CHORBHDLNyFfjqKOMyI8OsDwll9P1rH9sN2q1SSfKi3vKlSfmc7/JSwTx2yGUKwbH85hE1egZ84Uqp8LoSmua2fGC4ndIWTNQcExPUYtc+ucbBEhUdIOiB+NWfluhz4AtY5Z8AFvoDRFnxsY1hj4rGCZEa4GC0kjqEyGzV0OvwBFsZJbAB0tMzbQRBn8qXtyqdb8lLxl3CAIqyW+YcK2H8v3GX/lsoaKnQcoePcd3K4vURrYDNaxR3t+n4rV7RjIYYpbLCytL7jk/Oovl9EzsJ33KFfbeL9Nwvx0m+/T891s+XS/PPw1Su3pPj8aqd3Le7++uA/LOF/6JbYsn+vjbK5Odiz/AK1iOizB5UCEAAAAAElFTkSuQmCC" alt=""></a>
+      
+      
         
       </div>
       <div id="middle" class="nav-right nav-links">
@@ -224,7 +226,9 @@ function navbar() {
       </div>
      
     </div>
-        <p><i class="fa-regular fa-user" style="color: #000000"></i></p>
+        
+        <a href="/Signup.html"><p><i class="fa-regular fa-user" style="color: #000000"></i></p></a>
+        
         <p id="user-name"></p>
         <p
           data-bs-toggle="offcanvas"
