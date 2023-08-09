@@ -100,7 +100,22 @@ input {
   padding: 12px;
   padding-left: 12%;
 }
+#cartImg {
+  position: relative;
+  margin-right: 20px;
+}
 
+#quantityDiv {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -10px;
+  right: -10px;
+  background-color: #808080;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+}
 #right-contacts,
 #right-shipping,
 #right-delivery,
@@ -261,15 +276,29 @@ hr {
   border: 1px solid gray;
   cursor: pointer;
 }
-
+#sstotal {
+  display: none;
+}
 @media screen and (max-width: 380px) {
 }
+
 @media screen and (max-width: 1000px) {
+  #sstotal-div {
+    display: flex;
+  }
+  #sstotal {
+    display: block;
+    margin: auto;
+  }
+  #details-div {
+    margin-top: 50px;
+  }
   #contacts-details,
   #shipping-details,
   #delivery-details,
   #checkout-logo {
     flex-direction: column;
+    margin-bottom: 5px;
   }
   #right-contacts,
   #right-shipping,
@@ -294,17 +323,24 @@ hr {
   }
   #checkout-logo {
     margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
   }
   #logo {
-    border: 1px solid red;
-    display: none;
-    width: 100px;
-    height: 27px;
+    margin-left: 32%;
+    width: 144px;
+    height: 30px;
   }
 }
 @media screen and (min-width: 1274px) {
   #eachCardDiv p,
   #eachCardDiv h4 {
     font-size: 1vw;
+  }
+}
+@media screen and (min-width: 424px) and (max-width: 1100px) {
+  #logo {
+    margin-left: 40%;
   }
 }

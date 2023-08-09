@@ -16,7 +16,7 @@ let cartArr = [
     price: 26,
     category: "Treatments",
     bestSelling: "yes",
-    quantity: 1,
+    quantity: 2,
   },
   {
     image1:
@@ -34,7 +34,7 @@ let cartArr = [
     price: 19,
     category: "Cleansers",
     bestSelling: "yes",
-    quantity: 1,
+    quantity: 4,
   },
   {
     image1:
@@ -81,6 +81,10 @@ document.querySelector("#total").textContent = `$ ${Math.round(
   totalPrice
 ).toFixed(2)}`;
 
+document.querySelector("#sstotal").textContent = `Total : $${Math.round(
+  totalPrice
+).toFixed(2)}`;
+
 document.querySelector("#subtotal").textContent = `$ ${Math.round(
   totalPrice
 ).toFixed(2)}`;
@@ -107,6 +111,10 @@ content.forEach((div) => {
     console.log(totalPrice);
     document.querySelector("#total").textContent = `$ ${Math.round(
       newTotal
+    ).toFixed(2)}`;
+
+    document.querySelector("#sstotal").textContent = `Total : $${Math.round(
+      totalPrice
     ).toFixed(2)}`;
 
     document.querySelector("#shipping").textContent = `$ ${Math.round(
@@ -155,12 +163,17 @@ function displayCart(arr) {
     let leftCartDiv = document.createElement("div");
     leftCartDiv.setAttribute("id", "leftCartDiv");
     let firstDiv = document.createElement("div");
+    firstDiv.setAttribute("id", "cartImg");
+    let quantityDiv = document.createElement("div");
+    quantityDiv.setAttribute("id", "quantityDiv");
+    quantityDiv.textContent = el.quantity;
     let img = document.createElement("img");
     img.setAttribute("src", el.image1);
     // leftCartDiv.append(img, name);
-    firstDiv.append(img);
+    firstDiv.append(img, quantityDiv);
 
     let secondDiv = document.createElement("div");
+    secondDiv.setAttribute("id", "secDiv");
     let name = document.createElement("h4");
     name.textContent = el.name;
     let desc = document.createElement("p");
@@ -191,6 +204,17 @@ document.querySelector("#payment-btn").addEventListener("click", () => {
   let city = document.querySelector("#city").value;
   let state = document.querySelector("#state").value;
   let zipcode = document.querySelector("#zipcode").value;
+  if (
+    email == "" ||
+    country == "" ||
+    address == "" ||
+    city == "" ||
+    state == "" ||
+    zipcode == ""
+  ) {
+    alert("Please Fill all the required details!");
+    return;
+  }
 
   let deliveryDetails = {
     email: email,

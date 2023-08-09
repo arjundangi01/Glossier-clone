@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="checkout.css" />
   </head>
 
@@ -22,20 +22,30 @@
           <h3>></h3>
           <a href="payment.html"><h3>Payment</h3></a>
         </div>
+        <div id="sstotal-div">
+          <h1 id="sstotal">Total : $100</h1>
+        </div>
         <!-- <h1 id="checkout-logo">Checkout</h1> -->
         <div id="contacts-details">
           <div id="left-contacts">
             <h2>Contacts</h2>
           </div>
           <div id="right-contacts">
-            <div id="name">
-              <input type="text" id="first-name" placeholder="First Name" />
-              <input type="text" id="last-name" placeholder="Last Name" />
-            </div>
-            <div id="phone-email">
-              <input type="text" id="phone" placeholder="Phone" />
-              <input type="text" id="email" placeholder="Email" />
-            </div>
+            <form action="">
+              <div id="name">
+                <input
+                  type="text"
+                  id="first-name"
+                  placeholder="First Name"
+                  required
+                />
+                <input type="text" id="last-name" placeholder="Last Name" />
+              </div>
+              <div id="phone-email">
+                <input required type="text" id="phone" placeholder="Phone" />
+                <input type="text" id="email" placeholder="Email" />
+              </div>
+            </form>
           </div>
         </div>
         <div id="shipping-details">

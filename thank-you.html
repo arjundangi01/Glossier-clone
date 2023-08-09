@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank you!</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .gradient {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(-45deg, #333333, #ffffff, #666666);
+        background-size: 400% 400%;
+        animation: animation 5s infinite;
+      }
+
+      #container {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #252525;
+        text-align: center;
+      }
+      #text1 {
+        font-size: 2vw;
+        font-weight: lighter;
+      }
+      #text2 {
+        font-size: 1.2vw;
+        font-weight: lighter;
+        text-align: center;
+      }
+
+      @keyframes animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="text1">Order Placed! Thank you for shopping with us. 🥳</h1>
+      <h4 id="text2">
+        Redirecting to main page in <span id="counter">5</span> seconds...
+      </h4>
+    </div>
+
+    <div class="gradient"></div>
+  </body>
+</html>
+<script>
+  let counter = 5;
+  setInterval(() => {
+    counter--;
+    document.querySelector("#counter").textContent = counter;
+  }, 1000);
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 5000);
+  });
+</script>
