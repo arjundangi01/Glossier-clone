@@ -74,6 +74,8 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
   import { getAuth, signInWithEmailAndPassword ,GoogleAuthProvider , signInWithPopup } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+  import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
   const firebaseConfig = {
     apiKey: "AIzaSyAGpHrB0sm21lPXpz4OtoSKWVLFb-jisb8",
     authDomain: "glossier-eba28.firebaseapp.com",
@@ -89,7 +91,7 @@
   const analytics = getAnalytics(app);
   const auth = getAuth();
 const provider = new GoogleAuthProvider();
-
+const db = getDatabase();
 
 
 
@@ -104,12 +106,19 @@ if(!email||!password){
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    alert ("Login Successfull")
+    let userId=user.uid;
+    const starCountRef = ref(db, 'users/' + userId );
+    onValue(starCountRef, (snapshot) => {
+  const data = snapshot.val();
+  localStorage.setItem("userName",data.username)
+  window.location.assign("./Signup.html");
+});
     // ...
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
+    console.log(error)
   });
 
 })
@@ -121,7 +130,7 @@ googlebtn.addEventListener("click",()=>{
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const token = credential.accessToken;
     const user = result.user;
-    alert ("Login Successfull")
+   alert("login")
     // ...
   }).catch((error) => {
     // Handle Errors here.

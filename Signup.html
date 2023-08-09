@@ -81,7 +81,7 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
     import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider , signInWithPopup} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-   
+    import { getDatabase,ref, set } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
    
     const firebaseConfig = {
       apiKey: "AIzaSyAGpHrB0sm21lPXpz4OtoSKWVLFb-jisb8",
@@ -99,6 +99,7 @@
     const analytics = getAnalytics(app);
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
+    const database = getDatabase();
 
     const signUpButton = document.getElementById("signupbtn");
 
@@ -115,13 +116,22 @@
       createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
+   
     const user = userCredential.user;
- alert ("Sign Up Successfull")
+    let userId=user.uid;
+    set(ref(database, 'users/' + userId), {
+    username: name,
+    email: email,
+  }).then(function(){
+    localStorage.setItem("userName",name)
+    window.location.assign("./login.html");
+  })
     // ...
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
+    alert("already register")
     // ..
   });
 
