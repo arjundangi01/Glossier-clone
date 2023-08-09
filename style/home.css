@@ -294,10 +294,12 @@ strike{
     color: #aeb0b8 ;
     margin-top: 20px;
     font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+    font-size: 1rem;
 }
 .sibl1>.price{
     color: #e83968 ;
     font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+    font-size: 1rem;
 }
 .save{
     position: absolute;
