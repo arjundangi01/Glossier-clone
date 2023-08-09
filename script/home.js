@@ -1,3 +1,4 @@
+
 import { navbar, displayCart, showCart,debounceALl } from "../nav-comp/nav.js";
 // window.addToCart = addToCart;
 window.reduceQuantity = reduceQuantity;
