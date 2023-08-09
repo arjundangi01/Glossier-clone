@@ -68,3 +68,8 @@ function deleteItem(index) {
 }
 
 debounceALl()
+
+let allSkin=document.querySelector("#seeSkin");
+allSkin.addEventListener("click",function(){
+  window.location.href="./Product-page/product.html";
+})
