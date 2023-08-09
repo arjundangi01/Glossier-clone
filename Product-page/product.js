@@ -1,35 +1,40 @@
 import { navbar, displayCart, showCart,debounceALl } from "../nav-comp/nav.js";
-// import { displayCart } from "../cart-page/cart.js";
+
 window.addToCart = addToCart;
 window.reduceQuantity = reduceQuantity;
 window.addQuantity = addQuantity;
 window.deleteItem = deleteItem;
-window.hover = hover;
+window.moveToDetailPage = moveToDetailPage;
+// window.hover = hover;
 
 document.getElementById("navbar").innerHTML = navbar();
 
 fetchData(1);
 let output;
+let tempArr;
 async function fetchData(page) {
   
   try {
     let response = await fetch(`https://project-1-1qlk.onrender.com/glossier?_page=${page}&_limit=12`);
     output = await response.json();
-   
+   tempArr = [...output]
     display(output);
   } catch (error) {}
 }
 
-// -----------------
+// -----------------  products display function start-------------------
 
 function display(array) {
+  let filteredArrayCopy = [...array];
+  sortAll(filteredArrayCopy, array);
+
   let container = document.getElementById("container");
   container.innerHTML = "";
 
   array.forEach((element, index, array) => {
     container.innerHTML += ` 
     <div class="prod-card">
-      <div class="prod-img-div">
+      <div onclick="moveToDetailPage(${index})" class="prod-img-div">
           <img   src="${element.image1}" alt="">
       </div>
 
@@ -50,22 +55,28 @@ function display(array) {
     
    </div>`;
     
+    
+    
   });
 
 
 }
 
-function hover(index) {
- event.target.src = output[index].image2
+// -----------------  products display function end-------------------
 
-  console.log("first")
-}
-function hover2(index) {
- event.target.src = output[index].image1
+// function hover(index) {
+//  event.target.src = output[index].image2
 
-  console.log("first")
-}
+//   console.log("first")
+// }
+// function hover2(index) {
+//  event.target.src = output[index].image1
 
+//   console.log("first")
+// }
+
+
+// --------------------------------------------------------
 function addToCart(index) {
   let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
   let check = true;
@@ -86,6 +97,11 @@ function addToCart(index) {
     displayCart(cartArr);
   }
 }
+// --------------------------------------------------------
+
+
+
+// ------------------cart functions need in all file (start)---------------
 
 let cartBtn = document.getElementById("cart-btn");
 cartBtn.addEventListener("click", () => {
@@ -120,8 +136,11 @@ function deleteItem(index) {
 
   displayCart(cartArr);
 }
+// ------------------cart functions need in all file (end) ---------------
 
-// -------------------filter----------------
+
+
+// -------------------filter start--------------------------
 let filters = document.querySelectorAll(".filter");
 filters.forEach((ele) => {
   ele.addEventListener("click", () => {
@@ -140,6 +159,8 @@ filters.forEach((ele) => {
       let filteredArr = output.filter((element) => {
         return element.category == value;
       });
+      tempArr = [...filteredArr]
+
       display(filteredArr);
     }
   });
@@ -150,46 +171,92 @@ function defaultclass(filters,className) {
   });
 }
 
-// -----------------Sort---------------------
+// -------------------filter end--------------------------
 
-// function htL(out) {
-  
-//   let sorted =  out.sort((a, b) => {
-//     if (a.price > b.price) {
-//       return -1;
-//     } else if (a.price < b.price) {
-//       return 1;
-//     } else {
-//       return 0;
-//     }
-//   });
-//   display(sorted);
-// }
 
-// function lth(out) {
-//   let copy = [...out];
+
+
+// -----------------Sort start---------------------
+
+let sortBtn = document.getElementById("sortBtn");
+let sortType = document.getElementById("sort-type");
+var sortOptions =  document.getElementById("sort-options")
+sortBtn.addEventListener("click", () => {
+  sortOptions.style.display ="block"
+})
+
+
+
+function sortAll(copyArr,array){
+  let featured = document.getElementById("featured")
+  let htL = document.getElementById("HtL")
+  let ltH = document.getElementById("Lth")
+
+  htL.addEventListener("click", () => {
+    HTL(copyArr)
+    sortOptions.style.display = "none"
+    sortType.textContent = "(" + htL.textContent + ")"
+
+  })
+  ltH.addEventListener("click", () => {
+    LTH(copyArr)
+    sortOptions.style.display = "none"
+    sortType.textContent =  "(" + ltH.textContent +")"
+    
+
+  })
+  featured.addEventListener("click", () => {
+    display(tempArr);
+  sortOptions.style.display ="none"
+  sortType.textContent = "(" + featured.textContent +")"
+
+  })
+}
+function HTL(arr) {
   
-//   let sorted =  copy.sort((a, b) => {
+   arr.sort((a, b) => {
+    if (a.price > b.price) {
+      return -1;
+    } else if (a.price < b.price) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+  display(arr);
+}
+
+function LTH(arr) {
+
+  
+  arr.sort((a, b) => {
    
-//     if (a.price > b.price) {
-//       return 1;
-//     } else if (a.price < b.price) {
-//       return -1;
-//     } else {
-//       return 0;
-//     }
-//   });
-//   display(sorted);
-//   console.log(output)
-// }
+    if (a.price > b.price) {
+      return 1;
+    } else if (a.price < b.price) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+  display(arr);
+  
+}
  
 
 // function def(out) {
   
-//   display(out);
+//   
 
 // }
-// ----------------------pagination----------------------------------------
+
+
+// -----------------Sort end---------------------
+
+
+
+
+// ----------------------pagination start----------------------------------------
  
 let pages = document.querySelectorAll(".page");
 pages.forEach((page) => {
@@ -204,5 +271,25 @@ pages.forEach((page) => {
 
   })
 })
+// ----------------------pagination end----------------------------------------
 
-debounceALl()
+debounceALl()  // exported from nav-components
+
+let user = document.getElementById("user-name");
+let logoutBtn = document.getElementById("logout-btn");
+user.innerHTML = "Arjun"
+logoutBtn.addEventListener("click", () => {
+  user.innerHTML = `<i class="fa-regular fa-user" style="color: #000000">
+  </i>`
+  
+})
+
+
+
+// -----------  product detail page -----------
+
+function moveToDetailPage(index) {
+  let singleItem = output[index]
+  localStorage.setItem("singleItem", JSON.stringify(singleItem));
+  console.log(singleItem)
+}

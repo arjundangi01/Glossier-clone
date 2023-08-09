@@ -224,8 +224,14 @@ function navbar() {
       </div>
      
     </div>
-        <p><i class="fa-regular fa-user" style="color: #000000"></i></p>
-        <p id="user-name"></p>
+          
+          <div id="user-detail-div">
+          <a href="#"> <p id="user-name"><i class="fa-regular fa-user" style="color: #000000">
+          </i></p></a>
+          <p id="logout-btn"> logout </p>
+  
+         </div>
+      
         <p
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
@@ -329,9 +335,9 @@ function displayCart(array) {
           </div>
         </div>
         <div
-          class="cart-prod-det-2 d-flex flex-column  justify-content-xxl-between"
+          class="cart-prod-det-2 d-flex flex-column  justify-content-between"
         >
-          <p>${element.price}</p>
+          <p>${element.price*element.quantity}</p>
           <p onclick="deleteItem(${index})" id="remove-item">Remove</p>
         </div>
       </div>

@@ -22,7 +22,7 @@ body p {
   gap: 10px;
 }
 #filter-right {
-  display: flex;
+ 
   gap: 5px;
   margin-right: 1%;
 }
@@ -30,20 +30,19 @@ body p {
   opacity: 0.8;
 }
 
+
 .clicked {
   text-decoration: underline;
 }
 
 #sort-options {
-  position: fixed;
+  position: absolute;
   line-height: 2rem;
-  right: 2%;
   font-size: 0.9rem;
-
   display: none;
+ 
 }
 #sort-options p {
-  padding: 0px 5px;
   cursor: pointer;
 }
 #sort-options p:hover {
