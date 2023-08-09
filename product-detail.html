@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+      body {
+        background-color: #f7f7f7;
+        /* background-color: #eceff4; */
+        /* width: 90%; */
+        margin: auto;
+        /* border: 1px solid red; */
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      #top-div img {
+        width: 70%;
+      }
+      #top-div {
+        width: 90%;
+        display: flex;
+        margin: auto;
+        justify-content: space-evenly;
+        text-align: center;
+      }
+      #product-detail {
+        margin-top: 40px;
+        /* border: 1px solid black; */
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      #wishlist-logo {
+        width: 10px;
+      }
+      #cart-and-quantity-btn {
+        width: 65%;
+        margin: auto;
+        margin-top: 80px;
+        /* border: 1px solid gold; */
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      #quantity-and-btn-div {
+        /* border: 1px solid crimson; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 30%;
+      }
+      #quantity-and-btn-div button {
+        /* border: 0; */
+        width: 40%;
+        height: 45px;
+        font-size: 1.1rem;
+      }
+      #name-and-desc p {
+        width: 60%;
+        margin: auto;
+      }
+
+      #quantity-and-btn-div button:nth-child(2) {
+        width: 30%;
+      }
+      #quantity-div {
+        margin-right: 10px;
+        font-size: 2rem;
+      }
+      #minus {
+        border: 0;
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        cursor: pointer;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+      #plus {
+        border: 0;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        cursor: pointer;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+      #quantity {
+        border: 0;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        /* padding-left: 0; */
+        /* padding-right: 0; */
+        padding: 0px;
+      }
+      #cart-btn {
+        margin-left: 10px;
+        width: 50%;
+        height: 45px;
+        background-color: #242424;
+        color: white;
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #whydiv,
+      #howtouse {
+        display: flex;
+        /* border: 1px solid green; */
+        width: 80%;
+        margin: auto;
+      }
+      #left-why-div {
+        width: 40%;
+      }
+      #right-why-div p {
+        width: 80%;
+      }
+      #right-why-div,
+      #right-ingredients {
+        width: 60%;
+      }
+      #img-div {
+        display: flex;
+        /* justify-content: center; */
+      }
+      #howtouse {
+        margin-top: 40px;
+        justify-content: space-between;
+      }
+      #lefthowtouse {
+        width: 40%;
+      }
+      #righthowtouse {
+        display: flex;
+        align-items: center;
+        width: 60%;
+      }
+      #righthowtouse {
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: center;
+      }
+      .resized-image {
+        max-height: 450px;
+        max-width: 100%;
+        gap: 10px;
+        margin-right: 15px;
+      }
+      #img-div img {
+        /* width: 350px; */
+        /* height: 500px; */
+        /* width: 100%; */
+        /* height: 400px; */
+        /* margin-right: 20px; */
+      }
+      #ingredients {
+        display: flex;
+        width: 80%;
+        margin: auto;
+      }
+      #left-ingredients {
+        width: 40%;
+      }
+      #right-ingredients > div {
+        display: flex;
+        justify-content: space-between;
+      }
+      #right-ingredients p {
+        /* border: 1px solid red; */
+        font-weight: lighter;
+        width: 70%;
+      }
+      #firsthr,
+      #secondhr {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 80%;
+      }
+      .ingredientshr {
+        margin: 0;
+      }
+      @media screen and (max-width: 619px) {
+        #product-detail h1 {
+          font-size: 2vw;
+        }
+      }
+      @media screen and (min-width: 801px) and (max-width: 1110px) {
+        #cart-and-quantity-btn {
+          margin: auto;
+          margin-top: 30px;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        #top-div {
+          /* border: 1px solid yellow; */
+          flex-direction: column;
+        }
+        #top-div img {
+          width: 40%;
+        }
+        #product-detail h1,
+        #product-detail h3,
+        #product-detail p {
+          font-size: 3vw;
+        }
+        #name-and-desc p {
+          width: 70%;
+          font-size: 2.3vw;
+          /* margin: auto; */
+        }
+        #cart-and-quantity-btn {
+          margin-top: 10px;
+          width: 80%;
+          border: 1px solid green;
+          color: aqua;
+        }
+        #whydiv {
+          flex-direction: column;
+          width: 90%;
+        }
+        #right-why-div {
+          width: 100%;
+          /* border: 1px solid green; */
+        }
+        #right-why-div p {
+          width: 100%;
+          font-size: 2.4vw;
+        }
+        #ingredients {
+          flex-direction: column;
+        }
+        #right-ingredients {
+          width: 100%;
+        }
+        #ingredients h5,
+        #ingredients p {
+          font-size: 2.2vw;
+        }
+        #ingredients h4 {
+          font-size: 2vw;
+        }
+        #howtouse {
+          flex-direction: column;
+          margin-top: 0;
+        }
+        #howtouse p {
+          font-size: 2.2vw;
+        }
+        #righthowtouse {
+          width: 100%;
+          flex-direction: column;
+        }
+        #righthowtouse video {
+          width: 50%;
+          height: 50%;
+        }
+        #firsthr,
+        #secondhr {
+          margin-top: 0;
+        }
+        #product-detail {
+          margin-top: 0;
+        }
+        #product-detail p {
+          width: 90%;
+          font-size: 3vw;
+        }
+        #product-detail h1 {
+          width: 100%;
+          /* border: 1px solid red; */
+        }
+        #product-detail button {
+          height: 30px;
+        }
+        #quantity-and-btn-div {
+          /* width: 100%; */
+          border: 1px solid palegreen;
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        #righthowtouse {
+          width: 100%;
+          flex-direction: column;
+        }
+      }
+      @media screen and (max-width: 619px) {
+        #product-detail h1 {
+          font-size: 4vw;
+        }
+        #wishlist-logo {
+          display: none;
+        }
+        #cart-and-quantity-btn {
+          width: 100%;
+        }
+        #cart-and-quantity-btn button {
+          height: 35px;
+        }
+        #cart-and-quantity-btn > div:nth-child(1) {
+          /* border: 1px solid rebeccapurple; */
+          width: 40%;
+        }
+        #cart-btn {
+          /* border: 1px solid rebeccapurple; */
+          width: 60%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top-div">
+      <div id="product-img">
+        <img
+          src="https://glossier-prod.imgix.net/products/glossier-mjc-carousel-01.png?auto=compress,format&cs=srgb&w=540"
+          alt="product image"
+        />
+        <!-- <img
+          src="https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540"
+          alt=""
+        /> -->
+      </div>
+      <div id="product-detail">
+        <div id="name-and-desc">
+          <div><h1>Milky Jelly Cleasner</h1></div>
+          <div><h3>$12</h3></div>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed et
+              neque id.
+            </p>
+          </div>
+        </div>
+        <div id="cart-and-quantity-btn">
+          <div id="quantity-and-btn-div">
+            <button id="minus">-</button>
+            <!-- <div id="quantity-div"> -->
+            <!-- <p id="quantity">1</p> -->
+            <!-- </div> -->
+            <button id="quantity">1</button>
+            <button id="plus">+</button>
+          </div>
+          <button id="cart-btn">Add to bag</button>
+          <div id="wishlist-div">
+            <img
+              width="70"
+              height="40"
+              id="wishlist-logo"
+              src="https://www.svgrepo.com/show/13666/heart.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr id="firsthr" />
+    <div id="whydiv">
+      <div id="left-why-div">
+        <h4>WHY IT'S SPECIAL</h4>
+      </div>
+      <div id="right-why-div">
+        <p>
+          It's formulated with five skin conditioners (like Allantoin and
+          Pro-Vitamin B5) that leave your skin feeling baby soft (not like you
+          need to rush for moisturizer afterwards).
+        </p>
+        <p>
+          Instead of traditional, we used Poloxamer. it's the same mild
+          cleansing agent that's found in contact lens solution, so it's safe
+          for eyes and doesn't sting when removing your mascaral.
+        </p>
+        <p>
+          The milky phase conditions skin to keep it fresh, happy, and
+          moisturized. The jelly phase works to dissolve oil, dirt, and makeup.
+          It's gentle enough to use daily, twice a day, or more!
+        </p>
+        <div id="img-div">
+          <div>
+            <img
+              class="resized-image"
+              src="https://glossier-prod.imgix.net/products/glossier-mjc-carousel-08.png?auto=compress,format&cs=srgb&w=540"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="resized-image"
+              src="https://glossier-prod.imgix.net/files/glossier-mjc-ugc-02.png?auto=compress,format&cs=srgb&w=540"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr id="secondhr" />
+    <div id="ingredients">
+      <div id="left-ingredients">
+        <h4>INGREDIENTS</h4>
+      </div>
+      <div id="right-ingredients">
+        <div>
+          <h5>Poloxamer</h5>
+          <p>A wild eye-safe cleansing used in contact lens solution.</p>
+        </div>
+        <hr class="ingredientshr" />
+        <div>
+          <h5>Rose Water</h5>
+          <p>
+            We replaced 1/4 of the H20 content with soothing rose water (bonus:
+            smells great!).
+          </p>
+        </div>
+        <hr class="ingredientshr" />
+        <div>
+          <h5>Comfrey Root Extract</h5>
+          <p>
+            Contains Allantoin, which is like dry skin's comforting best friend.
+          </p>
+        </div>
+        <hr class="ingredientshr" />
+        <div>
+          <h5>Aquaxyl</h5>
+          <p>
+            Refills skin's water reserves and improves its barrier to prevent
+            dehydratio.
+          </p>
+        </div>
+        <hr class="ingredientshr" />
+        <div>
+          <h5>Pro-Vitamin B5</h5>
+          <p>
+            Like the nutrients found in mushrooms, avocados, and lentils. It's a
+            powerful, natural, and nourishing moisturizer.
+          </p>
+        </div>
+        <hr class="ingredientshr" />
+      </div>
+    </div>
+    <div id="howtouse">
+      <div id="lefthowtouse">
+        <h4>HOW TO USE</h4>
+      </div>
+      <div id="righthowtouse">
+        <p>
+          To start your day massage 1-2 pumps onto wet skin (Keep it in the
+          shower!) and rinse. To remove makeup: on dry skin gently and
+          thoroughly massage 2-3 pumps directly onto eye area to melt away
+          mascara, add water, massage over the rest of your face, and rinse.
+        </p>
+        <video
+          height="400px"
+          autoplay
+          loop
+          muted
+          src="https://player.vimeo.com/progressive_redirect/playback/815642486/rendition/480p/file.mp4?loc=external&signature=0574411195b6974759ec4c9046dd265d50671f804c539f26d1de22499ec0e2b6"
+        ></video>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module"></script>
