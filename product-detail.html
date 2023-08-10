@@ -201,12 +201,14 @@
       }
       #firsthr,
       #secondhr {
+        margin: auto;
         margin-top: 40px;
         margin-bottom: 40px;
         width: 80%;
       }
       .ingredientshr {
-        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
       @media screen and (max-width: 619px) {
         #product-detail h1 {
@@ -260,6 +262,7 @@
           font-size: 2.4vw;
         }
         #ingredients {
+          width: 90%;
           flex-direction: column;
         }
         #right-ingredients {
@@ -270,11 +273,16 @@
           font-size: 2.2vw;
         }
         #ingredients h4 {
-          font-size: 2vw;
+          /* font-size: 2vw; */
+        }
+        .ingredientshr {
+          margin: 0;
+          margin-bottom: 10px;
         }
         #howtouse {
           flex-direction: column;
           margin-top: 0;
+          width: 90%;
         }
         #howtouse p {
           font-size: 2.2vw;
@@ -287,7 +295,9 @@
           width: 50%;
           height: 50%;
         }
-        #firsthr,
+        #firsthr {
+          margin-top: 10px;
+        }
         #secondhr {
           margin-top: 0;
         }
@@ -501,6 +511,8 @@
 
   let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
   let currProduct = JSON.parse(localStorage.getItem("singleItem"));
+
+  document.querySelector("title").textContent = currProduct.name;
 
   //  <---- For checking --->
   // let currProduct = {
