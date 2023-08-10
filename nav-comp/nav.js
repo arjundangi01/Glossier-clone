@@ -414,7 +414,7 @@ window.moveToDetailPage = moveToDetailPage;
     let singleItem = searchOutput[index]
     localStorage.setItem("singleItem", JSON.stringify(singleItem));
     console.log(singleItem)
-    // window.location.assign()
+    window.location.assign("../product-detail.html")
   }
 }
 
