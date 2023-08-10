@@ -307,6 +307,9 @@ hr {
     padding: 0;
     width: 100%;
   }
+  #checkout-logo {
+    margin-left: 0;
+  }
   #left-contacts,
   #left-shipping,
   #left-delivery {
@@ -328,7 +331,8 @@ hr {
     margin: auto;
   }
   #logo {
-    margin-left: 32%;
+    /* margin-left: 32%; */
+    margin: auto;
     width: 144px;
     height: 30px;
   }
@@ -339,8 +343,8 @@ hr {
     font-size: 1vw;
   }
 }
-@media screen and (min-width: 424px) and (max-width: 1100px) {
+/* @media screen and (min-width: 424px) and (max-width: 1100px) {
   #logo {
     margin-left: 40%;
   }
-}
+} */
