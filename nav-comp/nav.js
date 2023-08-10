@@ -394,7 +394,7 @@ function debounceALl() {
     let arr = array.slice(0, 5);
     arr.forEach((element) => {
       showResult.innerHTML += ` 
-    <div  class="search-res-card">
+    <div onclick= "moveToDetailPage(${index})" class="search-res-card">
       <div>
          <img src="${element.image1}" alt="">
       </div>
