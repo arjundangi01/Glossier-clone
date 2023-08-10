@@ -3,7 +3,8 @@ body{
 }
 #upper{
     position: relative;
-    max-width: 100%;
+    /* max-width: 100%; */
+    width: 100%;
     margin: 0 auto;
  
 }
@@ -108,11 +109,19 @@ a>#main-photo{
 .sibl{
     display: flex;
     justify-content: space-between;
-    margin-top: -4%;
     margin-right: 20px;
     margin-left: 10px;
     color: #484a52 ;
     font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
+}
+.sibl>.name{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+.dol{
+    font-size: 1rem; 
+    margin-top: -10px;
 }
 #cater{
     margin-left: 80px;
@@ -356,6 +365,7 @@ strike{
     border-radius: 10px;
     cursor: pointer;
     margin-top: 20px;
+    
 }
 #main{
     /* display: grid;
@@ -402,4 +412,89 @@ strike{
 #input>p{
     color: #aeb0b8 ;
     margin-top: -1px;
+}
+@media screen and (min-width:400px) and (max-width: 1272px) {
+    a>#main-photo{
+        -webkit-transform: none;
+      transform: scaleX(-1);
+      width: 100%;
+      height: auto;
+    }
+  #inner{
+    display: none;
+  }
+  #best{
+    grid-template-columns: repeat(1,1fr);
+    width: 100%;
+   margin-left: 0;
+    justify-items: center;
+   }
+   #best>.product:last-child{
+    width: 95%;
+}
+#middle>h3{
+    display: none;
+}
+#videos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    width: 90%;
+}
+#sets{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 10px;
+    width: 100%;
+}
+#sets>.set1:first-child{
+    width:50%;
+    margin-left: 400px;
+}
+#sets {
+    grid-template-columns: repeat(1, 1fr);
+    width: 40%;
+}
+.set1{
+    width: 300px;
+}
+
+#real{
+    font-weight: 100;
+    width: 100%;
+}
+#parent{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+  justify-items: center;
+}
+.child{
+width: 100%;
+}
+#main {
+    flex-direction: column; /* Stack contents vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    margin-left: 0; /* Reset margin to center horizontally */
+    margin-right: 0;
+    text-align: center; /* Center text */
+    height: 450px;
+    margin-left: 40px;
+}
+#main>#mailimg{
+    margin-left: 10px;
+}
+#main>#mail{
+  margin-left: 40px;
+}
+#mail>p{
+    width: 340px;
+    margin-right: 20px;
+}
+#input>input{
+    width: 380px;
+    margin-top: 45px;
+    height: 25px;
+}
+  
 }
