@@ -348,6 +348,8 @@ function displayCart(array) {
 }
 
 function debounceALl() {
+window.moveToDetailPage = moveToDetailPage;
+
   let timer;
   let searchBar = document.getElementById("searchright");
   searchBar.addEventListener("keyup", () => {
@@ -361,7 +363,7 @@ function debounceALl() {
       getdata();
     }, 500);
   }
-
+  let searchOutput =[]
   async function getdata() {
     let searchItem = document.getElementById("searchright").value;
     if (searchItem == "") {
@@ -374,7 +376,7 @@ function debounceALl() {
       let SearchResult = await fetch(
         `https://project-1-1qlk.onrender.com/glossier?q=${searchItem}`
       );
-      let searchOutput = await SearchResult.json();
+       searchOutput = await SearchResult.json();
       displaySearchResult(searchOutput);
       console.log(searchOutput);
     } catch (error) {
@@ -390,9 +392,9 @@ function debounceALl() {
     showResult.innerHTML = "";
 
     let arr = array.slice(0, 5);
-    arr.forEach((element) => {
+    arr.forEach((element,index) => {
       showResult.innerHTML += ` 
-    <div class="search-res-card">
+    <div onclick= "moveToDetailPage(${index})" class="search-res-card">
       <div>
          <img src="${element.image1}" alt="">
       </div>
@@ -406,6 +408,12 @@ function debounceALl() {
 
     showResult.style.display = "none";
   });
+  function moveToDetailPage(index) {
+    let singleItem = searchOutput[index]
+    localStorage.setItem("singleItem", JSON.stringify(singleItem));
+    console.log(singleItem)
+    // window.location.assign()
+  }
 }
 
 export { navbar, displayCart, showCart, debounceALl };
