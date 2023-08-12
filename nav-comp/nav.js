@@ -285,7 +285,19 @@ function navbar() {
         </div>
       </div>
     </div>
-  </nav>`;
+  </nav>
+  <div id="side-menu">
+  <div id="side-menu-header">
+    <i id="close" class="fa-solid fa-xmark" style="color: #080808;"></i>
+  </div>
+  <div id="side-menu-body">
+    <a href="../Product-page/product.html"><p>SKINCARE</p></a>
+    <p>MAKEUP</p>
+    <p>BODY</p>
+    <p>FRAGRANCE</p>
+    <p>GLOSSIER GOODS</p>
+  </div>
+</div>`;
 }
 
 function showCart() {
