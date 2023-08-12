@@ -291,6 +291,16 @@ logoutBtn.addEventListener("click", () => {
 function moveToDetailPage(index) {
   let singleItem = output[index]
   localStorage.setItem("singleItem", JSON.stringify(singleItem));
-  // console.log(singleItem)
-  window.location.assign("../product-detail.html")
+  console.log(singleItem)
 }
+
+let menuIcon = document.querySelector(".show");
+menuIcon.addEventListener("click", () => {
+  document.querySelector("#side-menu").style.display = "block"
+
+})
+let close = document.querySelector("#close");
+close.addEventListener("click", () => {
+  document.querySelector("#side-menu").style.display = "none"
+
+})

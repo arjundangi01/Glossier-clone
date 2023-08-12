@@ -1,74 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Page</title>
     <script
-    src="https://kit.fontawesome.com/ab7e10d51f.js"
-    crossorigin="anonymous"
-  ></script>
-  <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-  crossorigin="anonymous"
-></script>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-    crossorigin="anonymous"
-  />
-    <link rel="stylesheet" href="./product.css">
-    <link rel="stylesheet" href="../Navbar/navbar.css">
+      src="https://kit.fontawesome.com/ab7e10d51f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./product.css" />
+    <link rel="stylesheet" href="../Navbar/navbar.css" />
     <link rel="stylesheet" href="../cart-page/cart.css" />
-    <link rel="stylesheet" href="../footer/footer.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="../footer/footer.css" />
+  </head>
+  <body>
     <div id="navbar"></div>
-  
-    
+
+    <div id="side-menu">
+      <div id="side-menu-header">
+        <i id="close" class="fa-solid fa-xmark" style="color: #080808;"></i>
+      </div>
+      <div id="side-menu-body">
+        <a href=""><p>SKINCARE</p></a>
+        <p>MAKEUP</p>
+        <p>BODY</p>
+        <p>FRAGRANCE</p>
+        <p>GLOSSIER GOODS</p>
+      </div>
+    </div>
 
     <div id="filter">
-        <div id="filter-left">
-            <p class="filter clicked" value="">All skincare</p>
-            <p class="filter" value="Cleansers">Cleansers</p>
-            <p class="filter" value="Balms">Balms</p>
-            <p class="filter" value="Treatments">Treatments</p>
-            <p class="filter" value="Sunscreen">Sunscreen</p>
-            <p class="filter" value="Moisturizers">Moisturizers</p>
+      <div id="filter-left">
+        <p class="filter clicked" value="">All skincare</p>
+        <p class="filter" value="Cleansers">Cleansers</p>
+        <p class="filter" value="Balms">Balms</p>
+        <p class="filter" value="Treatments">Treatments</p>
+        <p class="filter" value="Sunscreen">Sunscreen</p>
+        <p class="filter" value="Moisturizers">Moisturizers</p>
+      </div>
+      <div id="filter-right">
+        <p id="sortBtn">Sort <span id="sort-type">(Featured)</span></p>
+        <div id="sort-options">
+          <p id="featured">Featured</p>
+          <p id="HtL">Price High to Low</p>
+          <p id="Lth">Price Low to Hig</p>
         </div>
-        <div id="filter-right">
+      </div>
+    </div>
 
-          <p id="sortBtn" >Sort <span id="sort-type">(Featured)</span> </p>
-          <div id="sort-options">
-            <p id="featured" >Featured</p>
-            <p id="HtL" >Price High to Low</p>
-            <p id="Lth" >Price Low to Hig</p>
-          </div>
-        </div>
-    </div>
-    
-    <div id="container" >
-        
-    </div>
+    <div id="container"></div>
+
     <div class="page-container">
-  
-   
       <div class="pagination p2">
         <ul>
           <a class="is-active page" href="#"><li>1</li></a>
-          <a class="page"  href="#"><li>2</li></a>
-       
+          <a class="page" href="#"><li>2</li></a>
         </ul>
       </div>
-     
-   </div>
+    </div>
 
-   <div id="footer" ></div>
-    
-</body>
+    <div id="footer"></div>
+  </body>
 </html>
 <script type="module" src="./product.js"></script>
 <!-- <script type="module" src="../cart-page/cart.js"></script> -->
