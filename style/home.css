@@ -258,9 +258,10 @@ margin-right: 20px;
 
 #sets{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 3fr 2fr 2fr;
+    gap: 10px;
     margin-top: 40px;
-    width: 80%;
+    width: 87%;
 }
 #sets>.set1>a>img{
     width: 100%;
@@ -270,7 +271,7 @@ margin-right: 20px;
     position: relative;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background-color: #edeef2 ;
-    width: 95%;
+    width: 100%;
     margin-left: 80px;
 }
 
@@ -279,18 +280,9 @@ margin-right: 20px;
     font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
     margin-left: 10px;
 }
-
-#sets>.set1:first-child{
-    width:130%;
-}
-#sets>.set1:nth-child(2){
-    margin-left: 54%;
-}
-#sets>.set1:last-child{
-    margin-left: 52%;
-}
 .name1{
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 .sibl1{
     display: flex;
@@ -303,7 +295,6 @@ margin-right: 20px;
 }
 strike{
     color: #aeb0b8 ;
-    margin-top: 20px;
     font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
     font-size: 1rem;
 }
@@ -311,6 +302,7 @@ strike{
     color: #e83968 ;
     font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
     font-size: 1rem;
+    margin-top: 10px;
 }
 .save{
     position: absolute;
@@ -417,7 +409,7 @@ strike{
     a>#main-photo{
         -webkit-transform: none;
       transform: scaleX(-1);
-      width: 100%;
+      width: 120%;
       height: auto;
     }
   #inner{
@@ -425,9 +417,10 @@ strike{
   }
   #best{
     grid-template-columns: repeat(1,1fr);
-    width: 100%;
-   margin-left: 0;
-    justify-items: center;
+    width: 50%;
+    gap: 10px;
+   margin-left: 25%;
+    align-items: center;
    }
    #best>.product:last-child{
     width: 95%;
@@ -442,21 +435,13 @@ strike{
     width: 90%;
 }
 #sets{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    gap: 10px;
-    width: 100%;
+   grid-template-columns: 1fr;
+   gap: 20px;
+   margin-left: 20%;
 }
-#sets>.set1:first-child{
-    width:50%;
-    margin-left: 400px;
-}
-#sets {
-    grid-template-columns: repeat(1, 1fr);
-    width: 40%;
-}
-.set1{
-    width: 300px;
+
+div .set1{
+width: 50%;
 }
 
 #real{
@@ -473,11 +458,11 @@ strike{
 width: 100%;
 }
 #main {
-    flex-direction: column; /* Stack contents vertically on smaller screens */
-    align-items: center; /* Center items horizontally */
-    margin-left: 0; /* Reset margin to center horizontally */
+    flex-direction: column;
+    align-items: center; 
+    margin-left: 0; 
     margin-right: 0;
-    text-align: center; /* Center text */
+    text-align: center; 
     height: 450px;
     margin-left: 40px;
 }
