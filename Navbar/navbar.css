@@ -4,6 +4,52 @@ nav {
   width: 98%;
   margin: auto;
 }
+/* mobile screen menu */
+
+#menu-icon{
+  display: none;
+
+}
+
+#side-menu{
+  display: none;
+  position: fixed;
+  z-index: 1500;
+  background: white;
+  height: 100%;
+  width: 50%;
+
+ 
+  /* border: 1px solid #000; */
+}
+
+#side-menu-header{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 15px 4px 0px;
+}
+#side-menu-header i{
+ 
+}
+#side-menu-body{
+  line-height: 2rem;
+  /* border: 1px solid #000; */
+  text-align: center;
+}
+#side-menu-body p:hover{
+ text-decoration: underline;
+}
+#side-menu-body a{
+ text-decoration: none;
+ color: black;
+}
+
+
+/* mobile screen menu */
+
+
+
 .navbar > div {
   font-size: 0.8rem;
   width: 95%;
@@ -23,6 +69,13 @@ nav > div > div {
 .nav-right p {
   margin: 0;
 }
+
+
+
+
+
+
+
 
 /* right start--------------------------- */
 
@@ -272,19 +325,21 @@ nav input {
   }
 }
 @media only screen and (min-width: 495px) and (max-width: 970px) {
+  #menu-icon{
+    display: block;
+  
+  }
   .navbar-brand{
     width: 50px;
    }
   #search-bar {
-    width: 200px;
+    width: 310px;
     border: 1px solid #000;
   }
   #middle li {
     display: none;
   }
-  #middle li:first-child {
-    display: block;
-  }
+ 
   #search-bar {
     height: 32px;
     border-radius: 10px;
@@ -331,6 +386,8 @@ nav input {
     height: 32px;
     border-radius: 10px;
     margin-right: 0;
+    width: 200px;
+
   }
   #searchright {
     height: 100%;
@@ -354,6 +411,7 @@ nav input {
     height: 28px;
     border-radius: 10px;
     margin-right: 0;
+   
   }
   #searchright {
     height: 100%;
@@ -430,8 +488,12 @@ nav input {
 }
 
 @media only screen and (min-width: 345px) and (max-width: 495px) {
+  #menu-icon{
+    display: block;
+  
+  }
   #search-bar {
-    width: 100px;
+    width: 140px;
     border: 1px solid #000;
   }
 
@@ -442,7 +504,7 @@ nav input {
     display: none;
   }
   #middle li:first-child {
-    display: block;
+    display: none;
     font-size: 0.6rem;
   }
   #middle .mega-box {
@@ -451,8 +513,12 @@ nav input {
   
 }
 @media only screen and (max-width: 345px) {
+  #menu-icon{
+    display: block;
+  
+  }
   #search-bar {
-    width: 70px;
+    width: 90px;
     height: 18px;
 
     border: 1px solid #000;
@@ -465,7 +531,7 @@ nav input {
   }
 
   .navbar #middle li:first-child {
-    display: block;
+    display: none;
     font-size: 0.2rem;
   }
   #middle .mega-box {
@@ -476,3 +542,4 @@ nav input {
 /* -------------------responsive end------------------ */
 
 /* Add more CSS rules for your existing styles */
+
