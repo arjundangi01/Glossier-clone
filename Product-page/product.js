@@ -293,3 +293,14 @@ function moveToDetailPage(index) {
   localStorage.setItem("singleItem", JSON.stringify(singleItem));
   console.log(singleItem)
 }
+
+let menuIcon = document.querySelector(".show");
+menuIcon.addEventListener("click", () => {
+  document.querySelector("#side-menu").style.display = "block"
+
+})
+let close = document.querySelector("#close");
+close.addEventListener("click", () => {
+  document.querySelector("#side-menu").style.display = "none"
+
+})
