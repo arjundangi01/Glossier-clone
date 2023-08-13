@@ -281,7 +281,7 @@ user.innerHTML = "Arjun"
 logoutBtn.addEventListener("click", () => {
   user.innerHTML = `<i class="fa-regular fa-user" style="color: #000000">
   </i> Login`
-  logoutBtn.style.display = "none"
+  logoutBtn.style.display = "none"  // h
 })
 
 
