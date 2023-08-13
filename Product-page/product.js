@@ -1,4 +1,4 @@
-import { navbar, displayCart, showCart,debounceALl } from "../nav-comp/nav.js";
+import { navbar, displayCart, showCart,debounceALl ,displayUser} from "../nav-comp/nav.js";
 import { footer } from "../footer/footer.js";
 window.addToCart = addToCart;
 window.reduceQuantity = reduceQuantity;
@@ -275,14 +275,13 @@ pages.forEach((page) => {
 
 debounceALl()  // exported from nav-components
 
-let user = document.getElementById("user-name");
-let logoutBtn = document.getElementById("logout-btn");
-user.innerHTML = "Arjun"
-logoutBtn.addEventListener("click", () => {
-  user.innerHTML = `<i class="fa-regular fa-user" style="color: #000000">
-  </i> Login`
-  logoutBtn.style.display = "none"
-})
+
+// function deleteUser() {
+  
+// }
+displayUser();
+
+
 
 
 

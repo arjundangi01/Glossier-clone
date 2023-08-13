@@ -437,4 +437,31 @@ window.moveToDetailPage = moveToDetailPage;
   }
 }
 
-export { navbar, displayCart, showCart, debounceALl };
+function displayUser() {
+  let userDetailContainer = document.getElementById("user-detail-div");
+  userDetailContainer.innerHTML = "";
+ 
+let name = localStorage.getItem("userName") || "";
+if (name == "") {
+  userDetailContainer.innerHTML = `   
+
+  <a href="../Signup.html"> <p id="user-name"><i class="fa-regular fa-user" style="color: #000000">
+  </i> Login</p></a>`
+} else {
+  userDetailContainer.innerHTML = `
+  <img  id="logout-btn" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZMDpj2jjF8OVyQIka2SR9eU9TqIuzEHntIeMWrYfnKNJbHOFvJyFVFOj74D7VkuD_LaU&usqp=CAU alt="">
+  <a> <p id="user-name">${name}</p></a>
+  `
+  let logoutBtn = document.getElementById("logout-btn");
+
+  logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("userName")
+
+  displayUser();
+  
+})
+}
+
+}
+
+export { navbar, displayCart, showCart, debounceALl ,displayUser };
