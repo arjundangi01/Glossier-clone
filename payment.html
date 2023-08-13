@@ -618,17 +618,17 @@
       // alert(response.razorpay_payment_id);.
       window.location.href = "thank-you.html";
     },
-    modal: {
-      ondismiss: function () {
-        if (confirm("Are you sure, you want to close the form?")) {
-          txt = "You pressed OK!";
-          console.log("Checkout form closed by the user");
-        } else {
-          txt = "You pressed Cancel!";
-          console.log("Complete the Payment");
-        }
-      },
-    },
+    // modal: {
+    //   ondismiss: function () {
+    //     if (confirm("Are you sure, you want to close the form?")) {
+    //       txt = "You pressed OK!";
+    //       console.log("Checkout form closed by the user");
+    //     } else {
+    //       txt = "You pressed Cancel!";
+    //       console.log("Complete the Payment");
+    //     }
+    //   },
+    // },
   };
   var rzp1 = new Razorpay(options);
   document.getElementById("rzp-button1").onclick = function (e) {

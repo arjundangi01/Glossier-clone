@@ -193,11 +193,17 @@ function displayCart(arr) {
     document.querySelector("#cart-items").append(div);
   });
 }
-// document.querySelector
+document.querySelector("#alert button").addEventListener("click", () => {
+  document.querySelector("#alert-container").style.display = "none";
+});
+
 document.querySelector("#payment-btn").addEventListener("click", () => {
   event.preventDefault();
 
+  let firstName = document.querySelector("#first-name").value;
+  let lastName = document.querySelector("#last-name").value;
   let email = document.querySelector("#email").value;
+  let phone = document.querySelector("#phone").value;
   let country = document.querySelector("#country").value;
   let address = document.querySelector("#address").value;
   console.log(address);
@@ -205,14 +211,18 @@ document.querySelector("#payment-btn").addEventListener("click", () => {
   let state = document.querySelector("#state").value;
   let zipcode = document.querySelector("#zipcode").value;
   if (
+    firstName == "" ||
+    lastName == "" ||
     email == "" ||
+    phone == "" ||
     country == "" ||
     address == "" ||
     city == "" ||
     state == "" ||
     zipcode == ""
   ) {
-    alert("Please Fill all the required details!");
+    // alert("Please Fill all the required details!");
+    document.querySelector("#alert-container").style.display = "block";
     return;
   }
 
