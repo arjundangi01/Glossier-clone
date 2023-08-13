@@ -236,7 +236,7 @@ function navbar() {
   <img id="logout-btn" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZMDpj2jjF8OVyQIka2SR9eU9TqIuzEHntIeMWrYfnKNJbHOFvJyFVFOj74D7VkuD_LaU&usqp=CAU alt="">
     
 
-    <a href="#"> <p id="user-name"><i class="fa-regular fa-user" style="color: #000000">
+    <a href="../Signup.html"> <p id="user-name"><i class="fa-regular fa-user" style="color: #000000">
     </i> Login</p></a>
 
    </div>
