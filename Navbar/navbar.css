@@ -3,7 +3,9 @@ nav {
   background-color: white;
   width: 98%;
   margin: auto;
+  
 }
+
 /* mobile screen menu */
 
 #menu-icon{
@@ -386,7 +388,7 @@ nav input {
   .navbar-brand{
     width: 50px;
    }
-  body {
+  body div{
     font-size: 0.8rem;
   }
   #search-bar {
