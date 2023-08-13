@@ -18,27 +18,10 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
     rel="stylesheet"
   />
-  <style>
-    #signinbtn,#googlebtn{
-        background-color: white;
-        box-shadow: none;
-  border: 0;
-  padding: 10px;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
-  color: black;
-    }
-    #signinbtn:hover{
-        border: 1px dashed;
-    }
-    #googlebtn:hover{
-        border: 1px dashed;
-    }
-
-    
-  </style>
+ <link rel="stylesheet" href="./login.css">
 </head>
 <body>
+  <div id="navbar"></div>
   <section class="vh-100" style="background-color: #e1e5ee;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -91,13 +74,14 @@
       </div>
     </div>
   </section>
+  <div id="footer"></div>
 </body>
 </html>
 <script
  type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
 ></script>
-
+<script src="./components/loginIMPORT.js" type="module" ></script>
 
 
 <script type="module">
@@ -141,8 +125,9 @@
           const starCountRef = ref(database, 'users/' + userId);
           onValue(starCountRef, (snapshot) => {
               const data = snapshot.val();
-             localStorage.setItem("userName", userId);
-            window.location.assign("./Signup.html");
+             localStorage.setItem("userName", data.username);
+            
+      //      window.location.assign("./Signup.html");
           });
       })
       .catch((error) => {
