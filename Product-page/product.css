@@ -141,7 +141,7 @@ a {
 }
 
 @media only screen and (min-width: 450px) and (max-width: 600px) {
-  body {
+  .prod-detail-div  p {
     font-size: 0.8rem;
   }
 }
@@ -169,8 +169,8 @@ a {
 }
 
 @media only screen and (max-width: 450px) {
-  body {
-    font-size: 0.7rem;
+  .prod-detail-div  p {
+    font-size: 0.75rem;
   }
 }
 

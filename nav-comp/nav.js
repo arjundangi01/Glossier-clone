@@ -232,9 +232,12 @@ function navbar() {
     </div>
         
     <div id="user-detail-div">
+    
+  <img id="logout-btn" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZMDpj2jjF8OVyQIka2SR9eU9TqIuzEHntIeMWrYfnKNJbHOFvJyFVFOj74D7VkuD_LaU&usqp=CAU alt="">
+    
+
     <a href="#"> <p id="user-name"><i class="fa-regular fa-user" style="color: #000000">
-    </i></p></a>
-    <p id="logout-btn"> logout </p>
+    </i> Login</p></a>
 
    </div>
 
@@ -287,7 +290,19 @@ function navbar() {
         </div>
       </div>
     </div>
-  </nav>`;
+  </nav>
+  <div id="side-menu">
+  <div id="side-menu-header">
+    <i id="close" class="fa-solid fa-xmark" style="color: #080808;"></i>
+  </div>
+  <div id="side-menu-body">
+    <a href="../Product-page/product.html"><p>SKINCARE</p></a>
+    <p>MAKEUP</p>
+    <p>BODY</p>
+    <p>FRAGRANCE</p>
+    <p>GLOSSIER GOODS</p>
+  </div>
+</div>`;
 }
 
 function showCart() {

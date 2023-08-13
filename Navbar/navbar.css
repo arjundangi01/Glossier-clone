@@ -87,11 +87,18 @@ nav > div > div {
   font-size: 1rem;
 }
 #user-detail-div{
-  width: 40px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  gap: 14%;
   /* border: 1px solid #000; */
 }
+#user-detail-div img{
+  width: 30%;
+  
+}
 #logout-btn{
-  display: none;
+  /* display: none; */
   position: relative;
 
 }
@@ -432,11 +439,7 @@ nav input {
   border-radius: 2px;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
   }
-  .search-res-card p{
-    
-    font-size: 0.3rem;
-   
-  }
+  
   .search-res-card > div {
     width: 18px;
   }
@@ -529,7 +532,7 @@ nav input {
   .navbar-brand {
     font-size: 0.7rem;
   }
-
+ 
   .navbar #middle li:first-child {
     display: none;
     font-size: 0.2rem;
