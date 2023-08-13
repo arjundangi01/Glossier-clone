@@ -1,4 +1,7 @@
 import { navbar, displayCart, showCart,debounceALl } from "../nav-comp/nav.js";
+import { footer } from "../footer/footer.js";
+document.getElementById("footer").innerHTML = footer();
+
 
 window.addToCart = addToCart;
 window.reduceQuantity = reduceQuantity;
