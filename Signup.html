@@ -5,83 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  rel="stylesheet"
-/>
-<!-- Google Fonts -->
-<link
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-  rel="stylesheet"
-/>
-<!-- MDB -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
-  rel="stylesheet"
-/>
-<link rel="stylesheet" href="login.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- MDB -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+    rel="stylesheet"
+  />
+ <link rel="stylesheet" href="./signup.css">
 </head>
 <body>
+  <div id="navbar"></div>
   <section class="vh-100" style="background-color: #e1e5ee;">
-        <div class="container py-5 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-              <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                <div class="card-body p-5 text-center">
-      
-                  <h3 class="mb-5">Sign Up</h3>
-                  
-                  <div class="form-outline mb-4">
-                    <input type="text" id="name" class="form-control form-control-lg"  />
-                    <label class="form-label" for="typeEmailX-2">Full Name</label>
-                  </div>
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-10">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+              <div class="col-md-6 col-lg-5 d-none d-md-block">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+              </div>
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+  
+                  <form>
+  
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign up to your account</h5>
+                    
+                    <div class="form-outline mb-4">
+                        <input type="text" id="name"  class="form-control form-control-lg" />
+                        <label class="form-label" for="form2Example17">Name</label>
+                      </div>
 
-                  <div class="form-outline mb-4">
-                    <input type="text" id="typeEmailX-2" class="form-control form-control-lg"  />
-                    <label class="form-label" for="typeEmailX-2">Email</label>
-                  </div>
-                  
-      
-                  <div class="form-outline mb-4">
-                    <input type="text" id="typePasswordX-2" class="form-control form-control-lg"  />
-                    <label class="form-label" for="typePasswordX-2">Password</label>
-                  </div>
-      
-                  <!-- Checkbox -->
-                  <div class="form-check d-flex justify-content-start mb-4">
-                    <input class="form-check-input" type="checkbox" value="" id="form1Example3"  />
-                    <label class="form-check-label" for="form1Example3"> Remember password </label>
-                  </div>
-      
-                  <button class="btn btn-primary btn-lg btn-block" type="submit" id="signupbtn" >Sign Up</button>
-                  
-                  <hr class="my-4">
-      
-                  <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
-                    type="submit" id="googlebtn" ><i class="fab fa-google me-2"></i> Sign in with google</button>
-                    <h6>Have account?
-                      <a href="login.html">Sign in</a>
-                    </h6>
+                    <div class="form-outline mb-4">
+                      <input type="email" id="form2Example17" class="form-control form-control-lg" />
+                      <label class="form-label" for="form2Example17">Email address</label>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input type="password" id="form2Example27" class="form-control form-control-lg" />
+                      <label class="form-label" for="form2Example27">Password</label>
+                    </div>
+  
+                    <div class="pt-1 mb-4">
+                        <button class="btn btn-lg btn-block btn-primary" 
+                        type="submit" id="signupbtn">Sign up</button>
+                      <button class="btn btn-lg btn-block btn-primary" 
+                type="submit" id="googlebtn" >Sign up with google</button>
+                
+                    </div>
+  
+                    <a class="small text-muted" href="#!">Forgot password?</a>
+                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Have an account? <a href="./login.html"
+                        style="color: #393f81;">Login</a></p>
+                    <a href="#!" class="small text-muted">Terms of use.</a>
+                    <a href="#!" class="small text-muted">Privacy policy</a>
+                  </form>
+  
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
+  <div id="footer"></div>
 </body>
 </html>
 <script
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
 ></script>
- 
 
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
-    import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider , signInWithPopup} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-    import { getDatabase,ref, set } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
-   
-    const firebaseConfig = {
+<script type="module" src="./components/loginIMPORT.js">
+
+</script>
+ <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+  import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+  const firebaseConfig = {
       apiKey: "AIzaSyAGpHrB0sm21lPXpz4OtoSKWVLFb-jisb8",
       authDomain: "glossier-eba28.firebaseapp.com",
       projectId: "glossier-eba28",
@@ -90,75 +102,61 @@
       appId: "1:79396284003:web:e7b409f936564e49b6fa56",
       measurementId: "G-G7STPRSJ5S"
     };
+
   
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const auth = getAuth();
-    const provider = new GoogleAuthProvider();
-    const database = getDatabase();
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth = getAuth();
+  const provider = new GoogleAuthProvider();
+  const database = getDatabase();
 
-    const signUpButton = document.getElementById("signupbtn");
+  const signUpButton = document.getElementById("signupbtn");
 
-    signUpButton.addEventListener("click", function () {
+  signUpButton.addEventListener("click", function () {
+    event.preventDefault();
       const nameInput = document.getElementById("name");
-    const emailInput = document.getElementById("typeEmailX-2");
-    const passwordInput = document.getElementById("typePasswordX-2");
+      const emailInput = document.getElementById("form2Example17");
+      const passwordInput = document.getElementById("form2Example27");
       const name = nameInput.value;
       const email = emailInput.value;
       const password = passwordInput.value;
-      if(!name||!email||!password){
-        alert("Enter all details!")
+      if (!name || !email || !password) {
+          alert("Enter all details!");
+          return; // Exit the function if fields are not filled
       }
       createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-   
-    const user = userCredential.user;
-    let userId=user.uid;
-    set(ref(database, 'users/' + userId), {
-    username: name,
-    email: email,
-  }).then(function(){
-    localStorage.setItem("userName",name)
-    window.location.assign("./login.html");
-  })
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    alert("already register")
-    // ..
-  });
+          .then((userCredential) => {
+              const user = userCredential.user;
+              let userId = user.uid;
   
-
-    });
-
-    
-let googlebtn=document.getElementById("googlebtn")
-googlebtn.addEventListener("click",()=>{
-  signInWithPopup(auth, provider)
-  .then((result) => {
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    const user = result.user;
-    alert ("Login Successfull")
-    // ...
-  }).catch((error) => {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // The email of the user's account used.
-    const email = error.customData.email;
-    // The AuthCredential type that was used.
-    const credential = GoogleAuthProvider.credentialFromError(error);
-    // ...
+              localStorage.setItem("userName",name);
+              set(ref(database, 'users/' + userId), {
+                  username: name,
+                  email: email,
+              }).then(function(){
+               // window.location.assign("./")
+              })
+          })
+          .catch((error) => {
+              const errorMessage = error.message;
+              console.log(errorMessage);
+          });
   });
-})
 
+  let googlebtn = document.getElementById("googlebtn");
+  googlebtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      signInWithPopup(auth, provider)
+          .then((result) => {
+              const user = result.user;
+              alert("Login Successful");
+          })
+          .catch((error) => {
+              const errorMessage = error.message;
+              console.log(errorMessage);
+          });
+  });
 
-
-  </script>
- 
+</script>
