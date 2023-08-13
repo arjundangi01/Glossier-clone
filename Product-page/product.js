@@ -280,8 +280,8 @@ let logoutBtn = document.getElementById("logout-btn");
 user.innerHTML = "Arjun"
 logoutBtn.addEventListener("click", () => {
   user.innerHTML = `<i class="fa-regular fa-user" style="color: #000000">
-  </i>`
-  
+  </i> Login`
+  logoutBtn.style.display = "none"
 })
 
 
