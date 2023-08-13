@@ -1,9 +1,17 @@
-.shadow-2-strong{
-	border: 1px solid black;
+
+#signinbtn,#googlebtn{
+	background-color: white;
+	box-shadow: none;
+border: 0;
+padding: 10px;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+color: black;
 }
-.btn-primary{
-	color: black;
+#signinbtn:hover{
+	border: 1px dashed;
 }
-h6{
-	margin-top: 20px;
+#googlebtn:hover{
+	border: 1px dashed;
 }
+
