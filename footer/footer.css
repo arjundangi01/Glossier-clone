@@ -30,7 +30,7 @@
 
 }
 .about-divs{
-    line-height: 1.2rem;
+    line-height: 0.8rem;
 }
 .about-divs p:first-child{
     font-weight: 600;
@@ -67,7 +67,7 @@
 @media only screen and (min-width: 1000px) and (max-width: 1400px) {
    
     .about-divs{
-        line-height: 1.2rem;
+        line-height: 0.8rem;
     }
     #footer-bottom-div >div:first-child{
         display: flex;
@@ -84,7 +84,7 @@
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
    
     #footer-top-div .about-divs{
-        line-height: 1rem;
+        line-height: 0.5rem;
     }
     #footer-top-div .about-divs p{
         font-size: 0.6rem;
@@ -115,10 +115,11 @@
 @media only screen and (min-width: 445px) and (max-width: 600px) {
     
     #footer-top-div .about-divs{
-        line-height: 0.59rem;
+        line-height: 0.5rem;
     }
     #footer-top-div .about-divs p{
         font-size: 0.4rem;
+        margin: 0;
        
     }
     #footer-bottom-div >div:first-child{
@@ -144,13 +145,15 @@
     }
     
 }
-@media only screen and (min-width: 405px) and (max-width: 445) {
+@media only screen and (min-width: 405px) and (max-width: 445px) {
     
     #footer-top-div .about-divs{
-        line-height: 0.5rem;
+        line-height: 0.4rem;
     }
     #footer-top-div .about-divs p{
-        font-size: 0.4rem;
+        font-size: 0.3rem;
+        margin: 0;
+
        
     }
     #footer-bottom-div >div:first-child{
@@ -161,18 +164,18 @@
     }
     #footer-bottom-div >div:first-child p{
        
-        font-size: 0.4rem;
+        font-size: 0.3rem;
 
     }
     #footer-bottom-div >div:last-child p{
        
-        font-size: 0.4rem;
+        font-size: 0.3rem;
 
     }
    #footer #footer-bottom-div{
         font-size: 0.3rem;
         
-        gap: 0px  ;
+        gap: 1px  ;
     }
     
     
@@ -180,10 +183,11 @@
 @media only screen and (max-width: 405px) {
     
     #footer-top-div .about-divs{
-        line-height: 0.5rem;
+        line-height: 0.42rem;
     }
     #footer-top-div .about-divs p{
-        font-size: 0.3rem;
+        font-size: 0.25rem;
+        margin: 0;
        
     }
     #footer-bottom-div >div:first-child{
@@ -194,18 +198,18 @@
     }
     #footer-bottom-div >div:first-child p{
        
-        font-size: 0.3rem;
+        font-size: 0.25rem;
 
     }
     #footer-bottom-div >div:last-child p{
        
-        font-size: 0.3rem;
+        font-size: 0.25rem;
 
     }
    #footer #footer-bottom-div{
-        font-size: 0.3rem;
+        font-size: 0.25rem;
         
-        gap: 0px  ;
+        gap: 1px  ;
     }
     
 }
