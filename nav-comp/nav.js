@@ -223,8 +223,8 @@ function navbar() {
       </div>
 
       <div class="nav-right">
-      <div  id="search-bar"class="input-group mb-1">
-      <input  type="text" class="  form-control" id="searchright" placeholder="Search Item" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div  id="search-bar"class="input-group-cus mb-1-cus">
+      <input  type="text" class="  form-control-cus" id="searchright" placeholder="Search Item" aria-label="Recipient's username" aria-describedby="basic-addon2">
       <div id="show-result">
      
       </div>
@@ -284,7 +284,9 @@ function navbar() {
         </div>
         </div>
         <div id="checkout-div" class="offcanvas-bottom">
-            <button id="checkout-btn"><span></span> - Checkout</button>
+       <a href="../checkout.html"><button id="checkout-btn"><span></span> - Checkout</button></a>
+
+            
         </div>
       </div>
     </div>
@@ -431,8 +433,35 @@ window.moveToDetailPage = moveToDetailPage;
     let singleItem = searchOutput[index]
     localStorage.setItem("singleItem", JSON.stringify(singleItem));
     console.log(singleItem)
-    // window.location.assign()
+    window.location.assign("../product-detail.html")
   }
 }
 
-export { navbar, displayCart, showCart, debounceALl };
+function displayUser() {
+  let userDetailContainer = document.getElementById("user-detail-div");
+  userDetailContainer.innerHTML = "";
+ 
+let name = localStorage.getItem("userName") || "";
+if (name == "") {
+  userDetailContainer.innerHTML = `   
+
+  <a href="../Signup.html"> <p id="user-name"><i class="fa-regular fa-user" style="color: #000000">
+  </i> Login</p></a>`
+} else {
+  userDetailContainer.innerHTML = `
+  <img  id="logout-btn" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZMDpj2jjF8OVyQIka2SR9eU9TqIuzEHntIeMWrYfnKNJbHOFvJyFVFOj74D7VkuD_LaU&usqp=CAU alt="">
+  <a> <p id="user-name">${name}</p></a>
+  `
+  let logoutBtn = document.getElementById("logout-btn");
+
+  logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("userName")
+
+  displayUser();
+  
+})
+}
+
+}
+
+export { navbar, displayCart, showCart, debounceALl ,displayUser };
