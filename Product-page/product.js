@@ -1,4 +1,4 @@
-import { navbar, displayCart, showCart,debounceALl ,displayUser} from "../nav-comp/nav.js";
+import { navbar, displayCart, showCart,debounceALl ,displayUser,hamburger} from "../nav-comp/nav.js";
 import { footer } from "../footer/footer.js";
 window.addToCart = addToCart;
 window.reduceQuantity = reduceQuantity;
@@ -293,13 +293,4 @@ function moveToDetailPage(index) {
   console.log(singleItem)
 }
 
-let menuIcon = document.querySelector(".show");
-menuIcon.addEventListener("click", () => {
-  document.querySelector("#side-menu").style.display = "block"
-
-})
-let close = document.querySelector("#close");
-close.addEventListener("click", () => {
-  document.querySelector("#side-menu").style.display = "none"
-
-})
+function hamburger() 

@@ -464,4 +464,18 @@ if (name == "") {
 
 }
 
-export { navbar, displayCart, showCart, debounceALl ,displayUser };
+
+function hamburger() {
+  let menuIcon = document.querySelector(".show");
+menuIcon.addEventListener("click", () => {
+  document.querySelector("#side-menu").style.display = "block"
+
+})
+let close = document.querySelector("#close");
+close.addEventListener("click", () => {
+  document.querySelector("#side-menu").style.display = "none"
+
+})
+}
+
+export { navbar, displayCart, showCart, debounceALl ,displayUser,hamburger };
