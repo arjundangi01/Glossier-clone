@@ -48,17 +48,17 @@ a>#main-photo{
     cursor: pointer;
     margin-top: 10px;
 }
-#middle>h3{
+#mid>h3{
     font-size: 4rem;
     font-family: acumin-pro,  acumin pro,  helvetica neue,  helvetica,  arial,  sans-serif;
     text-align: right;
     font-weight: 500;
 }
-#middle>h3>span{
+#mid>h3>span{
     margin-right: 20%;
    
 }
-#middle>p{
+#mid>p{
     text-align: justify;
     margin-top: -3%;
     font-size: 1.5rem;
@@ -426,7 +426,7 @@ strike{
    #best>.product:last-child{
     width: 95%;
 }
-#middle>h3{
+#mid>h3{
     display: none;
 }
 #videos{
