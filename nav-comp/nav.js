@@ -223,8 +223,8 @@ function navbar() {
       </div>
 
       <div class="nav-right">
-      <div  id="search-bar"class="input-group mb-1">
-      <input  type="text" class="  form-control" id="searchright" placeholder="Search Item" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div  id="search-bar"class="input-group-cus mb-1-cus">
+      <input  type="text" class="  form-control-cus" id="searchright" placeholder="Search Item" aria-label="Recipient's username" aria-describedby="basic-addon2">
       <div id="show-result">
      
       </div>
