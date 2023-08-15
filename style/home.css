@@ -3,10 +3,10 @@ body{
 }
 
 #upper{
-    position: relative;
-    /* max-width: 100%; */
-    width: 100%;
-    margin: 0 auto;
+
+  margin: 0 auto;
+  
+  margin-top:55px;
 }
 
 a>#main-photo{
@@ -406,13 +406,17 @@ strike{
     color: #aeb0b8 ;
     margin-top: -1px;
 }
-@media screen and (min-width:400px) and (max-width: 1272px) {
+
+
+ @media only screen and (min-width:500px) and (max-width: 1272px) {
     a>#main-photo{
         -webkit-transform: none;
       transform: scaleX(-1);
-      width: 120%;
+      width: 100%;
       height: auto;
     }
+ 
+   
   #inner{
     display: none;
   }
@@ -433,8 +437,9 @@ strike{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 10px;
-    width: 90%;
+    width: 100%;
 }
+
 #sets{
    grid-template-columns: 1fr;
    gap: 20px;
@@ -482,6 +487,104 @@ width: 100%;
     margin-top: 45px;
     height: 25px;
 }
-  
+
+}  
+ @media only screen and (min-width:300px) and (max-width: 500px) {
+    a>#main-photo{
+        -webkit-transform: none;
+      transform: scaleX(-1);
+      width: 100%;
+      height: auto;
+    }
+ 
+   
+  #inner{
+    display: none;
+  }
+  #best{
+    grid-template-columns: repeat(1,1fr);
+    width: 50%;
+    gap: 10px;
+   margin-left: 25%;
+    align-items: center;
+   }
+   #best>.product:last-child{
+    width: 95%;
 }
+#mid>h3{
+    display: none;
+}
+#videos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px 5px;
+    width: 100%;
+}
+.vid{
+  margin-left: 10px;
+}
+#videos div video{
+    height: 90px;
+   width: 100%;
+}
+
+#sets{
+   grid-template-columns: 1fr;
+   gap: 20px;
+   margin-left: 10px;
+}
+
+div .set1{
+width: 50%;
+margin: auto;
+
+}
+#cat img{
+  width: 100%;
+  /* height: 50px; */
+}
+.cat1{
+  height: 50px;
+}
+
+#real{
+    font-weight: 100;
+    width: 100%;
+}
+#parent{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+  justify-items: center;
+}
+.child{
+width: 100%;
+}
+#main {
+    flex-direction: column;
+    align-items: center; 
+    margin-left: 0; 
+    margin-right: 0;
+    text-align: center; 
+    width: 120%;
+    height: 450px;
+}
+#main>#mailimg{
+    margin-left: 10px;
+}
+#main>#mail{
+  margin-left: 40px;
+}
+#mail>p{
+    width: 340px;
+    margin-right: 20px;
+}
+#input>input{
+    width: 380px;
+    margin-top: 45px;
+    height: 25px;
+}
+
+}  
+ 
 

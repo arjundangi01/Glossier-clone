@@ -1,5 +1,6 @@
 #footer{
     background-color: #242424;
+    width: 100%;
     color: #aeadad;
     margin-left: -10px;
     margin-right: -2px;
@@ -11,7 +12,7 @@
 }
 
 #footer-container{
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 

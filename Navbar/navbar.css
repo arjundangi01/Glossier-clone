@@ -363,18 +363,18 @@ nav input {
   }
 }
 @media only screen and (min-width: 495px) and (max-width: 970px) {
-  #menu-icon{
+  #navbar  #menu-icon{
     display: block;
   
   }
-  .navbar-brand{
+  #navbar .navbar-brand{
     width: 50px;
    }
-  #search-bar {
+   #navbar  #search-bar {
     width: 310px;
     border: 1px solid #000;
   }
-  #middle li {
+  #navbar  #middle li {
     display: none;
   }
  
