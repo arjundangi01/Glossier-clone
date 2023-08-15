@@ -415,7 +415,7 @@ strike{
       width: 100%;
       height: auto;
     }
- 
+
    
   #inner{
     display: none;
@@ -512,7 +512,18 @@ width: 100%;
     width: 95%;
 }
 #mid>h3{
-    display: none;
+    /* display: none; */
+    font-size: 1.6rem;
+    font-family: acumin-pro, acumin pro, helvetica neue, helvetica, arial, sans-serif;
+    text-align: right;
+    font-weight: 500;
+}
+#mid > p {
+  text-align: justify;
+  font-size: 0.7rem;
+  font-family: acumin-pro, "acumin pro", "helvetica neue", helvetica, arial, sans-serif;
+  width: 80%;
+  margin: auto;
 }
 #videos{
     display: grid;
