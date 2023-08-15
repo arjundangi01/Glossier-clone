@@ -293,4 +293,4 @@ function moveToDetailPage(index) {
   console.log(singleItem)
 }
 
-function hamburger() 
+hamburger() 
