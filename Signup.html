@@ -197,7 +197,7 @@
           username: name,
           email: email,
         }).then(function () {
-          // window.location.assign("./")
+           window.location.assign("./index.html")
         });
       })
       .catch((error) => {
@@ -215,6 +215,7 @@
         let [firstName, lastName] = user.displayName.split(' ');
 
       localStorage.setItem("userName",firstName);
+      window.location.assign("./index.html")
       })
       .catch((error) => {
         const errorMessage = error.message;

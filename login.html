@@ -147,7 +147,7 @@
               const data = snapshot.val();
              localStorage.setItem("userName", data.username);
             
-      //      window.location.assign("./Signup.html");
+             window.location.assign("./index.html")
           });
       })
       .catch((error) => {
@@ -170,6 +170,7 @@
           let [firstName, lastName] = user.displayName.split(' ');
 
 localStorage.setItem("userName",firstName);
+window.location.assign("./index.html")
 
       }).catch((error) => {
           const errorCode = error.code;
