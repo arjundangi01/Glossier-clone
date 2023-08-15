@@ -1,13 +1,14 @@
 body{
     background-color: #e1e5ee;
 }
+
 #upper{
     position: relative;
     /* max-width: 100%; */
     width: 100%;
     margin: 0 auto;
- 
 }
+
 a>#main-photo{
     -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
@@ -463,8 +464,8 @@ width: 100%;
     margin-left: 0; 
     margin-right: 0;
     text-align: center; 
+    width: 120%;
     height: 450px;
-    margin-left: 40px;
 }
 #main>#mailimg{
     margin-left: 10px;
