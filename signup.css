@@ -13,6 +13,9 @@ color: black;
 #googlebtn:hover{
 	border: 1px dashed;
 }
+#alert{
+	display: none;
+}
 
 @media only screen and (min-width: 1500px)  {
 	#signupbox{
