@@ -5,11 +5,12 @@ body h5{
 /* --------------------filter & sort start---------------------- */
 #filter {
   background-color: #e8e8e8;
-  padding: 12px 30px;
+  padding: 10px 30px 2px 30px;
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
   margin-top: 60px;
+  /* border: 1px solid #000; */
 }
 #filter p:hover {
   text-decoration: underline;
