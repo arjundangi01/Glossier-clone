@@ -39,7 +39,19 @@
  <link rel="stylesheet" href="../footer/footer.css" />
 </head>
 <body>
+
+  
   <div id="navbar"></div>
+  <div class="spinner-border text-secondary" role="status" id="spinner">
+    <span class="sr-only"  >Loading...</span>
+  </div>
+  <div id="alert-container">
+    <div id="alert">
+      <p>Please fill all the required details!</p>
+      <button>OK</button>
+    </div>
+  </div>
+  
   <section class="vh-100" style="background-color: #e1e5ee;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100" id="loginbox">
@@ -47,7 +59,7 @@
           <div class="card" style="border-radius: 1rem;">
             <div class="row g-0">
               <div class="col-md-6 col-lg-5 d-none d-md-block">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                <img  src="https://i.ibb.co/rML9JXJ/photo-1629198688000-71f23e745b6e.jpg"
                   alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
@@ -134,7 +146,8 @@
       const password = passwordInput.value;
 
       if (!email || !password) {
-          alert("Enter all details!");
+        document.querySelector("#alert-container").style.display = "block";
+      
           return;
       }
 
@@ -146,7 +159,8 @@
           onValue(starCountRef, (snapshot) => {
               const data = snapshot.val();
              localStorage.setItem("userName", data.username);
-            
+            let spinner=document.getElementById("spinner");
+            spinner.style.display="block";
              window.location.assign("./index.html")
           });
       })
@@ -172,11 +186,16 @@
 localStorage.setItem("userName",firstName);
 window.location.assign("./index.html")
 
+
       }).catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           console.log(error);
       });
-  });
+  }); 
+
+  document.querySelector("#alert button").addEventListener("click", () => {
+  document.querySelector("#alert-container").style.display = "none";
+});
 </script>
  
