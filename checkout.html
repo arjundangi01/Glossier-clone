@@ -4,10 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
+     <script
+      src="https://kit.fontawesome.com/ab7e10d51f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="checkout.css" />
+      <link rel="stylesheet" href="../Navbar/navbar.css" />
+    <link rel="stylesheet" href="../cart-page/cart.css" />
+    <link rel="stylesheet" href="../footer/footer.css" />
   </head>
 
   <body>
+    <div id="navbar"></div>
     <div id="alert-container">
       <div id="alert">
         <p>Please fill all the required details!</p>
@@ -18,11 +37,11 @@
     <div id="main">
       <div id="details-div">
         <div id="checkout-logo">
-          <img
+          <!-- <img
             id="logo"
             src="https://cdn.shopify.com/s/files/1/0627/9164/7477/files/g-sharing-logo.png?85400"
             alt=""
-          />
+          /> -->
         </div>
         <div id="links">
           <h3>Checkout</h3>
@@ -96,31 +115,31 @@
             <div class="main content">
               <div id="left-del">
                 <input type="radio" class="radio" />
-                <h3>Standard</h3>
-                <h6 class="delivery-date" id="standard-delivery"></h6>
+                <h3 style="font-size: 1.2rem;">Standard</h3>
+                <h6  class="delivery-date" id="standard-delivery"></h6>
               </div>
               <div id="right">
-                <h3 data-charge="0">Free</h3>
+                <h3 style="font-size: 1rem;" data-charge="0">Free</h3>
               </div>
             </div>
             <div class="main content">
               <div id="left-del">
                 <input type="radio" class="radio" />
-                <h3>Expedited</h3>
+                <h3 style="font-size: 1.2rem;">Expedited</h3>
                 <h6 class="delivery-date" id="expedited-delivery"></h6>
               </div>
               <div id="right">
-                <h3 data-charge="12">$12</h3>
+                <h3 style="font-size: 1rem;" data-charge="12">$12</h3>
               </div>
             </div>
             <div class="main content">
               <div id="left-del">
                 <input type="radio" class="radio" />
-                <h3>Overnight</h3>
+                <h3 style="font-size: 1.2rem;">Overnight</h3>
                 <h6 class="delivery-date" id="overnight-delivery"></h6>
               </div>
               <div id="right">
-                <h3 data-charge="19">$19</h3>
+                <h3 style="font-size: 1rem;" data-charge="19">$19</h3>
               </div>
             </div>
           </div>
@@ -153,6 +172,7 @@
         </div>
       </div>
     </div>
+    <div id="footer" ></div>
   </body>
 </html>
 <script src="checkout.js"></script>

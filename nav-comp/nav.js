@@ -369,7 +369,7 @@ function displayCart(array) {
 }
 
 function debounceALl() {
-window.moveToDetailPage = moveToDetailPage;
+window.moveToDetailPage2 = moveToDetailPage2;
 
   let timer;
   let searchBar = document.getElementById("searchright");
@@ -415,7 +415,7 @@ window.moveToDetailPage = moveToDetailPage;
     let arr = array.slice(0, 5);
     arr.forEach((element,index) => {
       showResult.innerHTML += ` 
-    <div onclick= "moveToDetailPage(${index})" class="search-res-card">
+    <div onclick= "moveToDetailPage2(${index})" class="search-res-card">
       <div>
          <img src="${element.image1}" alt="">
       </div>
@@ -429,7 +429,7 @@ window.moveToDetailPage = moveToDetailPage;
 
     showResult.style.display = "none";
   });
-  function moveToDetailPage(index) {
+  function moveToDetailPage2(index) {
     let singleItem = searchOutput[index]
     localStorage.setItem("singleItem", JSON.stringify(singleItem));
     console.log(singleItem)

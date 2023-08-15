@@ -21,6 +21,8 @@
     />
     <link rel="stylesheet" href="../Navbar/navbar.css" />
     <link rel="stylesheet" href="../cart-page/cart.css" />
+    <link rel="stylesheet" href="../footer/footer.css" />
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap");
       body {
@@ -503,6 +505,7 @@
         ></video>
       </div>
     </div>
+    <div id="footer"></div>
   </body>
 </html>
 <script type="module"></script>
@@ -572,7 +575,7 @@
     if (prodIdx !== -1) {
       cartArr[prodIdx].quantity = cartArr[prodIdx].quantity + +quantity;
     } else {
-      cartArr.push({ ...currProduct, quantity: 1 });
+      cartArr.push({ ...currProduct, quantity:quantity });
     }
 
     localStorage.setItem("cartArr", JSON.stringify(cartArr));

@@ -288,8 +288,10 @@ displayUser();
 // -----------  product detail page -----------
 
 function moveToDetailPage(index) {
+  console.log(output)
   let singleItem = output[index]
   localStorage.setItem("singleItem", JSON.stringify(singleItem));
+  window.location.assign("../product-detail.html")
   console.log(singleItem)
 }
 

@@ -1,10 +1,12 @@
-import { navbar, displayCart, showCart,debounceALl } from "../nav-comp/nav.js";
+import { navbar, displayCart, showCart,debounceALl,displayUser,hamburger } from "../nav-comp/nav.js";
+import { footer } from "../footer/footer.js";
 
 window.addToCart = addToCart;
 window.reduceQuantity = reduceQuantity;
 window.addQuantity = addQuantity;
 window.deleteItem = deleteItem;
 // window.moveToDetailPage = moveToDetailPage;
+document.getElementById("footer").innerHTML = footer();
 
 document.getElementById("navbar").innerHTML = navbar();
 
@@ -65,3 +67,6 @@ function deleteItem(index) {
   displayCart(cartArr);
   console.log("first")
 }
+debounceALl()
+displayUser()
+hamburger()

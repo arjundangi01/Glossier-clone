@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment</title>
     <!-- <link rel="stylesheet" href="checkout.css" /> -->
+    <link rel="stylesheet" href="../footer/footer.css" />
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap");
       html {
@@ -22,6 +24,7 @@
         height: 100%;
         width: 100%;
         display: flex;
+        margin-bottom: -40px;
       }
       #details-div {
         margin-top: 80px;
@@ -259,6 +262,10 @@
         display: none;
       }
       @media screen and (max-width: 1000px) {
+        #main{
+          margin-bottom: -180px;
+          /* height: 500px; */
+        }
         #sstotal-div {
           display: flex;
         }
@@ -394,8 +401,10 @@
         </div>
       </div>
     </div>
+    <div id="footer" ></div>
   </body>
 </html>
+<script type="module" src="./payment-import.js"></script>
 <script>
   let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
   // let cartArr = [

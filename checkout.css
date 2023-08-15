@@ -117,17 +117,17 @@ body {
   display: flex;
   flex-direction: column;
 }
-h2,
-h3,
-h4,
-p,
-h1 {
+#main h2,
+#main h3,
+#main h4,
+#main p,
+#main h1 {
   font-weight: 500;
 }
-h2 {
+#main h2 {
   font-size: 1.3rem;
 }
-input {
+#main input {
   padding: 10px 10px;
   margin: 4px;
   border: 0;
@@ -171,7 +171,7 @@ input {
   padding-left: 40px;
   padding-right: 40px;
 }
-select {
+#main select {
   padding: 10px 10px;
   width: 98%;
   display: block;
@@ -215,6 +215,7 @@ select {
 }
 #left-del {
   display: flex;
+  align-items: center;
 }
 .main {
   display: flex;
@@ -315,6 +316,21 @@ hr {
   display: flex;
   justify-content: space-between;
   padding: 0px 80px;
+  margin: 0px 0px;
+}
+#subtotal-div h3,
+#shipping-charges-div h3{
+  font-size: 1.3rem;
+
+}
+#total-div{
+  /* margin-top: 15px; */
+  margin-top: 25px;
+ 
+}
+#total-div h1{
+  
+  font-size: 1.5rem;
 }
 #rzp-button1 {
   padding: 10px 20px;
@@ -327,6 +343,9 @@ hr {
 }
 
 @media screen and (max-width: 1000px) {
+  #main{
+    margin-top: 20px;
+  }
   #sstotal-div {
     display: flex;
   }
@@ -351,6 +370,7 @@ hr {
     padding: 0;
     width: 100%;
   }
+    
   #checkout-logo {
     margin-left: 0;
   }
