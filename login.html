@@ -166,7 +166,11 @@
           const credential = GoogleAuthProvider.credentialFromResult(result);
           const token = credential.accessToken;
           const user = result.user;
-          alert("Login Successful with Google");
+         
+          let [firstName, lastName] = user.displayName.split(' ');
+
+localStorage.setItem("userName",firstName);
+
       }).catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;

@@ -1,4 +1,4 @@
-import { navbar, displayCart, showCart,debounceALl } from "../nav-comp/nav.js";
+import { navbar, displayCart, showCart,debounceALl ,displayUser } from "../nav-comp/nav.js";
 import { footer } from "../footer/footer.js";
 document.getElementById("footer").innerHTML = footer();
 
@@ -68,3 +68,5 @@ function deleteItem(index) {
   displayCart(cartArr);
   console.log("first")
 }
+displayUser();
+debounceALl();
