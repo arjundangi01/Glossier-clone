@@ -206,8 +206,9 @@
       .then((userCredential) => {
         const user = userCredential.user;
         let userId = user.uid;
+        let [firstName, lastName] = name.split(" ");
 
-        localStorage.setItem("userName", name);
+        localStorage.setItem("userName", firstName);
         set(ref(database, "users/" + userId), { 
           username: name,
           email: email,
@@ -235,11 +236,17 @@
       .then((result) => {
         const user = result.user;
         let [firstName, lastName] = user.displayName.split(" ");
+        spinner.style.display = "block";
 
         localStorage.setItem("userName", firstName);
         window.location.assign("./index.html");
       })
       .catch((error) => {
+        spinner.style.display = "none";
+
+        document.querySelector("#alert-msg").textContent =
+          "Account already registered";
+        document.querySelector("#alert-container").style.display = "block";
         const errorMessage = error.message;
         console.log(errorMessage);
       });

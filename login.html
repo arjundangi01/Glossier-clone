@@ -198,7 +198,10 @@
         const starCountRef = ref(database, "users/" + userId);
         onValue(starCountRef, (snapshot) => {
           const data = snapshot.val();
-          localStorage.setItem("userName", data.username);
+          let [firstName, lastName] = data.username.split(" ");
+
+        localStorage.setItem("userName", firstName);
+          // localStorage.setItem("userName", data.username);
           window.location.assign("./index.html");
         });
       })

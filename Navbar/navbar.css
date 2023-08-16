@@ -122,10 +122,12 @@ nav > div > div {
   font-size: 1rem;
 }
 #user-detail-div{
-  width: 60px;
+  width: 65px;
   display: flex;
   align-items: center;
   gap: 14%;
+  margin-right: 2rem;
+  margin-left: -3rem;
   /* border: 1px solid #000; */
 }
 #user-detail-div img{
@@ -316,9 +318,12 @@ nav input {
 
 /*-------search result -----------  */
 #search-bar {
-  width: 400px;
-  margin-right: 3rem;
+  width: 320px;
+  margin-right: 4rem;
+  /* margin-left: -10rem; */
+  right: 50px;
 }
+
 #searchright {
   border-radius: 10px;
 }
@@ -374,10 +379,14 @@ nav input {
   }
   #navbar .navbar-brand{
     width: 50px;
+    margin-left: -60px;
+    margin-right: -50px;
    }
    #navbar  #search-bar {
-    width: 310px;
+    width: 180px;
     border: 1px solid #000;
+    /* left: 0px; */
+    right: 50px;
   }
   #navbar  #middle li {
     display: none;
@@ -430,6 +439,7 @@ nav input {
     border-radius: 10px;
     margin-right: 0;
     width: 200px;
+    right: 50px;
 
   }
   #searchright {
@@ -450,10 +460,11 @@ nav input {
   #middle li {
     display: none;
   }
-  #search-bar {
+   #search-bar {
     height: 28px;
     border-radius: 10px;
     margin-right: 0;
+    width: 150px;
    
   }
   #searchright {
@@ -514,6 +525,8 @@ nav input {
     height: 20px;
     border-radius: 10px;
     margin-right: 0;
+    right: 50px;
+
   }
   #searchright {
     height: 100%;
@@ -532,10 +545,24 @@ nav input {
   
   }
   #search-bar {
-    width: 140px;
+    width: 120px;
     border: 1px solid #000;
+    margin-top: 2px;
   }
-
+  #user-detail-div{
+    width: 65px;
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    margin-right: 0rem;
+    margin-left: -3.5rem;
+    font-size: 0.75rem;
+    /* border: 1px solid #000; */
+  }
+  #user-detail-div img{
+    width: 15%;
+    
+  }
   .navbar #searchright {
     font-size: 0.7rem;
   }
@@ -559,8 +586,22 @@ nav input {
   #search-bar {
     width: 90px;
     height: 18px;
-
+   margin-top: 2px;
     border: 1px solid #000;
+  }
+  #user-detail-div{
+    width: 65px;
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    margin-right: 0rem;
+    margin-left: -3.5rem;
+    font-size: 0.6rem;
+    /* border: 1px solid #000; */
+  }
+  #user-detail-div img{
+    width: 15%;
+    
   }
   .navbar #searchright {
     font-size: 0.7rem;
