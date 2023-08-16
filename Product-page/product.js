@@ -1,5 +1,6 @@
 import { navbar, displayCart, showCart,debounceALl ,displayUser,hamburger} from "../nav-comp/nav.js";
 import { footer } from "../footer/footer.js";
+import { skelteon } from "../components/skeleton.js";
 window.addToCart = addToCart;
 window.reduceQuantity = reduceQuantity;
 window.addQuantity = addQuantity;
@@ -9,10 +10,15 @@ window.moveToDetailPage = moveToDetailPage;
 document.getElementById("navbar").innerHTML = navbar();
 document.getElementById("footer").innerHTML = footer();
 let skelCont = document.querySelector(".container");
-setTimeout(() => {
-fetchData(1);
-  
-},500)
+skelCont.innerHTML = skelteon();
+onloadfunction()
+function onloadfunction(){
+  setTimeout(() => {
+    fetchData(1);
+      
+    },500)
+}
+
 let output;
 let tempArr;
 async function fetchData(page) {
@@ -305,99 +311,3 @@ hamburger()
 
 
 
-skelCont.innerHTML = `<div class="col-sm-6 col-md-3">
-<div class="movie--isloading">
-  <div class="loading-image"></div>
-  <div class="loading-content">
-    <div class="loading-text-container">
-      <div class="loading-main-text"></div>
-      <div class="loading-sub-text"></div>
-    </div>
-    <div class="loading-btn"></div>
-  </div>
-</div>
-</div>
-<div class="col-sm-6 col-md-3">
-<div class="movie--isloading">
-  <div class="loading-image"></div>
-  <div class="loading-content">
-    <div class="loading-text-container">
-      <div class="loading-main-text"></div>
-      <div class="loading-sub-text"></div>
-    </div>
-    <div class="loading-btn"></div>
-  </div>
-</div>
-</div>
-<div class="col-sm-6 col-md-3">
-<div class="movie--isloading">
-  <div class="loading-image"></div>
-  <div class="loading-content">
-    <div class="loading-text-container">
-      <div class="loading-main-text"></div>
-      <div class="loading-sub-text"></div>
-    </div>
-    <div class="loading-btn"></div>
-  </div>
-</div>
-</div>
-<div class="col-sm-6 col-md-3">
-<div class="movie--isloading">
-  <div class="loading-image"></div>
-  <div class="loading-content">
-    <div class="loading-text-container">
-      <div class="loading-main-text"></div>
-      <div class="loading-sub-text"></div>
-    </div>
-    <div class="loading-btn"></div>
-  </div>
-</div>
-</div>
-<div class="col-sm-6 col-md-3">
-<div class="movie--isloading">
-  <div class="loading-image"></div>
-  <div class="loading-content">
-    <div class="loading-text-container">
-      <div class="loading-main-text"></div>
-      <div class="loading-sub-text"></div>
-    </div>
-    <div class="loading-btn"></div>
-  </div>
-</div>
-</div>
-<div class="col-sm-6 col-md-3">
-<div class="movie--isloading">
-  <div class="loading-image"></div>
-  <div class="loading-content">
-    <div class="loading-text-container">
-      <div class="loading-main-text"></div>
-      <div class="loading-sub-text"></div>
-    </div>
-    <div class="loading-btn"></div>
-  </div>
-</div>
-</div>
-<div class="col-sm-6 col-md-3">
-<div class="movie--isloading">
-  <div class="loading-image"></div>
-  <div class="loading-content">
-    <div class="loading-text-container">
-      <div class="loading-main-text"></div>
-      <div class="loading-sub-text"></div>
-    </div>
-    <div class="loading-btn"></div>
-  </div>
-</div>
-</div>
-<div class="col-sm-6 col-md-3">
-<div class="movie--isloading">
-  <div class="loading-image"></div>
-  <div class="loading-content">
-    <div class="loading-text-container">
-      <div class="loading-main-text"></div>
-      <div class="loading-sub-text"></div>
-    </div>
-    <div class="loading-btn"></div>
-  </div>
-</div>
-</div>`
