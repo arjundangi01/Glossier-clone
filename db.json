@@ -123,9 +123,9 @@
       },
       {
         "image1": "https://glossier-prod.imgix.net/products/glossier-moisturizing-moon-mask-carousel-01_73d37e4e-bcd4-44f7-ad6a-4b5448ebeb60.png?auto=compress,format&cs=srgb&w=540",
-        "image2": "https://glossier-prod.imgix.net/products/glossier-moisturizing-moon-mask-carousel-06.png?auto=compress,format&cs=srgb&w=540",
+        "image2": "https://glossier-prod.imgix.net/files/glossier-moisturizing-moon-mask-ugc-01.png?auto=compress,format&cs=srgb&w=540",
         "image3": "https://glossier-prod.imgix.net/products/glossier-moisturizing-moon-mask-carousel-06.png?auto=compress,format&cs=srgb&w=540",
-        "video1": "https://glossier-prod.imgix.net/files/glossier-moisturizing-moon-mask-ugc-01.png?auto=compress,format&cs=srgb&w=540",
+        "video1": "https://player.vimeo.com/progressive_redirect/playback/815665158/rendition/480p/file.mp4?loc=external&signature=70382f4d12b3411d19d5f553ba8a3e22016139228dffd748707eb9b9ad472b2f",
         "name": "Moisturizing  Mask",
         "desc": "Soothing face treatment",
         "skinType": "Dry",
@@ -139,7 +139,7 @@
       {
         "image1": "https://glossier-prod.imgix.net/products/glossier-pro-retinol-carousel-01_674a9a03-1adf-4a9c-9c47-3fb6ce7abc5d.png?auto=compress,format&cs=srgb&w=540",
         "image2": "https://glossier-prod.imgix.net/products/glossier-pro-retinol-carousel-08.png?auto=compress,format&cs=srgb&w=540",
-        "image3": "https://glossier-prod.imgix.net/products/glossier-pro-retinol-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+        "image3": "https://glossier-prod.imgix.net/files/glossier-pro-retinol-ugc-01_668edde0-6e88-4a04-8e0b-42c3f6a30d75.png?auto=compress,format&cs=srgb&w=540",
         "video1": "https://player.vimeo.com/progressive_redirect/playback/816340637/rendition/360p/file.mp4?loc=external&signature=9f200e61ce40c8998750581e6dfe22f92c96f54f1502a6ddf3b1bcbe11565bcd",
         "name": "Universal Pro-Retinol",
         "desc": "Nightly renewing complex",
@@ -154,8 +154,8 @@
       {
         "image1": "https://glossier-prod.imgix.net/products/glossier-solution-carousel-01.png?auto=compress,format&cs=srgb&w=540",
         "image2": "https://glossier-prod.imgix.net/products/glossier-solution-carousel-07.png?auto=compress,format&cs=srgb&w=540",
-        "image3": "https://glossier-prod.imgix.net/products/glossier-solution-carousel-07.png?auto=compress,format&cs=srgb&w=540",
-        "video1": "https://glossier-prod.imgix.net/files/glossier-solution-ugc-01_d577f011-9518-4357-9f3f-3a184543373c.png?auto=compress,format&cs=srgb&w=540",
+        "image3": "https://glossier-prod.imgix.net/products/glossier-solution-carousel-05.png?auto=compress,format&cs=srgb&w=540",
+        "video1": "https://player.vimeo.com/progressive_redirect/playback/815674018/rendition/480p/file.mp4?loc=external&signature=bed5bf950f686283afb6ff2df1c740b53e28931fb4848d4ca9895e1c34e3ea96",
         "name": "Solution",
         "desc": "Exfoliating skin perfector",
         "skinType": "Sensitive",
@@ -169,7 +169,7 @@
       {
         "image1": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-rich-carousel-01.png?auto=compress,format&cs=srgb&w=540",
         "image2": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-rich-carousel-08.png?auto=compress,format&cs=srgb&w=540",
-        "image3": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-rich-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+        "image3": "https://glossier-prod.imgix.net/files/glossier-priming-moisturizer-rich-module-01.png?auto=compress,format&cs=srgb&w=461",
         "video1": "https://player.vimeo.com/progressive_redirect/playback/815665158/rendition/480p/file.mp4?loc=external&signature=70382f4d12b3411d19d5f553ba8a3e22016139228dffd748707eb9b9ad472b2f",
         "name": "Priming Moisturizer",
         "desc": "Luxurious face cream",
@@ -184,7 +184,7 @@
       {
         "image1": "https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-01_23fe78f1-1917-42e6-9448-b7f44e65acfc.png?auto=compress,format&cs=srgb&w=540",
         "image2": "https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-08.png?auto=compress,format&cs=srgb&w=540",
-        "image3": "https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+        "image3": "https://glossier-prod.imgix.net/files/glossier-after-baume-module-03.png?auto=compress,format&cs=srgb&w=540",
         "video1": "https://player.vimeo.com/progressive_redirect/playback/815636967/rendition/480p/file.mp4?loc=external&signature=5fa1e49c08270c6b21f9f34cc1a8eb1e5d474b7633f99411c00b2ada4b29366c",
         "name": "After Baume",
         "desc": "Moisture recovery cream",
@@ -199,7 +199,7 @@
       {
         "image1": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-balance-carousel-01_4b6e0d57-d05e-46fc-8610-ab6201468c2c.png?auto=compress,format&cs=srgb&w=540",
         "image2": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-balance-carousel-08.png?auto=compress,format&cs=srgb&w=540",
-        "image3": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-balance-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+        "image3": "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-balance-carousel-02.png?auto=compress,format&cs=srgb&w=540",
         "video1": "https://player.vimeo.com/progressive_redirect/playback/816316854/rendition/480p/file.mp4?loc=external&signature=59ac9015c9bcc91c42d5eda4f64564e80f859732bb3930e449b5e301df0c9bf7",
         "name": "Moisturizer Balance",
         "desc": "Oil-control cream",
