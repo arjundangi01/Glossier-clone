@@ -575,9 +575,9 @@
     let prodIdx = cartArr.findIndex((obj) => obj.id === currProdId);
 
     if (prodIdx !== -1) {
-      cartArr[prodIdx].quantity = cartArr[prodIdx].quantity + +quantity;
+      cartArr[prodIdx].quantity = cartArr[prodIdx].quantity + + quantity;
     } else {
-      cartArr.push({ ...currProduct, quantity:quantity });
+      cartArr.push({ ...currProduct, quantity:parseInt( quantity) });
     }
 
     localStorage.setItem("cartArr", JSON.stringify(cartArr));
