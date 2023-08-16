@@ -246,9 +246,8 @@
       .catch((error) => {
         spinner.style.display = "none";
 
-        document.querySelector("#alert-msg").textContent =
-          "Account already registered";
-        document.querySelector("#alert-container").style.display = "block";
+       
+       
         const errorMessage = error.message;
         console.log(errorMessage);
       });
