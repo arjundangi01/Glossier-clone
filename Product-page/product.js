@@ -18,6 +18,7 @@ function onloadfunction(){
       
     },500)
 }
+let cartValue = document.getElementById("cart-value");
 
 let output;
 let tempArr;
@@ -87,9 +88,12 @@ function display(array) {
 // }
 
 
+
+
 // --------------------------------------------------------
 function addToCart(index) {
-  let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
+let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
+
   let check = true;
   cartArr.forEach((ele) => {
     if (ele.name == output[index].name) {
@@ -107,6 +111,9 @@ function addToCart(index) {
     localStorage.setItem("cartArr", JSON.stringify(cartArr));
     displayCart(cartArr);
   }
+ 
+
+
 }
 // --------------------------------------------------------
 
@@ -146,6 +153,8 @@ function deleteItem(index) {
   localStorage.setItem("cartArr", JSON.stringify(cartArr));
 
   displayCart(cartArr);
+cartValue.innerText = cartArr.length;
+
 }
 // ------------------cart functions need in all file (end) ---------------
 
@@ -181,6 +190,7 @@ function defaultclass(filters,className) {
     element.classList.remove(className);
   });
 }
+showCart();
 
 // -------------------filter end--------------------------
 

@@ -4,6 +4,7 @@ import {
   showCart,
   debounceALl,
   displayUser,
+  
 } from "../nav-comp/nav.js";
 // window.addToCart = addToCart;
 window.reduceQuantity = reduceQuantity;
@@ -128,3 +129,4 @@ function moveToDetailPage3(index) {
   window.location.assign("../product-detail.html");
   console.log(singleItem)
 }
+

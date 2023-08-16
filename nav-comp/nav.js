@@ -250,6 +250,8 @@ function navbar() {
           <span id="cart-btn">
             <i class="fa-solid fa-bag-shopping" style="color: #000000"></i>
           </span>
+          <span id="cart-value">          
+          </span>
         </p>
       </div>
       <div
@@ -312,6 +314,9 @@ function showCart() {
 }
 // -----------cart display -------------------------------
 function displayCart(array) {
+  let cartValue = document.getElementById("cart-value");
+// console.log(cartArr.length)
+ cartValue.innerText = array.length;
   if (array.length == 0) {
     let cardList = document.getElementById("card-child-list");
     let checkoutBtn = document.getElementById("checkout-div");
@@ -477,5 +482,9 @@ close.addEventListener("click", () => {
 
 })
 }
+
+
+
+
 
 export { navbar, displayCart, showCart, debounceALl ,displayUser,hamburger };

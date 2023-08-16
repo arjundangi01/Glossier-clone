@@ -70,3 +70,4 @@ function deleteItem(index) {
 debounceALl()
 displayUser()
 hamburger()
+showCart()

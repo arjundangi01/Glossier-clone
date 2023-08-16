@@ -185,7 +185,7 @@ function displayCart(arr) {
     let rightCartDiv = document.createElement("div");
     let price = document.createElement("p");
     price.setAttribute("id", "price");
-    let cost = Math.round(el.price);
+    let cost = Math.round(el.price)*el.quantity;
     price.textContent = `$ ${cost.toFixed(2)}`;
     rightCartDiv.append(price);
 

@@ -70,3 +70,4 @@ function deleteItem(index) {
 }
 displayUser();
 debounceALl();
+showCart()
