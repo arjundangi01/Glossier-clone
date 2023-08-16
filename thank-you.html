@@ -68,6 +68,9 @@
   </body>
 </html>
 <script>
+  let cartArr = [];
+    localStorage.setItem("cartArr", JSON.stringify(cartArr));
+
   let counter = 5;
   setInterval(() => {
     counter--;
