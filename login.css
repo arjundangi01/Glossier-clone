@@ -65,6 +65,10 @@ color: black;
 	border: 1px dashed black;
   }  
 #spinner{
+	position: fixed;
+	top: 300px;
+	left: 50%;
+	z-index: 2000;
 	display: none;
 }
 
