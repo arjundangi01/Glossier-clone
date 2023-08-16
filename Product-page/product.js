@@ -39,6 +39,7 @@ async function fetchData(page) {
 function display(array) {
   let filteredArrayCopy = [...array];
   sortAll(filteredArrayCopy, array);
+  localStorage.setItem("productArr", JSON.stringify(array));
 
   let container = document.getElementById("container");
   container.innerHTML = "";
@@ -93,10 +94,12 @@ function display(array) {
 // --------------------------------------------------------
 function addToCart(index) {
 let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
+let localStroProduct = JSON.parse(localStorage.getItem("productArr")) || [];
 
   let check = true;
+ 
   cartArr.forEach((ele) => {
-    if (ele.name == output[index].name) {
+    if (ele.name == localStroProduct[index].name) {
       ele.quantity++;
       localStorage.setItem("cartArr", JSON.stringify(cartArr));
       displayCart(cartArr);
@@ -107,7 +110,7 @@ let cartArr = JSON.parse(localStorage.getItem("cartArr")) || [];
   });
 
   if (check) {
-    cartArr.push(output[index]);
+    cartArr.push(localStroProduct[index]);
     localStorage.setItem("cartArr", JSON.stringify(cartArr));
     displayCart(cartArr);
   }
