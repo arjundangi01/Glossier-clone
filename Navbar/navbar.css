@@ -3,6 +3,7 @@ nav {
   background-color: white;
   width: 98%;
   margin: auto;
+
   
 }
 a{
@@ -307,6 +308,9 @@ nav input {
 }
 
 /* cart------------- */
+#cart-btn{
+  
+}
 #offcanvasNavbar {
   width: 450px;
 }
