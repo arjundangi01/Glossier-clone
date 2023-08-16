@@ -356,14 +356,14 @@ function displayCart(array) {
           class="cart-prod-det-1 "
         >
           <p>${element.name}</p>
-          <div class="container d-flex gap-3 cart-quant-div">
+          <div class="container d-flex gap-3 w-50 cart-quant-div">
             <p onclick="reduceQuantity(${index})">-</p>
             <p>${element.quantity}</p>
             <p onclick="addQuantity(${index})">+</p>
           </div>
         </div>
         <div
-          class="cart-prod-det-2 d-flex flex-column  justify-content-xxl-between"
+          class="cart-prod-det-2 d-flex flex-column  justify-content-between"
         >
           <p>${element.price*element.quantity}</p>
           <p onclick="deleteItem(${index})" id="remove-item">Remove</p>
