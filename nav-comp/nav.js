@@ -395,11 +395,11 @@ window.moveToDetailPage2 = moveToDetailPage2;
     }
     try {
       let SearchResult = await fetch(
-        `https://project-1-1qlk.onrender.com/glossier?q=${searchItem}`
+        `https://fair-teal-worm-gown.cyclic.cloud/glossier?q=${searchItem}`
       );
        searchOutput = await SearchResult.json();
       displaySearchResult(searchOutput);
-      console.log(searchOutput);
+      // console.log(searchOutput);
     } catch (error) {
       console.log(error);
     }
@@ -432,7 +432,7 @@ window.moveToDetailPage2 = moveToDetailPage2;
   function moveToDetailPage2(index) {
     let singleItem = searchOutput[index]
     localStorage.setItem("singleItem", JSON.stringify(singleItem));
-    console.log(singleItem)
+    // console.log(singleItem)
     window.location.assign("../product-detail.html")
   }
 }

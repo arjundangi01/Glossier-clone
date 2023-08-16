@@ -547,7 +547,8 @@ nav input {
   #search-bar {
     width: 120px;
     border: 1px solid #000;
-    margin-top: 2px;
+    margin-top: 2px
+    ;
   }
   #user-detail-div{
     width: 65px;
@@ -575,6 +576,11 @@ nav input {
   }
   #middle .mega-box {
     display: none;
+  }
+  #show-result p{
+    
+   font-size: 0.4rem; 
+   
   }
   
 }
@@ -617,6 +623,11 @@ nav input {
   #middle .mega-box {
     display: none;
   }
+  #show-result p{
+    
+    font-size: 0.35rem; 
+    
+   }
 }
 
 /* -------------------responsive end------------------ */

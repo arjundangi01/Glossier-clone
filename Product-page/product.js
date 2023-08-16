@@ -8,17 +8,22 @@ window.moveToDetailPage = moveToDetailPage;
 // window.hover = hover;
 document.getElementById("navbar").innerHTML = navbar();
 document.getElementById("footer").innerHTML = footer();
-
+let skelCont = document.querySelector(".container");
+setTimeout(() => {
 fetchData(1);
+  
+},500)
 let output;
 let tempArr;
 async function fetchData(page) {
   
   try {
-    let response = await fetch(`https://project-1-1qlk.onrender.com/glossier?_page=${page}&_limit=12`);
+    let response = await fetch(`https://fair-teal-worm-gown.cyclic.cloud/glossier?_page=${page}&_limit=12`);
     output = await response.json();
-   tempArr = [...output]
+    tempArr = [...output]
+    skelCont.style.display = "none";
     display(output);
+
   } catch (error) {}
 }
 
@@ -266,7 +271,7 @@ pages.forEach((page) => {
     page.classList.add('is-active')
     event.preventDefault();
     let num = page.textContent;
-    console.log(num)
+    // console.log(num)
     fetchData(num);
 
   })
@@ -288,11 +293,111 @@ displayUser();
 // -----------  product detail page -----------
 
 function moveToDetailPage(index) {
-  console.log(output)
+  // console.log(output)
   let singleItem = output[index]
   localStorage.setItem("singleItem", JSON.stringify(singleItem));
   window.location.assign("../product-detail.html")
-  console.log(singleItem)
+  // console.log(singleItem)
 }
 
 hamburger() 
+
+
+
+
+skelCont.innerHTML = `<div class="col-sm-6 col-md-3">
+<div class="movie--isloading">
+  <div class="loading-image"></div>
+  <div class="loading-content">
+    <div class="loading-text-container">
+      <div class="loading-main-text"></div>
+      <div class="loading-sub-text"></div>
+    </div>
+    <div class="loading-btn"></div>
+  </div>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="movie--isloading">
+  <div class="loading-image"></div>
+  <div class="loading-content">
+    <div class="loading-text-container">
+      <div class="loading-main-text"></div>
+      <div class="loading-sub-text"></div>
+    </div>
+    <div class="loading-btn"></div>
+  </div>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="movie--isloading">
+  <div class="loading-image"></div>
+  <div class="loading-content">
+    <div class="loading-text-container">
+      <div class="loading-main-text"></div>
+      <div class="loading-sub-text"></div>
+    </div>
+    <div class="loading-btn"></div>
+  </div>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="movie--isloading">
+  <div class="loading-image"></div>
+  <div class="loading-content">
+    <div class="loading-text-container">
+      <div class="loading-main-text"></div>
+      <div class="loading-sub-text"></div>
+    </div>
+    <div class="loading-btn"></div>
+  </div>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="movie--isloading">
+  <div class="loading-image"></div>
+  <div class="loading-content">
+    <div class="loading-text-container">
+      <div class="loading-main-text"></div>
+      <div class="loading-sub-text"></div>
+    </div>
+    <div class="loading-btn"></div>
+  </div>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="movie--isloading">
+  <div class="loading-image"></div>
+  <div class="loading-content">
+    <div class="loading-text-container">
+      <div class="loading-main-text"></div>
+      <div class="loading-sub-text"></div>
+    </div>
+    <div class="loading-btn"></div>
+  </div>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="movie--isloading">
+  <div class="loading-image"></div>
+  <div class="loading-content">
+    <div class="loading-text-container">
+      <div class="loading-main-text"></div>
+      <div class="loading-sub-text"></div>
+    </div>
+    <div class="loading-btn"></div>
+  </div>
+</div>
+</div>
+<div class="col-sm-6 col-md-3">
+<div class="movie--isloading">
+  <div class="loading-image"></div>
+  <div class="loading-content">
+    <div class="loading-text-container">
+      <div class="loading-main-text"></div>
+      <div class="loading-sub-text"></div>
+    </div>
+    <div class="loading-btn"></div>
+  </div>
+</div>
+</div>`

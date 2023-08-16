@@ -46,7 +46,7 @@ async function sendData() {
       };
 
       let response = await fetch(
-        `https://project-1-1qlk.onrender.com/glossier`,
+        `https://fair-teal-worm-gown.cyclic.cloud/glossier`,
         {
           method: "POST",
           body: JSON.stringify(newObj),
