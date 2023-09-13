@@ -625,6 +625,7 @@
     {
       "id": 1,
       "token": "aby45kuf4ku",
+      "userName":"Arjun Dangi",
       "bookingHistory": [
         {
           "name": "Abiansemal, Bali, Indonesia",
@@ -633,12 +634,23 @@
           "cost": "39201",
           "status": true,
           "bookngDate": "27/08/2023"
+        },
+        {
+          "name": "Abiansemal, Bali, Indonesia",
+          "heading": "Aura House 2bds Eco Bamboo House, Pool, River View",
+          "title": "Entire cabin hosted by Eco Six Bali",
+          "cost": "39201",
+          "status": false,
+          "bookngDate": "27/08/2023",
+          "cancelDate":"28/08/2023",
+          "refundAmount":"2000"
         }
       ]
     },
     {
       "id": 2,
-      "token": "aby45kuf4ku",
+      "token": "acfby45kuf4ku",
+      "userName":"Shivraj Dangi",
       "bookingHistory": [
         {
           "name": "Abiansemal, Bali, Indonesia",
