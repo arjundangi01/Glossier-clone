@@ -654,5 +654,13 @@
         }
       ]
     }
+  ],
+  "travUser":[
+    {
+      "username": "nitishkumar",
+      "email": "nitish@gmail.com",
+      "password": "nitish",
+      "id": 1
+    }
   ]
 }
