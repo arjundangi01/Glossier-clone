@@ -25,7 +25,7 @@ let tempArr;
 async function fetchData(page) {
   
   try {
-    let response = await fetch(`https://fair-teal-worm-gown.cyclic.cloud/glossier?_page=${page}&_limit=12`);
+    let response = await fetch(`https://underwear-pig.cyclic.cloud/glossier?_page=${page}&_limit=12`);
     output = await response.json();
     tempArr = [...output]
     skelCont.style.display = "none";
