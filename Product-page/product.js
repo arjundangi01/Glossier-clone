@@ -16,7 +16,7 @@ function onloadfunction(){
   setTimeout(() => {
     fetchData(1);
       
-    },500)
+    },300)
 }
 let cartValue = document.getElementById("cart-value");
 
@@ -25,7 +25,8 @@ let tempArr;
 async function fetchData(page) {
   
   try {
-    let response = await fetch(`https://underwear-pig.cyclic.cloud/glossier?_page=${page}&_limit=12`);
+    // let response = await fetch(`https://underwear-pig.cyclic.cloud/glossier?_page=${page}&_limit=12`);
+    let response = await fetch(`../database/database.json`)
     output = await response.json();
     tempArr = [...output]
     skelCont.style.display = "none";
